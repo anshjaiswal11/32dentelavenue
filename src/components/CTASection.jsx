@@ -4,7 +4,7 @@ import ctaBanner from '../assets/images/cta-banner.png';
 
 export default function DentalCTA() {
   return (
-    <section className="py-16 md:py-0 bg-[#0f2847]" aria-label="cta">
+    <section className="mt-12 py-16 md:py-0 bg-[#0f2847]" aria-label="cta">
       <div className="container mx-auto px-4 max-w-[540px] sm:max-w-[540px] md:max-w-[750px] lg:max-w-[980px] xl:max-w-[1180px]">
         <div className="flex flex-col md:grid md:grid-cols-2 md:items-end md:gap-[60px] xl:items-center">
           {/* CTA Banner */}
@@ -19,7 +19,7 @@ export default function DentalCTA() {
 
           {/* CTA Content */}
           <div className="text-center md:text-left md:py-[60px] lg:py-[80px]">
-            <p className="text-[#3b82f6] text-sm md:text-base font-medium mb-4 capitalize tracking-wide">
+            <p className="text-[#afabfd] text-sm md:text-base font-medium mb-4 capitalize tracking-wide">
               Book Dentail Appointment
             </p>
             
@@ -29,7 +29,7 @@ export default function DentalCTA() {
             
             <a 
               href="#" 
-              className="inline-block bg-[#3b82f6] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#2563eb] transition-colors duration-300 uppercase tracking-wide text-sm max-w-max"
+              className="inline-block bg-[#afabfd] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#9b8dfb] transition-colors duration-300 uppercase tracking-wide text-sm max-w-max"
             >
               Book appointment
             </a>

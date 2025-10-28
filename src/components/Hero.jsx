@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import slide2 from '../assets/images/slide2.png'
 
 const slides = [
   {
@@ -13,8 +14,7 @@ const slides = [
     secondaryHref: '#team',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1588776814546-da63b7f3537a?q=80&w=1974&auto=format&fit=crop',
+    image: slide2,
     headline: 'Premium Dental Care Made Accessible',
     subheadline:
       'Experience world-class dental care powered by advanced technology, modern techniques, and a state-of-the-art clinic designed for your comfort.',
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1533794299596-8e62c152a450?q=80&w=2070&auto=format&fit=crop',
+      'https://www.shutterstock.com/image-photo/dental-hygiene-oral-health-care-600nw-2523738153.jpg',
     headline: 'Redefining Dental Tourism in India',
     subheadline:
       'Travel with confidence knowing your smile is in expert hands. Experience advanced technology, world-class expertise, and luxury care at affordable costs.',
@@ -65,19 +65,27 @@ function Hero() {
           <div
             key={i}
             aria-hidden={i !== current}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out transform scale-105 ${
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out ${
               i === current ? 'opacity-100' : 'opacity-0'
             }`}
             style={{ 
               backgroundImage: `url('${s.image}')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              filter: 'brightness(0.9) contrast(1.1)'
+              // increase visibility: slightly brighter, normal contrast, mild saturation
+              filter: 'brightness(1.05) contrast(1) saturate(1.05)'
             }}
           />
         ))}
-        {/* overlay for better readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(247,244,241,0.95)] via-[rgba(247,244,241,0.85)] to-[rgba(247,244,241,0.7)]" />
+        {/* lighter overlay so background image is more visible */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[rgba(247,244,241,0.25)] via-[rgba(247,244,241,0.12)] to-transparent" />
+        {/* dark gradient on the left (md+) to improve text contrast without hiding the image */}
+        <div
+          className="absolute inset-0 pointer-events-none hidden md:block"
+          style={{
+            background: 'linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 35%, transparent 60%)',
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -89,8 +97,8 @@ function Hero() {
             }`}
             aria-live="polite"
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-charcoal leading-tight" dangerouslySetInnerHTML={{ __html: slides[current].headline }} />
-            <p className="mt-4 text-lg text-text-charcoal max-w-prose">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md leading-tight" dangerouslySetInnerHTML={{ __html: slides[current].headline }} />
+            <p className="mt-4 text-lg text-white/95 drop-shadow-sm max-w-prose">
               {slides[current].subheadline}
             </p>
 

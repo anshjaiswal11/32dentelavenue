@@ -7,6 +7,8 @@ import AboutSection from './components/AboutSection'
 import TeamSection from './components/TeamSection'
 import CTASection from './components/CTASection'
 import AppointmentBooking from './components/Booking'
+import Testimonials from './components/Testimonals'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,11 +17,13 @@ function App() {
         <Navbar />
         <Hero />
         <Banner />
+        <Testimonials/>
         <Services/>
         <AboutSection/>
         <TeamSection/>
         <CTASection/>
         <AppointmentBooking/>
+        <Footer/>
       </div>
     </BrowserRouter>
   )

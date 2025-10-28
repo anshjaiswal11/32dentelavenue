@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Phone, Mail, User } from 'lucide-react';
 
 export default function AppointmentBooking() {
   const [formData, setFormData] = useState({
@@ -24,149 +23,147 @@ export default function AppointmentBooking() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#f7f4f1] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Left Side - Form */}
-            <div className="p-8 md:p-12 lg:p-16">
-              <div className="max-w-md mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                  Book Appointment Today!
-                </h1>
-                <p className="text-gray-600 mb-8">
-                  Schedule your consultation in minutes and let our experts guide you toward parenthood with care and clarity.
-                </p>
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-[#424040] mb-4">Schedule Your Visit</h2>
+          <p className="text-lg text-[#424040]/70">Experience exceptional dental care at your convenience</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-start bg-white rounded-2xl shadow-xl overflow-hidden">
 
-                <div className="space-y-5">
-                  {/* Name Fields */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First Name"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last Name"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
-                      />
-                    </div>
-                  </div>
+          {/* Left Side - Form with enhanced styling */}
+          <div className="p-8 md:p-12 lg:p-16 bg-gradient-to-br from-white to-[#f7f4f1]">
+            <div className="max-w-md mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#424040] mb-2 relative">
+                Book Appointment Today!
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#88d4cb]/20 rounded-full"></div>
+              </h1>
+              <p className="text-[#424040] opacity-80 mb-8">
+                Schedule your consultation in minutes. Our team provides precise, compassionate dental care.
+              </p>
 
-                  {/* Contact Fields */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Location */}
-                  <div>
-                    <select
-                      name="location"
-                      value={formData.location}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition appearance-none"
-                    >
-                      <option value="">Choose Location</option>
-                      <option value="waziabad">Asha IVF & Fertility Centre - Waziabad</option>
-                      <option value="sector57">Asha IVF & Fertility Centre - Sector 57</option>
-                      <option value="delhi">Asha IVF & Fertility Centre - Delhi</option>
-                    </select>
-                  </div>
-
-                  {/* Date */}
+              <div className="space-y-5">
+                {/* Name Fields */}
+                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <input
-                      type="date"
-                      name="date"
-                      placeholder="dd-mm-yyyy"
-                      value={formData.date}
+                      type="text"
+                      name="firstName"
+                      placeholder="First Name"
+                      value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition"
+                      className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition"
                     />
                   </div>
 
-                  {/* Submit Button */}
+                  <div>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition"
+                    />
+                  </div>
+                </div>
+
+                {/* Contact Fields */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition"
+                    />
+                  </div>
+
+                  <div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition"
+                    />
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div>
+                  <select
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition appearance-none"
+                  >
+                    <option value="">Choose Location</option>
+                    <option value="rohini_sec5">32 Dental Avenue - Sector 5, Rohini</option>
+                    <option value="rohini_other">32 Dental Avenue - Other Branch</option>
+                  </select>
+                </div>
+
+                {/* Date */}
+                <div>
+                  <input
+                    type="date"
+                    name="date"
+                    placeholder="dd-mm-yyyy"
+                    value={formData.date}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] focus:border-transparent transition"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#88d4cb] to-[#afabfd] rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                   <button
                     onClick={handleSubmit}
-                    className="w-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-semibold py-4 rounded-lg hover:from-pink-500 hover:to-pink-600 transform hover:scale-105 transition duration-200 shadow-lg"
+                    className="relative w-full bg-gradient-to-r from-[#88d4cb] to-[#88d4cb] text-white font-semibold py-4 rounded-lg hover:from-[#88d4cb] hover:to-[#afabfd] transform hover:scale-102 transition duration-200 shadow-xl"
                   >
                     BOOK AN APPOINTMENT
                   </button>
                 </div>
-              </div>
-            </div>
 
-            {/* Right Side - Map and Info */}
-            <div className="bg-gray-100 p-8 md:p-12 lg:p-16 relative">
-              <div className="h-full flex flex-col">
-                {/* Location Info Card */}
-                <div className="bg-white rounded-xl shadow-lg p-6 mb-6 z-10">
-                  <h3 className="font-bold text-lg mb-2">Asha IVF & Fertility Centre | Best IVF...</h3>
-                  <p className="text-sm text-gray-600 mb-2">
-                    Plot No 2227, Sector 57 Rd, near Waziabad Road, Waziabad, Sector 57, Gurugram, Haryana 122011
-                  </p>
-                  <div className="flex items-center mb-2">
-                    <span className="text-yellow-500">★★★★★</span>
-                    <span className="text-sm text-blue-600 ml-2">5.0</span>
-                    <span className="text-sm text-gray-600 ml-1">93 reviews</span>
-                  </div>
-                  <a href="#" className="text-blue-600 text-sm hover:underline">View larger map</a>
-                </div>
-
-                {/* Map Container */}
-                <div className="flex-1 rounded-xl overflow-hidden shadow-lg">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.0848837767844!2d77.0867!3d28.4195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI1JzEwLjIiTiA3N8KwMDUnMTIuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0, minHeight: '400px' }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Asha IVF Location"
-                  ></iframe>
-                </div>
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#88d4cb]/10 rounded-full blur-xl"></div>
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#afabfd]/10 rounded-full blur-lg"></div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Additional Info Section */}
-        {/* <div className="mt-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Schedule Your Consultation</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Fill out the form and let our expert team craft your healthy, confident smile.
-          </p>
-        </div> */}
+          {/* Right Side - Map with enhanced styling */}
+          <div className="relative p-8 md:p-12 lg:p-16 bg-gradient-to-bl from-white to-[#f7f4f1]">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#88d4cb]/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#88d4cb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-[#424040]">32 Dental Avenue — Sector 5, Rohini, Delhi</h3>
+            </div>
+            <div className="w-full h-full rounded-xl overflow-hidden border-4 border-[#88d4cb]/20 shadow-lg relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#88d4cb]/10 to-transparent pointer-events-none"></div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.196835329085!2d77.1092939!3d28.713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07d8729099e1%3A0x54581905e31175cb!2s32%20Dental%20Avenue-%20Sector%205%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1761651873675!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '420px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="32 Dental Avenue - Sector 5 Rohini"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );

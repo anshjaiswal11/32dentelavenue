@@ -1,8 +1,9 @@
 import React from 'react';
 
 // You would replace these with the actual image paths
-import drAnkitaImage from '../assets/images/service-icon-5.png';
-import drAnujImage from '../assets/images/service-icon-5.png';
+import drAnkitaImage from '../assets/images/denties1.png';
+// Use a placeholder portrait for Dr. Anuj (external image)
+const drAnujImage = 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop';
 
 // Data for the dentists
 const dentists = [
@@ -11,14 +12,14 @@ const dentists = [
     specialty: "Pediatric Dentist",
     qualifications: "MDS – Pedodontics & Preventive Dentistry",
     experience: "10+ Years of Experience",
-    imageUrl: drAnkitaImage, // Placeholder image
+    imageUrl: drAnkitaImage,
   },
   {
     name: "Dr. Anuj Gambhir",
     specialty: "Prosthodontist & Oral Implantologist",
     qualifications: "MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry",
     experience: "10+ Years of Experience",
-    imageUrl: drAnujImage, // Placeholder image
+    imageUrl: drAnujImage,
   }
 ];
 
@@ -27,20 +28,24 @@ const dentists = [
  */
 const DentistCard = ({ name, specialty, qualifications, experience, imageUrl }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center transition-transform duration-300 hover:scale-105">
-      <div className="w-full h-56 bg-gray-200">
-        <img 
-          src={imageUrl} 
-          alt={name} 
-          className="w-full h-full object-cover object-center" 
-          loading="lazy"
-        />
+    <div className="relative bg-white rounded-lg shadow-lg overflow-visible text-center transition-transform duration-300 hover:scale-105 pt-12">
+      {/* Circular portrait overlapping the card */}
+      <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+        <div className="rounded-full p-1 bg-white shadow-md">
+          <img
+            src={imageUrl}
+            alt={name}
+            className="w-28 h-28 rounded-full object-cover object-center"
+            loading="lazy"
+          />
+        </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900">{name}</h3>
-        <p className="text-indigo-600 font-semibold mt-1">{specialty}</p>
+
+      <div className="p-6 pt-8">
+        <h3 className="text-lg md:text-xl font-bold text-[#424040]">{name}</h3>
+        <p className="text-[#88d4cb] font-semibold mt-1">{specialty}</p>
         <p className="text-gray-600 text-sm mt-3">{qualifications}</p>
-        <p className="text-gray-800 font-medium mt-2">{experience}</p>
+        <p className="text-[#424040] font-medium mt-2">{experience}</p>
       </div>
     </div>
   );
@@ -51,7 +56,7 @@ const DentistCard = ({ name, specialty, qualifications, experience, imageUrl }) 
  */
 const TeamSection = () => {
   return (
-    <section className="bg-gray-50 py-20 md:py-24">
+    <section className="bg-[#f7f4f1] py-20 md:py-24">
       <div className="container mx-auto px-4">
         
         {/* Section Title */}

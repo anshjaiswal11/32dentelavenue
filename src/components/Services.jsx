@@ -75,7 +75,7 @@ const Services = () => {
   const rightServices = servicesData.slice(3, 6);
 
   return (
-    <section id="service" aria-label="service" className="py-16 pb-0"> {/* .service */}
+    <section id="service" aria-label="service" className="py-16 pb-0 bg-[#f7f4f1]"> {/* .service */}
       <div className="container mx-auto px-4">
         <p className="text-center text-indigo-600 font-semibold uppercase">Our Services</p>
         {/* .service .section-title: mb-50px */}
