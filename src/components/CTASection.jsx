@@ -1,5 +1,5 @@
 import React from 'react';
-import ctaBanner from '../assets/images/IMG_0428.jpg';
+const Banner = 'https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg'
 
 export default function DentalCTA() {
   return (
@@ -13,7 +13,7 @@ export default function DentalCTA() {
           {/* CTA Banner */}
           <figure className="relative w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-lg">
             <img
-              src={ctaBanner}
+              src={Banner}
               alt="Dentist holding dental model"
               className="absolute inset-0 w-full h-full object-contain md:object-cover"
               loading="lazy"
