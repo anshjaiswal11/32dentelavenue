@@ -1,5 +1,5 @@
 import React from 'react';
-import ctaBanner from '../../assets/images/IMG_0428.jpg';
+import ctaBanner from '../../assets/images/IMG_0428.JPG';
 
 export default function DentalCTA() {
   return (
