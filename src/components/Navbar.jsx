@@ -36,7 +36,7 @@ function Navbar() {
               {/* Brand text - visible on md+ only */}
               <span className="hidden md:inline-flex flex-col ml-3 leading-none">
                 <span className="text-2xl md:text-3xl font-extrabold text-[#424040] tracking-wide">
-                  <span className="text-[#afabfd]">32</span>&nbsp;Dental Avenue
+                  <span className="text-[#afabfd]"></span>&nbsp;Dental Avenue
                 </span>
                 <span className="text-sm text-[#424040] opacity-80">Smile design & care</span>
               </span>
@@ -104,45 +104,59 @@ function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-[#f7f4f1] shadow-lg">
-          <Link
-            to="/"
-            className={`block px-3 py-2 rounded-md text-base font-medium text-neutral-white hover:bg-neutral-white/10 ${
-              location.pathname === '/' ? 'bg-neutral-white/20' : ''
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className={`block px-3 py-2 rounded-md text-base font-medium text-neutral-white hover:bg-neutral-white/10 ${
-              location.pathname === '/services' ? 'bg-neutral-white/20' : ''
-            }`}
-          >
-            Services
-          </Link>
-          <Link
-            to="/about"
-            className={`block px-3 py-2 rounded-md text-base font-medium text-neutral-white hover:bg-neutral-white/10 ${
-              location.pathname === '/about' ? 'bg-neutral-white/20' : ''
-            }`}
-          >
-            About Us
-          </Link>
-          <Link
-            to="/contact"
-            className={`block px-3 py-2 rounded-md text-base font-medium text-neutral-white hover:bg-neutral-white/10 ${
-              location.pathname === '/contact' ? 'bg-neutral-white/20' : ''
-            }`}
-          >
-            Contact Us
-          </Link>
-          <button className="w-full mt-2 bg-[#88d4cb] text-white px-6 py-2 rounded-md font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/30">
-            Book Appointment
-          </button>
-        </div>
-      </div>
+<div
+  className={`md:hidden absolute top-16 left-0 w-full transform transition-all duration-300 ease-in-out ${
+    isOpen
+      ? 'opacity-100 translate-y-0 visible'
+      : 'opacity-0 -translate-y-2 invisible'
+  }`}
+>
+  <div className="px-4 pt-4 pb-6 space-y-2 bg-[#f7f4f1]/95 backdrop-blur-md shadow-xl rounded-b-2xl border-t border-[#e0ddd9]">
+    <Link
+      to="/"
+      onClick={() => setIsOpen(false)}
+      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
+        location.pathname === '/' ? 'bg-[#eae7e3]' : ''
+      }`}
+    >
+      Home
+    </Link>
+    <Link
+      to="/services"
+      onClick={() => setIsOpen(false)}
+      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
+        location.pathname === '/services' ? 'bg-[#eae7e3]' : ''
+      }`}
+    >
+      Services
+    </Link>
+    <Link
+      to="/about"
+      onClick={() => setIsOpen(false)}
+      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
+        location.pathname === '/about' ? 'bg-[#eae7e3]' : ''
+      }`}
+    >
+      About Us
+    </Link>
+    <Link
+      to="/contact"
+      onClick={() => setIsOpen(false)}
+      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
+        location.pathname === '/contact' ? 'bg-[#eae7e3]' : ''
+      }`}
+    >
+      Contact Us
+    </Link>
+
+    <button
+      onClick={() => setIsOpen(false)}
+      className="w-full mt-3 bg-[#88d4cb] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40"
+    >
+      Book Appointment
+    </button>
+  </div>
+</div>
     </nav>
   );
 }

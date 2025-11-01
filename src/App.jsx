@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Banner from './components/banner'
@@ -9,20 +9,35 @@ import CTASection from './components/CTASection'
 import AppointmentBooking from './components/Booking'
 import Testimonials from './components/Testimonals'
 import Footer from './components/Footer'
+import AboutUsPage from './pages/About'
+import Home from './pages/Home'
+
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Banner />
+      <Testimonials/>
+      <Services/>
+      <CTASection/>
+      <AboutSection/>
+      <TeamSection/>
+      <AppointmentBooking/>
+    </>
+  )
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen overflow-x-hidden">
         <Navbar />
-        <Hero />
-        <Banner />
-        <Testimonials/>
-        <Services/>
-        <AboutSection/>
-        <TeamSection/>
-        <CTASection/>
-        <AppointmentBooking/>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/home2" element={<Home />} />
+        </Routes>
         <Footer/>
       </div>
     </BrowserRouter>

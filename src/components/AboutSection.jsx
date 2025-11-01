@@ -1,118 +1,112 @@
 import React from 'react';
+// Icon for the list, replacing the pink checkmark
+import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-// Make sure to import your image
-// You might need to change this path
-import dentistImage from '../assets/images/dentist-patient.png';
+// Import images directly
+import mainImage from '../assets/images/aboutpng2.jpg';
+import secondaryImage from '../assets/images/Aboutimg1.jpg';
 
-const AboutSection = () => {
+// Your content, structured for the new layout
+const features = [
+  {
+    title: "Experienced Specialists",
+    description: "Led by skilled prosthodontists and pediatric dentists with 10+ years of clinical expertise."
+  },
+  {
+    title: "Patient-Centric Care",
+    description: "Personalized, gentle treatments ensuring comfort, trust, and long-term oral wellness."
+  },
+  {
+    title: "Advanced Technology",
+    description: "Equipped with modern dental systems and digital precision for enhanced outcomes."
+  },
+  {
+    title: "Comprehensive Expertise",
+    description: "End-to-end dental solutions, from aesthetic smile makeovers to advanced restorative treatments, all under one roof."
+  }
+];
+
+const CommitmentSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#f7f4f1] to-white py-24 md:py-32">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#88d4cb]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#afabfd]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-      
-      <div className="container mx-auto px-4 relative">
-        {/* --- Section Headings --- */}
-        <div className="relative">
-          <h2 className="text-4xl md:text-6xl font-bold text-center text-[#424040] mb-6 relative">
-            Why Choose 32 Dental Avenue?
-            <div className="absolute -top-8 -right-8 w-16 h-16 bg-[#88d4cb]/20 rounded-full hidden md:block"></div>
-          </h2>
-          <p className="text-lg md:text-xl text-[#424040]/70 text-center max-w-3xl mx-auto mt-6 leading-relaxed">
-            At 32 Dental Avenue, a leading dental clinic in Rohini, clinical excellence meets compassionate care. 
-            Our experienced dentists combine 10+ years of expertise with advanced technology to deliver precise, 
-            aesthetic, and long-lasting dental solutions trusted by patients locally and internationally.
-          </p>
-        </div>
-
-        {/* --- 2-Column Layout --- */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20 mt-20">
+    <section className="bg-[#F7F4F1] py-20 md:py-28">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Column: Text Content */}
-          <div className="w-full lg:w-1/2 text-[#424040] space-y-10">
-            <div className="group hover:translate-x-2 transition-transform duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#88d4cb]/10 flex items-center justify-center group-hover:bg-[#88d4cb]/20 transition-colors">
-                  <span className="text-[#88d4cb] font-bold">01</span>
-                </div>
-                <h3 className="text-2xl font-bold text-[#424040]">Experienced Specialists</h3>
-              </div>
-              <p className="text-[#424040]/70 leading-relaxed pl-16">
-                Led by skilled prosthodontists and pediatric dentists with 10+ years of clinical expertise.
-              </p>
-            </div>
+          {/* --- Left Column: Text Content --- */}
+          <div className="flex flex-col gap-6">
+            <span 
+              className="font-bold uppercase tracking-wider text-lg" 
+              style={{ color: '#88D4CB' }}
+            >
+              Why Choose Us?
+            </span>
             
-            <div className="group hover:translate-x-2 transition-transform duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#afabfd]/10 flex items-center justify-center group-hover:bg-[#afabfd]/20 transition-colors">
-                  <span className="text-[#afabfd] font-bold">02</span>
-                </div>
-                <h3 className="text-2xl font-bold text-[#424040]">Patient-Centric Care</h3>
-              </div>
-              <p className="text-[#424040]/70 leading-relaxed pl-16">
-                Personalized, gentle treatments ensuring comfort, trust, and long-term oral wellness.
-              </p>
-            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-[#424040] tracking-tight leading-tight">
+              Why Choose 32 Dental Avenue?
+            </h2>
             
-            <div className="group hover:translate-x-2 transition-transform duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#88d4cb]/10 flex items-center justify-center group-hover:bg-[#88d4cb]/20 transition-colors">
-                  <span className="text-[#88d4cb] font-bold">03</span>
+            <p className="text-lg md:text-xl text-[#424040]/80 leading-relaxed font-medium">
+              At 32 Dental Avenue, a leading dental clinic in Rohini, clinical excellence meets compassionate care. 
+              Our experienced dentists combine 10+ years of expertise with advanced technology to deliver precise, 
+              aesthetic, and long-lasting dental solutions.
+            </p>
+
+            {/* Features List */}
+            <div className="mt-6 space-y-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div>
+                    <CheckCircle 
+                      className="w-6 h-6 mt-1" 
+                      style={{ color: '#88D4CB' }} 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#424040]">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#424040]/70 mt-2 font-medium leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-[#424040]">Advanced Technology</h3>
-              </div>
-              <p className="text-[#424040]/70 leading-relaxed pl-16">
-                Equipped with modern dental systems and digital precision for enhanced outcomes.
-              </p>
-            </div>
-            
-            <div className="group hover:translate-x-2 transition-transform duration-300 ease-out">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#afabfd]/10 flex items-center justify-center group-hover:bg-[#afabfd]/20 transition-colors">
-                  <span className="text-[#afabfd] font-bold">04</span>
-                </div>
-                <h3 className="text-2xl font-bold text-[#424040]">Comprehensive Expertise</h3>
-              </div>
-              <p className="text-[#424040]/70 leading-relaxed pl-16">
-                End-to-end dental solutions, from aesthetic smile makeovers to advanced restorative treatments, all under one roof.
-              </p>
+              ))}
             </div>
 
-            {/* Button with gradient effect */}
-            <div className="relative mt-12 group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#88d4cb] to-[#afabfd] rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <button className="relative w-full sm:w-auto bg-gradient-to-r from-[#88d4cb] to-[#88d4cb] hover:to-[#afabfd] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-                Learn More About Us
-              </button>
+            {/* Learn more button linking to About page */}
+            <div className="mt-8">
+              <Link to="/about" className="inline-flex items-center px-10 py-5 rounded-full text-white font-semibold shadow-lg hover:opacity-95 transition-opacity"
+                style={{ backgroundColor: '#88d4cb' }}
+              >
+                Learn more
+              </Link>
             </div>
           </div>
 
-          {/* Right Column: Image with Modern Frame */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative">
-              {/* Decorative background elements */}
-              <div className="absolute -top-4 -right-4 w-72 h-72 bg-[#88d4cb]/10 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-[#afabfd]/10 rounded-full blur-2xl"></div>
-              
-              {/* Image container with modern styling */}
-              <div className="relative bg-white p-4 rounded-3xl shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#88d4cb]/10 to-[#afabfd]/10 rounded-3xl"></div>
-                <img
-                  src={dentistImage}
-                  alt="Dentist treating a patient"
-                  className="w-full h-auto rounded-2xl relative z-10 transform transition-transform duration-500 hover:scale-[1.02]"
-                  loading="lazy"
-                />
-                
-                {/* Decorative corner accent */}
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#88d4cb] rounded-lg transform rotate-45"></div>
-              </div>
-            </div>
+          {/* --- Right Column: Image Layout --- */}
+          <div className="relative h-full min-h-[400px]">
+            {/* Main Image */}
+            <img 
+              src={mainImage} 
+              alt="Main clinic room"
+              className="w-full h-auto object-cover rounded-xl shadow-lg"
+              loading="lazy"
+            />
+            
+            {/* Secondary, Inset Image */}
+            <img 
+              src={secondaryImage}
+              alt="Secondary clinic room"
+              className="absolute w-1/2 h-100 -bottom-0 -right-0 object-cover rounded-xl shadow-2x1 border-4 border-white"
+              loading="lazy"
+            />
           </div>
+
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default CommitmentSection;

@@ -4,7 +4,7 @@ import slide2 from '../assets/images/slide2.png'
 const slides = [
   {
     image:
-      'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?q=80&w=1974&auto=format&fit=crop',
+      'https://plus.unsplash.com/premium_photo-1663088767412-b10c8dc27ad1?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1470',
     headline: 'Your Dream Smile, Designed With Care',
     subheadline:
       'At 32 Dental Avenue, a trusted dental clinic in Rohini, we blend precision, passion, and personalized care to craft smiles that radiate confidence and health.',
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     image:
-      'https://www.shutterstock.com/image-photo/dental-hygiene-oral-health-care-600nw-2523738153.jpg',
+      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1470',
     headline: 'Redefining Dental Tourism in India',
     subheadline:
       'Travel with confidence knowing your smile is in expert hands. Experience advanced technology, world-class expertise, and luxury care at affordable costs.',
@@ -42,18 +42,15 @@ function Hero() {
   const intervalRef = useRef(null)
 
   useEffect(() => {
-    // auto-advance every 3s
     intervalRef.current = setInterval(() => {
       setCurrent((s) => (s + 1) % slides.length)
-    }, 3000)
-
+    }, 4000)
     return () => clearInterval(intervalRef.current)
   }, [])
 
-  // text crossfade when current changes
   useEffect(() => {
     setTextVisible(false)
-    const t = setTimeout(() => setTextVisible(true), 450) // match duration
+    const t = setTimeout(() => setTextVisible(true), 450)
     return () => clearTimeout(t)
   }, [current])
 
@@ -68,37 +65,41 @@ function Hero() {
             className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out ${
               i === current ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ 
+            style={{
               backgroundImage: `url('${s.image}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              // increase visibility: slightly brighter, normal contrast, mild saturation
-              filter: 'brightness(1.05) contrast(1) saturate(1.05)'
+              filter: 'brightness(0.9) contrast(1.05) saturate(1.05)',
             }}
           />
         ))}
-        {/* lighter overlay so background image is more visible */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[rgba(247,244,241,0.25)] via-[rgba(247,244,241,0.12)] to-transparent" />
-        {/* dark gradient on the left (md+) to improve text contrast without hiding the image */}
-        <div
-          className="absolute inset-0 pointer-events-none hidden md:block"
-          style={{
-            background: 'linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 35%, transparent 60%)',
-          }}
-        />
+
+        {/* Overlay gradient — stronger for mobile, lighter for desktop */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Mobile overlay (stronger for visibility) */}
+          <div className="block md:hidden w-full h-full bg-[rgba(0,0,0,0.55)]"></div>
+          {/* Desktop overlay (slightly lighter) */}
+          <div
+            className="hidden md:block w-full h-full"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.10) 100%)',
+            }}
+          ></div>
+        </div>
       </div>
 
-      {/* Content */}
+      {/* Text content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl text-left">
           <div
             className={`transform transition-all duration-500 ease-in-out ${
               textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'
             }`}
-            aria-live="polite"
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-md leading-tight" dangerouslySetInnerHTML={{ __html: slides[current].headline }} />
-            <p className="mt-4 text-lg text-white/95 drop-shadow-sm max-w-prose">
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]"
+              dangerouslySetInnerHTML={{ __html: slides[current].headline }}
+            />
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-prose">
               {slides[current].subheadline}
             </p>
 
@@ -117,24 +118,10 @@ function Hero() {
               </a>
             </div>
           </div>
-
-          {/* Pagination dots */}
-          {/* <div className="mt-8 flex items-center gap-3">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  i === current ? 'bg-text-charcoal scale-110' : 'bg-neutral-white/60'
-                }`}
-              />
-            ))}
-          </div> */}
         </div>
       </div>
     </section>
   )
 }
 
-export default Hero;
+export default Hero

@@ -55,7 +55,7 @@ const happyClients = [
 ];
 
 const TestimonialCard = ({ name, location, review, rating }) => (
-  <div className="min-w-[350px] md:min-w-[400px] bg-white p-6 md:p-8 rounded-2xl shadow-lg mr-6">
+  <div className="min-w-[350px] md:min-w-[400px] bg-[#f7f4f1] p-6 md:p-8 rounded-2xl shadow-lg mr-6">
     <div className="flex items-center gap-1 mb-4">
       {[...Array(rating)].map((_, i) => (
         <svg key={i} className="w-5 h-5 text-[#88d4cb]" fill="currentColor" viewBox="0 0 20 20">
@@ -73,37 +73,18 @@ const TestimonialCard = ({ name, location, review, rating }) => (
 
 const Testimonials = () => {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#f7f4f1] overflow-hidden">
+    <section className="py-16 md:py-20 bg-[#f7f4f1] overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#424040] mb-6 relative">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#424040] mb-6">
             Stories That Make Us Smile
-            <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#88d4cb]/20 rounded-full hidden md:block"></div>
-          </h2>
+          </h1>
           <p className="text-lg text-[#424040]/70">
             Real experiences shared by our valued patients who trusted us with their smiles.
           </p>
         </div>
-
-        {/* Testimonials Scroll */}
-        <div className="relative mb-20">
-          {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
-          
-          {/* Auto-scrolling testimonials */}
-          <div className="flex overflow-hidden">
-            <div className="animate-scroll-left flex">
-              {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <TestimonialCard key={index} {...testimonial} />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Happy Clients Images */}
-        <div className="relative mt-20">
+              <div className="relative mb-12">
           {/* Gradient Overlays */}
           <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
           <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
@@ -124,6 +105,25 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
+
+        {/* Testimonials Scroll */}
+        <div className="relative">
+          {/* Gradient Overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
+          
+          {/* Auto-scrolling testimonials */}
+          <div className="flex overflow-hidden">
+            <div className="animate-scroll-left flex">
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Happy Clients Images */}
+  
       </div>
     </section>
   );

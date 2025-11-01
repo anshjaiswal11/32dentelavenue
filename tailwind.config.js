@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        'display': ['Plus Jakarta Sans', 'sans-serif'],
+        'body': ['Plus Jakarta Sans', 'sans-serif'],
+      },
       colors: {
         'primary-periwinkle': '#afabfd',
         'secondary-teal': '#88d4cb',
