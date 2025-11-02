@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Smile, Timer, Crown, Award } from 'lucide-react';
-import implantIcon from '../assets/images/implantx.png'; // ⬅️ update the path to your PNG file
+import implantIcon from '../assets/images/implant.png'; // ⬅️ update the path to your PNG file
 
 const stats = [
   {
