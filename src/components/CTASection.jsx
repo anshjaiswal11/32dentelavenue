@@ -15,7 +15,7 @@ export default function DentalCTA() {
             <img
               src={Banner}
               alt="Dentist holding dental model"
-              className="absolute inset-0 w-full h-full object-contain md:object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
           </figure>
