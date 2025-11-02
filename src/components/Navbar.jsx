@@ -54,9 +54,9 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="/services"
+              to="/home"
               className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${
-                location.pathname === '/services' ? 'bg-[#f7f4f1]/60' : ''
+                location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
               }`}
             >
               Services
@@ -122,10 +122,10 @@ function Navbar() {
       Home
     </Link>
     <Link
-      to="/services"
+      to="/home"
       onClick={() => setIsOpen(false)}
       className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
-        location.pathname === '/services' ? 'bg-[#eae7e3]' : ''
+        location.pathname === '/home' ? 'bg-[#eae7e3]' : ''
       }`}
     >
       Services

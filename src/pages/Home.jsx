@@ -7,10 +7,13 @@ import CDATASection from '../components/home2/ctaa'
 import AboutSection from '../components/home2/about'
 import TeamSection from '../components/home2/team'
 import AppointmentBooking from '../components/home2/booking'
+import Navbar from '../components/home2/nav'
+// import Footer from '../components/home2/footer'
 
 function Home() {
   return (
     <div>
+      <Navbar/>
       <Hero />
       <Banner />
       <Testimonials />
@@ -19,6 +22,7 @@ function Home() {
       <AboutSection/>
       <TeamSection/>
       <AppointmentBooking/>
+      {/* <Footer/> */}
     </div>
   )
 }
