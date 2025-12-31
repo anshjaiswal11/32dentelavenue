@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
-
+import IMG_8301 from '../assets/images/IMG_8301.jpg';
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedImage, setSelectedImage] = useState(null);
@@ -66,7 +66,14 @@ const Gallery = () => {
             category: 'Advanced Equipment',
             title: 'Intraoral Scanner',
             image: 'https://placehold.co/800x600/f0f0f0/424040?text=3D+Scanner'
+        },
+        {
+            id: 10,
+            category: 'Happy Smiles',
+            title: 'Team Photos',
+            image: IMG_8301
         }
+
     ];
 
     const filteredItems = selectedCategory === 'All'

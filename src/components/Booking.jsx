@@ -19,7 +19,7 @@ export default function AppointmentBooking() {
   };
 
   return (
-    <section className="bg-[#8FC6B7] py-25 md:py-20">
+    <section id="booking" className="bg-[#8FC6B7] py-25 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import drAnkitaImage from "../assets/images/1.jpg";
-import drAnujImage from "../assets/images/2.JPG";
+import drAnkitaImage from "../assets/images/drAnkitaImage.jpg";
+import drAnujImage from "../assets/images/drAnujImage.jpg";
 
 
 const dentists = [
