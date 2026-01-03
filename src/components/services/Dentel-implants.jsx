@@ -12,8 +12,8 @@ import {
     Award
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/images/1.jpg';
-import docAnuj from '../../assets/images/2.JPG';
+import docAnkita from '../../assets/images/drAnkitaImage.jpg';
+import docAnuj from '../../assets/images/drAnujImage.jpg';
 
 // Using generated assets
 import heroImage from '../../assets/images/dental-implants/hero.png';
@@ -112,7 +112,7 @@ const DentalImplants = () => {
             </section>
 
             {/* Meet Our Expert Dentists */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#8FC6B7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -129,7 +129,7 @@ const DentalImplants = () => {
                             <p className="text-gray-600 mb-8 leading-relaxed">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <button className="bg-[#8FC6B7] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#76c4bb] transition-colors flex items-center gap-2 group">
+                            <button className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>

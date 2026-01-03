@@ -18,7 +18,7 @@ import AppointmentBooking from './Booking';
 import mainImage from '../assets/images/aboutpng2.jpg';
 import secondaryImage from '../assets/images/Aboutimg1.jpg';
 // Doctor image for CTA
-import doctorImg from '../assets/images/1.jpg';
+import doctorImg from '../assets/images/drAnkitaImage.jpg';
 
 const International = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -274,13 +274,13 @@ const International = () => {
 
                         {/* Right Image Section */}
                         <div className="relative">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 ">
                                 <div className="aspect-square bg-gradient-to-br from-white/20 to-white/5 rounded-2xl flex items-center justify-center relative overflow-hidden">
                                     {/* Decorative elements */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-48 h-48 bg-white/10 rounded-full absolute top-8 right-8"></div>
-                                        <div className="w-32 h-32 bg-white/10 rounded-full absolute bottom-12 left-12"></div>
-                                    </div>
+                                    {/* <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-48 h-48  rounded-full absolute top-8 right-8"></div>
+                                        <div className="w-32 h-32  rounded-full absolute bottom-12 left-12"></div>
+                                    </div> */}
 
                                     {/* Doctor image */}
                                     <div className="relative z-10 text-center">

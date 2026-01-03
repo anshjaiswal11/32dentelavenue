@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import drAnkitaImage from "../assets/images/drAnkitaImage.jpg";
-import drAnujImage from "../assets/images/drAnujImage.jpg";
-
+import drAnkitaImage from "../assets/bg-removed/bg-removed-mam.png";
+import drAnujImage from "../assets/bg-removed/bg-removed-sir.png";
 
 const dentists = [
   {
@@ -11,6 +10,7 @@ const dentists = [
     qualifications: "MDS – Pedodontics & Preventive Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnkitaImage,
+    position: "center 35%",
   },
   {
     name: "Dr. Anuj Gambhir",
@@ -19,7 +19,7 @@ const dentists = [
       "MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnujImage,
-
+    position: "center 35%",
   },
 ];
 
@@ -29,50 +29,41 @@ const DentistProfile = ({
   qualifications,
   experience,
   imageUrl,
+  position,
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-white rounded-3xl shadow-lg overflow-hidden max-w-xl mx-auto"
+      className="bg-[#f7f4f1] rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden w-full"
     >
-      {/* IMAGE SECTION */}
-      <div className="relative w-full">
+      {/* IMAGE */}
+      <div className="w-full h-[500px] bg-[#8FC6B7] overflow-hidden">
         <img
           src={imageUrl}
           alt={name}
-          className="w-full aspect-[2/2] object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: position }}
           loading="lazy"
         />
       </div>
 
-      {/* TEXT SECTION */}
-      <div className="p-8 md:p-10 space-y-4">
-        <h3 className="text-2xl md:text-2xl font-bold text-[#2c3e50] font-['Roboto Slab'] leading-tight">
+      {/* TEXT */}
+      <div className="p-6 text-center space-y-1">
+        <h3 className="text-xl font-semibold text-gray-800 font-['Roboto Slab']">
           {name}
         </h3>
-
-        <h4 className="text-lg md:text-lg font-semibold text-[#2c3e50] font-['Raleway']">
+        <h4 className="text-sm font-medium text-indigo-600 font-['Raleway']">
           {specialty}
         </h4>
-
-        <div className="space-y-2 text-gray-600">
-          <p className="flex items-start gap-2 text-base md:text-base font-['Raleway']">
-            <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            {qualifications}
-          </p>
-
-          <p className="flex items-start gap-2 text-base md:text-base font-['Raleway']">
-            <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            {experience}
-          </p>
-        </div>
+        <p className="text-sm text-gray-500 font-['Raleway']">
+          {qualifications}
+        </p>
+        <p className="text-sm text-gray-500 font-['Raleway']">
+          {experience}
+        </p>
       </div>
     </motion.div>
   );
@@ -80,23 +71,19 @@ const DentistProfile = ({
 
 const TeamSection = () => {
   return (
-    <section className="bg-[#f7f4f1] pt-10 pb-20 md:pt-12 md:pb-28">
-      <div className="container mx-auto px-6 lg:px-12">
-        {/* HEADING */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+    <section className="bg-white pt-6 py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center text-4xl font-bold text-gray-800 font-['Roboto Slab'] mb-8"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-5xl font-bold text-[#2c3e50] font-['Roboto Slab'] leading-tight">
-            Meet Our Expert Dentists
-          </h2>
-        </motion.div>
+          Meet Our Expert Dentists
+        </motion.h2>
 
-        {/* PROFILES GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {dentists.map((dentist) => (
             <DentistProfile key={dentist.name} {...dentist} />
           ))}
