@@ -23,6 +23,8 @@ import OralHygiene from './components/services/oralhygiene'
 import Blogs from './pages/Blogs'
 import Gallery from './pages/Gallery'
 
+import ContactUs from './pages/contactus'
+
 function HomePage() {
   return (
     <>
@@ -57,6 +59,7 @@ function App() {
           <Route path="/oral-hygiene" element={<OralHygiene />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </div>
