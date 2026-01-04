@@ -107,7 +107,7 @@ const TeethAlignment = () => {
             </section>
 
             {/* Meet Our Expert Dentists */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#8FC6B7]">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
