@@ -140,7 +140,7 @@ const International = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     {stats.map((stat, index) => (
                         <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
-                            <h3 className="text-3xl md:text-4xl font-extrabold mb-2" style={{ color: stat.color }}>{stat.number}</h3>
+                            <h3 className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: stat.color }}>{stat.number}</h3>
                             <p className="text-gray-600 font-medium text-sm md:text-base font-raleway">{stat.label}</p>
                         </div>
                     ))}
@@ -156,19 +156,19 @@ const International = () => {
                             <div>
                                 {/* <span className="text-[#88d4cb] font-bold uppercase tracking-wider text-sm">WHY CHOOSE US</span> */}
                                 <h2 className="text-4xl font-bold text-[#424040] mt-2 leading-tight font-roboto-slab">Why Choose 32 Dental Avenue?</h2>
-                                <p className="text-lg text-gray-600 max-w-3xl mt-6 font-raleway">
+                                <p className="text-lg text-gray-600 max-w-3xl mt-3 font-raleway">
                                     Choosing the right clinic is the most important step of your dental tourism journey. We ensure every international patient receives world-class care.
                                 </p>
                             </div>
 
-                            <div className="grid gap-6">
+                            <div className="grid gap-4">
                                 {features.map((feature, index) => (
-                                    <div key={index} className="flex gap-6 p-6 rounded-2xl hover:bg-[#f7f4f1] transition-colors duration-300">
+                                    <div key={index} className="flex gap-4 p-4 rounded-2xl hover:bg-[#f7f4f1] transition-colors duration-300">
                                         <div className="flex-shrink-0 mt-1">
                                             {feature.icon}
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-[#424040] mb-3">{feature.title}</h3>
+                                            <h3 className="text-xl font-bold text-[#424040] mb-0">{feature.title}</h3>
                                             <p className="text-gray-600 leading-relaxed font-raleway">{feature.description}</p>
                                         </div>
                                     </div>
@@ -205,20 +205,20 @@ const International = () => {
             {/* Value Propositions */}
             <div className="bg-[#8FC6B7] py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-6">
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <CheckCircle className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">No Hidden Costs</h3>
+                            <CheckCircle className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">No Hidden Costs</h3>
                             <p className="text-gray-600 font-raleway">Upfront, transparent pricing with detailed written estimates shared before you begin your dental tourism journey.</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <Smile className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">All-Inclusive Plans</h3>
+                            <Smile className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">All-Inclusive Plans</h3>
                             <p className="text-gray-600 font-raleway">Comprehensive packages covering consultations, procedures, digital scans, crowns/veneers, and essential clinical requirements.</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <Clock className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">Fast Solutions</h3>
+                            <Clock className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">Fast Solutions</h3>
                             <p className="text-gray-600 font-raleway">Save both time and money with quick turnaround treatments, same-day procedures, and efficient planning tailored to your schedule.</p>
                         </div>
                     </div>
@@ -235,13 +235,13 @@ const International = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-6">
                         {processSteps.map((step, index) => (
                             <div key={index} className="relative p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-[#f7f4f1] rounded-full flex items-center justify-center text-[#88d4cb] mb-4">
+                                <div className="w-12 h-12 bg-[#f7f4f1] rounded-full flex items-center justify-center text-[#88d4cb] mb-2">
                                     {step.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-[#424040] mb-3 font-roboto-slab">{step.title}</h3>
+                                <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">{step.title}</h3>
                                 <p className="text-gray-600 font-raleway">{step.description}</p>
                             </div>
                         ))}
