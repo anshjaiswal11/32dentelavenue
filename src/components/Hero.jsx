@@ -5,13 +5,13 @@ const slides = [
   {
     image:
       'https://plus.unsplash.com/premium_photo-1663088767412-b10c8dc27ad1?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1470',
-    headline: 'Your Dream Smile, Designed With Care',
+    headline: 'Your Dream Smile,<br />Designed With Care',
     subheadline:
       'At 32 Dental Avenue, a trusted dental clinic in Rohini, we blend precision, passion, and personalized care to craft smiles that radiate confidence and health.',
     primaryLabel: 'Explore Our Services',
-    primaryHref: '#services',
+    primaryHref: '/services',
     secondaryLabel: 'Meet The Experts',
-    secondaryHref: '#team',
+    secondaryHref: '/about',
   },
   {
     image: slide2,
@@ -19,9 +19,9 @@ const slides = [
     subheadline:
       'Experience world-class dental care powered by advanced technology, modern techniques, and a state-of-the-art clinic designed for your comfort.',
     primaryLabel: 'Book a Visit',
-    primaryHref: '#book',
+    primaryHref: '/book',
     secondaryLabel: 'Explore Our Services',
-    secondaryHref: '#services',
+    secondaryHref: '/about',
   },
   {
     image:
@@ -30,9 +30,9 @@ const slides = [
     subheadline:
       'Travel with confidence knowing your smile is in expert hands. Experience advanced technology, world-class expertise, and luxury care at affordable costs.',
     primaryLabel: 'Explore Packages',
-    primaryHref: '#packages',
+    primaryHref: '/packages',
     secondaryLabel: 'Meet The Experts',
-    secondaryHref: '#team',
+    secondaryHref: '/about',
   },
 ]
 
@@ -94,7 +94,7 @@ function Hero() {
               }`}
           >
             <h1
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] font-roboto-slab"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] font-roboto-slab"
               dangerouslySetInnerHTML={{ __html: slides[current].headline }}
             />
             <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-prose font-raleway">

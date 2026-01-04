@@ -32,7 +32,7 @@ export default function DentalCTA() {
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-10 font-raleway">
-              Advanced treatments, experienced doctors, and a gentle approach —
+              Advanced treatments, experienced doctors, and a gentle approach,
               everything your smile deserves under one roof.
             </p>
 

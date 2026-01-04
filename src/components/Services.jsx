@@ -18,6 +18,20 @@ const serviceData = [
       "Advanced smile enhancement treatments combining restoration, technology, and natural-looking results.",
   },
   {
+    id: "implants",
+    image: serviceImages.implants,
+    title: "Dental Implants",
+    description:
+      "Permanent tooth replacement offering natural aesthetics, stability, and long-lasting confidence.",
+  },
+  {
+    id: "hygiene",
+    image: serviceImages.hygiene,
+    title: "Oral Hygiene & Preventive Care",
+    description:
+      "Comprehensive dental cleaning and check-ups ensuring long-term oral health protection.",
+  },
+  {
     id: "alignment",
     image: serviceImages.alignment,
     title: "Teeth Alignment",
@@ -38,20 +52,7 @@ const serviceData = [
     description:
       "Pain-free treatment to remove infection and preserve your natural tooth structure.",
   },
-  {
-    id: "implants",
-    image: serviceImages.implants,
-    title: "Dental Implants",
-    description:
-      "Permanent tooth replacement offering natural aesthetics, stability, and long-lasting confidence.",
-  },
-  {
-    id: "hygiene",
-    image: serviceImages.hygiene,
-    title: "Oral Hygiene & Preventive Care",
-    description:
-      "Comprehensive dental cleaning and check-ups ensuring long-term oral health protection.",
-  },
+
 ];
 
 const Services = () => {
