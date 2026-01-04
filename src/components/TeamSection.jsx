@@ -40,7 +40,7 @@ const DentistProfile = ({
       className="bg-[#f7f4f1] rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden w-full"
     >
       {/* IMAGE */}
-      <div className="w-full h-[500px] bg-[#8FC6B7] overflow-hidden">
+      <div className="w-full h-[500px] bg-gradient-to-br from-[#EAF7F4] to-[#8FC6B7] overflow-hidden">
         <img
           src={imageUrl}
           alt={name}
@@ -55,7 +55,7 @@ const DentistProfile = ({
         <h3 className="text-xl font-semibold text-gray-800 font-['Roboto Slab']">
           {name}
         </h3>
-        <h4 className="text-sm font-medium text-indigo-600 font-['Raleway']">
+        <h4 className="text-sm font-medium text-[#8FC6B7] font-['Raleway']">
           {specialty}
         </h4>
         <p className="text-sm text-gray-500 font-['Raleway']">
@@ -78,12 +78,12 @@ const TeamSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center text-4xl font-bold text-gray-800 font-['Roboto Slab'] mb-8"
+          className="text-center text-5xl font-bold text-gray-800 font-['Roboto Slab'] mb-8"
         >
           Meet Our Expert Dentists
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 font-['Raleway']">
           {dentists.map((dentist) => (
             <DentistProfile key={dentist.name} {...dentist} />
           ))}

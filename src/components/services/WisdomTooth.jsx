@@ -81,16 +81,16 @@ const WisdomTooth = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4">
+                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4 font-roboto-slab">
                             Wisdom Tooth Surgery in Rohini, Delhi
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight font-raleway">
                             Safe, Comfortable, <span className="text-secondary-teal">Expert Care</span>
                         </h1>
-                        <p className="text-lg text-text-light mb-8 max-w-xl">
+                        <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Experience painless, and stress-free wisdom tooth removal by expert surgeons designed for fast recovery and maximum comfort.
                         </p>
-                        <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1">
+                        <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab">
                             Book an Appointment
                         </button>
                     </div>
@@ -114,18 +114,18 @@ const WisdomTooth = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2">
+                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab">
                                     <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
                                     OUR TEAM
                                 </span>
                             </div>
-                            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight font-roboto-slab">
                                 Meet Our Expert Dentists
                             </h2>
-                            <p className="text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <button className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group">
+                            <button className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group font-roboto-slab">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </button>
@@ -148,7 +148,7 @@ const WisdomTooth = () => {
                                     </div> */}
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Ankita Sharma Gambhir</h3>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2 font-roboto-slab">Dr. Ankita Sharma Gambhir</h3>
                                     <div className="space-y-2 text-sm text-gray-600">
                                         <p className="flex items-start gap-2">
                                             <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
@@ -165,7 +165,7 @@ const WisdomTooth = () => {
                                             <span>MDS – Pedodontics & Preventive Dentistry</span>
                                         </p>
                                     </div>
-                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed font-raleway">
                                         A pediatric dentistry specialist with 10+ years of experience, delivering gentle, child-friendly care with advanced techniques.
                                     </p>
                                 </div>
@@ -186,7 +186,7 @@ const WisdomTooth = () => {
                                     </div> */}
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Anuj Gambhir</h3>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2 font-roboto-slab">Dr. Anuj Gambhir</h3>
                                     <div className="space-y-2 text-sm text-gray-600">
                                         <p className="flex items-start gap-2">
                                             <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
@@ -203,7 +203,7 @@ const WisdomTooth = () => {
                                             <span>MDS – Prosthodontics, Crown & Bridge</span>
                                         </p>
                                     </div>
-                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed font-raleway">
                                         A prosthodontics expert with 10+ years of experience, specializing in dental implants and advanced restorative procedures.
                                     </p>
                                 </div>
@@ -217,8 +217,8 @@ const WisdomTooth = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Specialized Procedures</h2>
-                        <p className="text-text-light max-w-3xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">Specialized Procedures</h2>
+                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
                             Expert surgical solutions for wisdom teeth, ensuring safety, comfort, and optimal oral health.
                         </p>
                     </div>
@@ -237,8 +237,8 @@ const WisdomTooth = () => {
                                     <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
                                         {service.icon}
                                     </div>
-                                    <h3 className="text-xl font-bold text-text-charcoal mb-3">{service.title}</h3>
-                                    <p className="text-text-light text-sm leading-relaxed">
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
                                         {service.description}
                                     </p>
                                 </div>
@@ -273,11 +273,11 @@ const WisdomTooth = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block">Our Facility</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
+                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block font-roboto-slab">Our Facility</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6 font-roboto-slab">
                                 State-of-the-Art Dental Care at 32 Dental Avenue
                             </h2>
-                            <p className="text-text-light mb-8">
+                            <p className="text-text-light mb-8 font-raleway">
                                 Behind every beautiful, healthy smile is a clinic built with advanced technology, modern equipment, and a patient-first approach. Our facility ensures precision, comfort, and consistently high-quality dental outcomes.
                             </p>
 
@@ -287,8 +287,8 @@ const WisdomTooth = () => {
                                         <Building2 className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-text-charcoal mb-1">Advanced Dental Technology</h4>
-                                        <p className="text-text-light text-sm">Digital scanners, high-resolution X-rays, and CAD/CAM systems for accurate diagnoses.</p>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Advanced Dental Technology</h4>
+                                        <p className="text-text-light text-sm font-raleway">Digital scanners, high-resolution X-rays, and CAD/CAM systems for accurate diagnoses.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
@@ -296,8 +296,8 @@ const WisdomTooth = () => {
                                         <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-text-charcoal mb-1">Sterilization & Safety Protocols</h4>
-                                        <p className="text-text-light text-sm">Strict international sterilization standards using Class-B autoclaves and advanced infection control.</p>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Sterilization & Safety Protocols</h4>
+                                        <p className="text-text-light text-sm font-raleway">Strict international sterilization standards using Class-B autoclaves and advanced infection control.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
@@ -305,8 +305,8 @@ const WisdomTooth = () => {
                                         <HeartPulse className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-text-charcoal mb-1">Patient Comfort Focus</h4>
-                                        <p className="text-text-light text-sm">Ergonomic chairs, calming ambiance, and gentle care techniques to ensure a relaxed experience.</p>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Patient Comfort Focus</h4>
+                                        <p className="text-text-light text-sm font-raleway">Ergonomic chairs, calming ambiance, and gentle care techniques to ensure a relaxed experience.</p>
                                     </div>
                                 </div>
                             </div>
@@ -321,16 +321,16 @@ const WisdomTooth = () => {
             {/* Bottom Info Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6 font-roboto-slab">
                         Expert Wisdom Tooth Removal in Rohini
                     </h2>
-                    <p className="text-text-light text-lg mb-8 leading-relaxed">
+                    <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         Don't let wisdom tooth pain disrupt your life. At 32 Dental Avenue, our specialized oral surgeons provide safe, quick, and comfortable wisdom tooth removal services. Whether it's a simple extraction or complex impaction surgery, we have the expertise and technology to handle it with care.
                     </p>
-                    <p className="text-text-light text-lg mb-8 leading-relaxed">
+                    <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         We believe in keeping you informed and comfortable every step of the way. From digital diagnostics to detailed aftercare, we ensure your journey to a pain-free smile is smooth and worry-free. Trust us for the best wisdom tooth care in Delhi.
                     </p>
-                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all">
+                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab">
                         Book Your Relief Today
                     </button>
                 </div>
@@ -340,8 +340,8 @@ const WisdomTooth = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">FAQ</h2>
-                        <p className="text-text-light">Common Questions About Wisdom Tooth Surgery</p>
+                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <p className="text-text-light font-raleway">Common Questions About Wisdom Tooth Surgery</p>
                     </div>
 
                     <div className="space-y-4">
@@ -362,7 +362,7 @@ const WisdomTooth = () => {
                                     className={`transition-all duration-300 ease-in-out overflow-hidden ${openFaq === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                                         }`}
                                 >
-                                    <div className="px-6 py-4 text-text-light bg-white border-t border-gray-100">
+                                    <div className="px-6 py-4 text-text-light bg-white border-t border-gray-100 font-raleway">
                                         {faq.answer}
                                     </div>
                                 </div>

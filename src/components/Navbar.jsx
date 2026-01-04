@@ -36,11 +36,11 @@ function Navbar() {
                 alt="32 Dental Avenue"
               />
               {/* Brand text - visible on md+ only */}
-              <span className="hidden md:inline-flex flex-col ml-3 leading-none">
-                <span className="text-2x1 md:text-3x2 font-extrabold text-[#8FC6B7] tracking-wide">
-                  <span className="text-[#8FC6B7]"></span>&nbsp;Dental Avenue
+              <span className="hidden md:inline-flex flex-col ml-1 leading-none">
+                <span className="text-sm font-roboto-slab text-[#18807e]">
+                  Dental Avenue
                 </span>
-                <span className="text-sm text-[#424040] opacity-80">Smile design & care</span>
+                {/* <span className="text-sm text-[#424040] opacity-80">Smile design & care</span> */}
               </span>
             </Link>
           </div>
@@ -49,14 +49,14 @@ function Navbar() {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
               to="/"
-              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/' ? 'bg-[#f7f4f1]/60' : ''
+              className={`text-[#185446] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/' ? 'bg-[#f7f4f1]/60' : ''
                 }`}
             >
               Home
             </Link>
             <div className="relative group">
               <button
-                className={`flex items-center text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
+                className={`flex items-center text-[#185446] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
                   }`}
               >
                 Services
