@@ -119,7 +119,7 @@ const WisdomTooth = () => {
                                     OUR TEAM
                                 </span>
                             </div>
-                            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight font-roboto-slab">
+                            <h2 className="text-4xl lg:text-5xl font-bold text-[#8FC6B7] mb-6 leading-tight font-roboto-slab">
                                 Meet Our Expert Dentists
                             </h2>
                             <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
@@ -217,7 +217,7 @@ const WisdomTooth = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">Specialized Procedures</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Specialized Procedures</h2>
                         <p className="text-text-light max-w-3xl mx-auto font-raleway">
                             Expert surgical solutions for wisdom teeth, ensuring safety, comfort, and optimal oral health.
                         </p>
@@ -274,7 +274,7 @@ const WisdomTooth = () => {
                         </div>
                         <div className="order-1 lg:order-2">
                             <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block font-roboto-slab">Our Facility</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6 font-roboto-slab">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
                                 State-of-the-Art Dental Care at 32 Dental Avenue
                             </h2>
                             <p className="text-text-light mb-8 font-raleway">
@@ -321,7 +321,7 @@ const WisdomTooth = () => {
             {/* Bottom Info Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6 font-roboto-slab">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
                         Expert Wisdom Tooth Removal in Rohini
                     </h2>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
