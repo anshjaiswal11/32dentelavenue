@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold" style={{ color: '#88d4cb' }}>
+            <h1 className="text-2xl font-bold" style={{ color: '#88d4cb', fontFamily: "roboto-slab" }} >
               32 DENTAL AVENUE
             </h1>
           </div>
@@ -61,8 +61,8 @@ const AboutUsPage = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Patient image */}
           <div className="order-2 md:order-1">
-            <img 
-              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
               alt="Happy dental patient"
               className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
             />
@@ -145,11 +145,11 @@ const AboutUsPage = () => {
             <h3 className="text-4xl font-bold mb-8" style={{ color: '#424040' }}>
               Why Choose Dental Avenue for Your Care?
             </h3>
-            
+
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="flex items-start space-x-4">
-                <div 
+                <div
                   className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: '#afabfd' }}
                 >
@@ -165,7 +165,7 @@ const AboutUsPage = () => {
 
               {/* Feature 2 */}
               <div className="flex items-start space-x-4">
-                <div 
+                <div
                   className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: '#88d4cb' }}
                 >
@@ -181,7 +181,7 @@ const AboutUsPage = () => {
 
               {/* Feature 3 */}
               <div className="flex items-start space-x-4">
-                <div 
+                <div
                   className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: '#ffbd59' }}
                 >
@@ -197,7 +197,7 @@ const AboutUsPage = () => {
 
               {/* Feature 4 */}
               <div className="flex items-start space-x-4">
-                <div 
+                <div
                   className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: '#ff9aa2' }}
                 >
@@ -215,8 +215,8 @@ const AboutUsPage = () => {
 
           {/* Doctor image */}
           <div>
-            <img 
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80"
               alt="Professional dentist"
               className="rounded-3xl shadow-2xl w-full h-[600px] object-cover"
             />
@@ -282,11 +282,11 @@ const AboutUsPage = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Vision Card */}
-          <div 
+          <div
             className="rounded-3xl p-12 text-white shadow-2xl"
             style={{ backgroundColor: '#424040' }}
           >
-            <div 
+            <div
               className="w-16 h-16 rounded-full flex items-center justify-center mb-6"
               style={{ backgroundColor: '#ff9aa2' }}
             >
@@ -299,11 +299,11 @@ const AboutUsPage = () => {
           </div>
 
           {/* Commitment Card */}
-          <div 
+          <div
             className="rounded-3xl p-12 text-white shadow-2xl"
             style={{ backgroundColor: '#424040' }}
           >
-            <div 
+            <div
               className="w-16 h-16 rounded-full flex items-center justify-center mb-6"
               style={{ backgroundColor: '#ff9aa2' }}
             >
@@ -317,11 +317,11 @@ const AboutUsPage = () => {
         </div>
 
         {/* Mission Card - Full Width */}
-        <div 
+        <div
           className="rounded-3xl p-12 text-white shadow-2xl"
           style={{ backgroundColor: '#afabfd' }}
         >
-          <div 
+          <div
             className="w-16 h-16 rounded-full flex items-center justify-center mb-6"
             style={{ backgroundColor: '#ff9aa2' }}
           >
@@ -345,8 +345,8 @@ const AboutUsPage = () => {
           {/* Testimonial 1 */}
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             <div className="mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
                 alt="Patient testimonial"
                 className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg"
               />
@@ -360,8 +360,8 @@ const AboutUsPage = () => {
           {/* Testimonial 2 */}
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             <div className="mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
                 alt="Patient testimonial"
                 className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg"
               />
@@ -375,8 +375,8 @@ const AboutUsPage = () => {
           {/* Testimonial 3 */}
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             <div className="mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"
                 alt="Patient testimonial"
                 className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg"
               />
@@ -402,8 +402,8 @@ const AboutUsPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {/* Gallery Image 1 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&q=80"
               alt="Happy patient story"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -411,8 +411,8 @@ const AboutUsPage = () => {
 
           {/* Gallery Image 2 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&q=80"
               alt="Patient care moment"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -420,8 +420,8 @@ const AboutUsPage = () => {
 
           {/* Gallery Image 3 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&q=80"
               alt="Team celebration"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -429,8 +429,8 @@ const AboutUsPage = () => {
 
           {/* Gallery Image 4 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1609436021205-08a3a0b19cfe?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1609436021205-08a3a0b19cfe?w=400&q=80"
               alt="Patient success story"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -438,8 +438,8 @@ const AboutUsPage = () => {
 
           {/* Gallery Image 5 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80"
               alt="Dental care excellence"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -447,8 +447,8 @@ const AboutUsPage = () => {
 
           {/* Gallery Image 6 */}
           <div className="relative group overflow-hidden rounded-2xl shadow-lg h-48">
-            <img 
-              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80"
               alt="Professional care"
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -458,7 +458,7 @@ const AboutUsPage = () => {
 
       {/* Final CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div 
+        <div
           className="rounded-3xl p-16 text-center text-white shadow-2xl"
           style={{ backgroundColor: '#88d4cb' }}
         >
@@ -468,7 +468,7 @@ const AboutUsPage = () => {
           <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
             Take the first step towards a healthier, more confident smile. Our team is here to guide you every step of the way.
           </p>
-          <button 
+          <button
             className="px-10 py-5 rounded-full text-xl font-semibold hover:opacity-90 transition-opacity shadow-lg"
             style={{ backgroundColor: '#424040', color: 'white' }}
           >
@@ -478,7 +478,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Footer */}
-      <footer 
+      <footer
         className="py-12 mt-20"
         style={{ backgroundColor: '#424040' }}
       >

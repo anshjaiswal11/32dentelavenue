@@ -18,7 +18,7 @@ const ExpertDentists = () => {
           <h2 className="text-4xl md:text-6xl font-extrabold text-[#2c3e50] font-['Roboto Slab'] mb-6">
             Meet Our <span className="text-[#8FC6B7]">Expert</span> Dentists
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-['Open Sans'] leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-[raleway] leading-relaxed">
             Compassionate care. Advanced expertise. Creating confident smiles for every age.
           </p>
         </motion.div>
@@ -45,16 +45,16 @@ const ExpertDentists = () => {
             <h3 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-4 font-['Raleway'] flex items-center justify-center md:justify-start gap-3">
               <FaUserMd className="text-[#8FC6B7]" /> Dr. Ankita Sharma Gambhir
             </h3>
-            <p className="text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
+            <p className="text-2xl font-semibold mb-4 font-[raleway] uppercase">
               Pediatric Dentist
             </p>
-            <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-['Open Sans']">
+            <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-[raleway]">
               MDS – Pedodontics & Preventive Dentistry
             </p>
-            <p className="text-[#424040] text-xl md:text-2xl font-semibold mb-6 font-['Raleway']">
+            <p className="text-[#424040] text-xl md:text-2xl font-semibold mb-6 font-[raleway]">
               10+ Years of Experience
             </p>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Open Sans']">
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-[raleway]">
               Dr. Ankita Sharma completed her BDS (2015) from ESIC Dental College & Hospital, a reputed
               government institution, and later pursued her MDS in Pedodontics and Preventive Dentistry (2019)
               from IPDC, Ghaziabad. With over 10 years of clinical experience, she specializes in providing gentle,
@@ -88,16 +88,16 @@ const ExpertDentists = () => {
             <h3 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-4 font-['Raleway'] flex items-center justify-center md:justify-start gap-3">
               <FaUserMd className="text-[#8FC6B7]" /> Dr. Anuj Gambhir
             </h3>
-            <p className="text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
+            <p className="text-2xl font-semibold mb-4 font-[raleway] uppercase">
               Prosthodontist & Oral Implantologist
             </p>
-            <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-['Open Sans']">
+            <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-[raleway]">
               MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry
             </p>
-            <p className="text-[#424040] text-xl md:text-2xl font-semibold mb-6 font-['Raleway']">
+            <p className="text-[#424040] text-xl md:text-2xl font-semibold mb-6 font-[raleway]">
               10+ Years of Experience
             </p>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Open Sans']">
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-[raleway]">
               Dr. Anuj Gambhir earned his BDS and MDS (2019) in Prosthodontics, Crown & Bridge, and Implant
               Dentistry from ESIC Dental College & Hospital, one of India’s leading government dental institutions.
               He brings advanced expertise in smile reconstruction, full-mouth rehabilitation, and implant-supported
