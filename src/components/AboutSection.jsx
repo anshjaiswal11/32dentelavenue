@@ -42,7 +42,7 @@ const CommitmentSection = () => {
               Why Choose Us?
             </span> */}
 
-            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-[#424040] tracking-tight leading-tight font-roboto-slab">
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-[#8FC6B7] tracking-tight leading-tight font-roboto-slab">
               Why Choose 32 Dental Avenue?
             </h2>
 
