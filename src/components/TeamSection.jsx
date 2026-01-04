@@ -78,7 +78,7 @@ const TeamSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center text-5xl font-bold text-gray-800 font-['Roboto Slab'] mb-8"
+          className="text-center text-5xl font-bold text-[#8FC6B7] font-['Roboto Slab'] mb-8 "
         >
           Meet Our Expert Dentists
         </motion.h2>
