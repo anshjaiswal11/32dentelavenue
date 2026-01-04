@@ -107,7 +107,7 @@ export default function Testimonials() {
     <section className="py-16 md:py-20 bg-[#f7f4f1] overflow-hidden w-full">
       <div className="w-full">
         <div className="max-w-3xl mx-auto text-center mb-12 px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#424040] mb-6 font-roboto-slab">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
             Stories That Make Us Smile
           </h1>
           <p className="text-lg text-[#424040]/70 font-raleway">

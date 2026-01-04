@@ -37,7 +37,7 @@ function Navbar() {
               />
               {/* Brand text - visible on md+ only */}
               <span className="hidden md:inline-flex flex-col ml-1 leading-none">
-                <span className="text-sm font-roboto-slab text-[#18807e]">
+                <span className="text-xl font-roboto-slab text-[#18807e]">
                   Dental Avenue
                 </span>
                 {/* <span className="text-sm text-[#424040] opacity-80">Smile design & care</span> */}
