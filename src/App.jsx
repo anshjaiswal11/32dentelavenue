@@ -40,9 +40,12 @@ function HomePage() {
   )
 }
 
+import ScrollToTop from './components/ScrollToTop'
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="relative min-h-screen overflow-x-hidden">
         <Navbar />
         <Routes>
