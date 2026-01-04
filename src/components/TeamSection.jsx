@@ -55,13 +55,13 @@ const DentistProfile = ({
         <h3 className="text-xl font-semibold text-gray-800 font-['Roboto Slab']">
           {name}
         </h3>
-        <h4 className="text-sm font-medium text-[#8FC6B7] font-['Raleway']">
+        <h4 className="text-xl font-medium text-[#8FC6B7] font-['Raleway']">
           {specialty}
         </h4>
-        <p className="text-sm text-gray-500 font-['Raleway']">
+        <p className="text-xl text-gray-500 font-['Raleway']">
           {qualifications}
         </p>
-        <p className="text-sm text-gray-500 font-['Raleway']">
+        <p className="text-xl text-gray-500 font-['Raleway']">
           {experience}
         </p>
       </div>
