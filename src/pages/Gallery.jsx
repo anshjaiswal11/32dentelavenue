@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
-import IMG_8301 from '../assets/images/IMG_8301.jpg';
+import img1 from '../assets/gallery/IMG_8114.JPG';
+import img2 from '../assets/gallery/IMG_8120.JPG';
+import img3 from '../assets/gallery/IMG_8127.JPG';
+import img4 from '../assets/gallery/IMG_8201.JPG';
+import img5 from '../assets/gallery/IMG_8214.JPG';
+import img6 from '../assets/gallery/IMG_8226.JPG';
+import img7 from '../assets/gallery/IMG_8359.JPG';
+import img8 from '../assets/gallery/IMG_8360.JPG';
+
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedImage, setSelectedImage] = useState(null);
@@ -11,69 +19,56 @@ const Gallery = () => {
 
     const categories = ['All', 'Clinic Interiors', 'Happy Smiles', 'Advanced Equipment'];
 
-    // Demo data with placeholder images
+    // Real images from gallery folder
     const galleryItems = [
         {
             id: 1,
             category: 'Clinic Interiors',
-            title: 'Modern Reception Area',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=Modern+Reception'
+            title: 'Modern Reception & Waiting Area',
+            image: img1
         },
         {
             id: 2,
-            category: 'Happy Smiles',
-            title: 'Radiant Smile Transformation',
-            image: 'https://placehold.co/600x800/f0f0f0/424040?text=Smile+Transformation'
+            category: 'Advanced Equipment',
+            title: 'Dental Operatory View',
+            image: img2
         },
         {
             id: 3,
-            category: 'Advanced Equipment',
-            title: 'Digital X-Ray Suite',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=Digital+X-Ray'
+            category: 'Clinic Interiors',
+            title: 'State-of-the-Art Facility',
+            image: img3
         },
         {
             id: 4,
-            category: 'Clinic Interiors',
-            title: 'Comfortable Treatment Room',
-            image: 'https://placehold.co/600x800/f0f0f0/424040?text=Treatment+Room'
+            category: 'Happy Smiles',
+            title: 'Patient Consultation',
+            image: img4
         },
         {
             id: 5,
-            category: 'Happy Smiles',
-            title: 'Teeth Whitening Results',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=Whitening+Results'
+            category: 'Advanced Equipment',
+            title: 'Advanced Dental Unit',
+            image: img5
         },
         {
             id: 6,
-            category: 'Advanced Equipment',
-            title: 'Dental Implant Tech',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=Implant+Tech'
+            category: 'Clinic Interiors',
+            title: 'Hygienic Treatment Room',
+            image: img6
         },
         {
             id: 7,
-            category: 'Clinic Interiors',
-            title: 'Sterilization Center',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=Sterilization+Area'
+            category: 'Happy Smiles',
+            title: 'Expert Dental Care',
+            image: img7
         },
         {
             id: 8,
-            category: 'Happy Smiles',
-            title: 'Confident Patient',
-            image: 'https://placehold.co/600x800/f0f0f0/424040?text=Happy+Patient'
-        },
-        {
-            id: 9,
-            category: 'Advanced Equipment',
-            title: 'Intraoral Scanner',
-            image: 'https://placehold.co/800x600/f0f0f0/424040?text=3D+Scanner'
-        },
-        {
-            id: 10,
-            category: 'Happy Smiles',
-            title: 'Team Photos',
-            image: IMG_8301
+            category: 'Clinic Interiors',
+            title: 'Premium Dental Experience',
+            image: img8
         }
-
     ];
 
     const filteredItems = selectedCategory === 'All'
@@ -103,8 +98,8 @@ const Gallery = () => {
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-6 py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${selectedCategory === category
-                                        ? 'bg-[#424040] text-white shadow-lg transform scale-105'
-                                        : 'bg-gray-100 text-gray-600 hover:bg-[#88d4cb] hover:text-white'
+                                    ? 'bg-[#424040] text-white shadow-lg transform scale-105'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-[#88d4cb] hover:text-white'
                                     }`}
                             >
                                 {category}

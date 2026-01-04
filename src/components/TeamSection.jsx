@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import drAnkitaImage from "../assets/bg-removed/bg-removed-mam.png";
-import drAnujImage from "../assets/bg-removed/bg-removed-sir.png";
+import drAnkitaImage from "../assets/bg-removed/4.png";
+import drAnujImage from "../assets/bg-removed/3.png";
 
 const dentists = [
   {
@@ -10,7 +10,7 @@ const dentists = [
     qualifications: "MDS – Pedodontics & Preventive Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnkitaImage,
-    position: "center 35%",
+    position: "center 90%",
   },
   {
     name: "Dr. Anuj Gambhir",
@@ -19,7 +19,7 @@ const dentists = [
       "MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnujImage,
-    position: "center 35%",
+    position: "center 90%",
   },
 ];
 
@@ -52,16 +52,16 @@ const DentistProfile = ({
 
       {/* TEXT */}
       <div className="p-6 text-center space-y-1">
-        <h3 className="text-xl font-semibold text-gray-800 font-['Roboto Slab']">
+        <h3 className="text-xl font-semibold text-gray-800 font-roboto-slab">
           {name}
         </h3>
-        <h4 className="text-xl font-medium text-[#8FC6B7] font-['Raleway']">
+        <h4 className="text-xl font-medium text-[#8FC6B7] font-raleway">
           {specialty}
         </h4>
-        <p className="text-xl text-gray-500 font-['Raleway']">
+        <p className="text-xl text-gray-500 font-raleway">
           {qualifications}
         </p>
-        <p className="text-xl text-gray-500 font-['Raleway']">
+        <p className="text-xl text-gray-500 font-raleway">
           {experience}
         </p>
       </div>
@@ -78,12 +78,12 @@ const TeamSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center text-5xl font-bold text-[#8FC6B7] font-['Roboto Slab'] mb-8 "
+          className="text-center text-5xl font-bold text-[#8FC6B7] font-roboto-slab mb-8 "
         >
           Meet Our Expert Dentists
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 font-['Raleway']">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 font-raleway">
           {dentists.map((dentist) => (
             <DentistProfile key={dentist.name} {...dentist} />
           ))}

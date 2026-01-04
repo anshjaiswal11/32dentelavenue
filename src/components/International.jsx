@@ -129,7 +129,7 @@ const International = () => {
                     <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl drop-shadow-md font-raleway">
                         Enjoy Smooth, Stress-Free Dental Care in India with 32 Dental Avenue
                     </p>
-                    <button className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab">
+                    <button className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-raleway hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab">
                         Schedule Consultation
                     </button>
                 </div>
