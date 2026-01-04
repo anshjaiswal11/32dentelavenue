@@ -56,7 +56,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/international-clients" element={<International />} />
+          <Route path="/dental-tourism" element={<International />} />
           <Route path="/international-2" element={<International2 />} />
           <Route path="/cosmetic-dentistry" element={<Cosmetic />} />
           <Route path="/teeth-alignment" element={<TeethAlignment />} />

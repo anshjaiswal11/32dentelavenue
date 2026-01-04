@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // const Banner = "https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg";
-import Banner from "../assets/images/CTA-IMAGE.JPG";
+import Banner from "../assets/images/hero-setcion.png";
 
 export default function DentalCTA() {
   return (
@@ -49,7 +49,7 @@ export default function DentalCTA() {
               <img
                 src={Banner}
                 alt="Dental Care"
-                className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-105"
+                className="w-full h-[420px] object-cover object-center transition-transform duration-700 hover:scale-105"
                 loading="lazy"
               />
             </div>

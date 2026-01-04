@@ -26,35 +26,18 @@ export default function AppointmentBooking() {
     setStatus("loading");
     setErrorMessage("");
 
-    try {
-      const response = await fetch("/api/bookings", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    // Simulate backend submission for demo
+    setTimeout(() => {
+      setStatus("success");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        location: "",
+        date: "",
       });
-
-      if (response.ok) {
-        setStatus("success");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          location: "",
-          date: "",
-        });
-      } else {
-        const errorData = await response.json().catch(() => ({}));
-        setStatus("error");
-        setErrorMessage(errorData.message || "Failed to submit appointment. Please try again.");
-      }
-    } catch (error) {
-      console.error("Booking Error:", error);
-      setStatus("error");
-      setErrorMessage("Network error. Please check your connection and try again.");
-    }
+    }, 1500);
   };
 
   const resetForm = () => {
@@ -122,8 +105,14 @@ export default function AppointmentBooking() {
                       className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-[#8FC6B7] outline-none text-gray-600 cursor-pointer"
                     >
                       <option value="">Choose Location</option>
-                      <option value="rohini">
+                      <option value="rohini-sec-5">
                         Sector 5, Rohini
+                      </option>
+                      <option value="rohini-sec-7">
+                        Sector 7, Rohini
+                      </option>
+                      <option value="rohini-sec-16">
+                        Sector 16, Rohini
                       </option>
                     </select>
                   </div>

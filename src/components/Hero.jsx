@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import slide2 from '../assets/images/slide2.png'
+import slide1 from '../assets/slides_home/slide1.png'
+import slide3 from '../assets/slides_home/slides3.jpg'
+
 
 const slides = [
   {
-    image:
-      'https://plus.unsplash.com/premium_photo-1663088767412-b10c8dc27ad1?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1470',
+    image: slide1,
     headline: 'Your Dream Smile,<br />Designed With Care',
     subheadline:
       'At 32 Dental Avenue, a trusted dental clinic in Rohini, we blend precision, passion, and personalized care to craft smiles that radiate confidence and health.',
     primaryLabel: 'Explore Our Services',
-    primaryHref: '/services',
+    primaryHref: '#services',
     secondaryLabel: 'Meet The Experts',
     secondaryHref: '/about',
   },
@@ -21,16 +23,15 @@ const slides = [
     primaryLabel: 'Book a Visit',
     primaryHref: '#booking',
     secondaryLabel: 'Explore Our Services',
-    secondaryHref: '/about',
+    secondaryHref: '#services',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1470',
+    image: slide3,
     headline: 'Redefining Dental Tourism in India',
     subheadline:
       'Travel with confidence knowing your smile is in expert hands. Experience advanced technology, world-class expertise, and luxury care at affordable costs.',
     primaryLabel: 'Explore Packages',
-    primaryHref: '/packages',
+    primaryHref: '/dental-tourism',
     secondaryLabel: 'Meet The Experts',
     secondaryHref: '/about',
   },

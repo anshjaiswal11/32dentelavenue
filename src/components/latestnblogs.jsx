@@ -129,9 +129,9 @@ const LatestBlogs = () => {
                 </div>
 
                 <div className="mt-12 text-center">
-                    <Link to="/blogs" className="inline-flex items-center text-[#424040] hover:text-[#88d4cb] font-semibold text-lg transition-colors font-roboto-slab group">
+                    <Link to="/blogs" className="inline-flex items-center bg-[#88d4cb] text-white px-8 py-3 rounded-full font-['raleway'] text-lg hover:bg-[#73b2aa] transition-all transform hover:-translate-y-1 shadow-md hover:shadow-lg font-roboto-slab group">
                         View All Articles
-                        <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>

@@ -67,7 +67,7 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <div className="bg-[#f7f4f1] min-h-screen pt-8 pb-20 px-6 sm:px-10 lg:px-20">
+    <div id="services" className="bg-[#f7f4f1] min-h-screen pt-8 pb-20 px-6 sm:px-10 lg:px-20">
       {/* Section Header */}
       <div className="text-center mb-20">
         <h2 className="text-5xl font-extrabold text-[#88d4cb] mb-6 font-roboto-slab">
