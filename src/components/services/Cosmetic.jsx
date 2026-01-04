@@ -106,9 +106,9 @@ const Cosmetic = () => {
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Advanced smile makeover treatments tailored for natural aesthetics, long-lasting results, and complete confidence.
                         </p>
-                        <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1">
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
                             Book an Appointment
-                        </button>
+                        </a>
                     </div>
                     <div className="relative">
                         {/* Placeholder for Hero Image - Replace with generated image later */}
@@ -173,10 +173,10 @@ const Cosmetic = () => {
                             <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <button className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group">
+                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group w-fit">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-                            </button>
+                            </a>
                         </div>
 
                         {/* Right Cards */}
@@ -333,9 +333,9 @@ const Cosmetic = () => {
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         Whether you want veneers, teeth whitening, clear aligners, crowns, or a complete smile makeover, every treatment is designed around your goals. With precise diagnostics and strict safety protocols, we ensure predictable, long-lasting results. Experience why patients trust us for advanced aesthetic dentistry and life-changing smile transformations.
                     </p>
-                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab">
+                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
                         Book Your Transformation
-                    </button>
+                    </a>
                 </div>
             </section>
 

@@ -129,9 +129,9 @@ const International = () => {
                     <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl drop-shadow-md font-raleway">
                         Enjoy Smooth, Stress-Free Dental Care in India with 32 Dental Avenue
                     </p>
-                    <button className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-raleway hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab">
+                    <a href="#booking" className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-raleway hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab inline-block">
                         Schedule Consultation
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -267,9 +267,9 @@ const International = () => {
                                 Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
                             </p>
 
-                            <button className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4">
+                            <a href="#booking" className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4 inline-block">
                                 Book a Consultation
-                            </button>
+                            </a>
                         </div>
 
                         {/* Right Image Section */}

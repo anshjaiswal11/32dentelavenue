@@ -90,9 +90,9 @@ const WisdomTooth = () => {
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Experience painless, and stress-free wisdom tooth removal by expert surgeons designed for fast recovery and maximum comfort.
                         </p>
-                        <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab">
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
                             Book an Appointment
-                        </button>
+                        </a>
                     </div>
                     <div className="relative">
                         {/* Placeholder for Hero Image */}
@@ -125,10 +125,10 @@ const WisdomTooth = () => {
                             <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <button className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group font-roboto-slab">
+                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group font-roboto-slab w-fit">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
-                            </button>
+                            </a>
                         </div>
 
                         {/* Right Cards */}
@@ -330,9 +330,9 @@ const WisdomTooth = () => {
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         We believe in keeping you informed and comfortable every step of the way. From digital diagnostics to detailed aftercare, we ensure your journey to a pain-free smile is smooth and worry-free. Trust us for the best wisdom tooth care in Delhi.
                     </p>
-                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab">
+                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
                         Book Your Relief Today
-                    </button>
+                    </a>
                 </div>
             </section>
 

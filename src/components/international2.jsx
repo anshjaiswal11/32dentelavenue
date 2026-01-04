@@ -180,9 +180,9 @@ const International2 = () => {
                         At 32 Dental Avenue, we bring together world-class technology, expert dentists, and end-to-end assistance to offer a seamless dental tourism experience.
                     </p>
                     <div className="flex gap-4">
-                        <button className="bg-[#ffbd59] text-[#424040] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#ffaa2b] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        <a href="#booking" className="bg-[#ffbd59] text-[#424040] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#ffaa2b] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 inline-block">
                             Schedule Consultation
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -313,9 +313,9 @@ const International2 = () => {
                     <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto relative z-10">
                         Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, cosmetic experts, and dedicated patient care team work together to ensure you receive world-class treatment and a truly comfortable experience. From diagnosis to smile transformation, you’re supported by experts at every step.
                     </p>
-                    <button className="bg-[#afabfd] text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-[#9b97f5] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 relative z-10">
+                    <a href="#booking" className="bg-[#afabfd] text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-[#9b97f5] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 relative z-10 inline-block">
                         Book a Consultation
-                    </button>
+                    </a>
                 </div>
             </div>
 

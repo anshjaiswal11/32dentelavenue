@@ -468,12 +468,13 @@ const AboutUsPage = () => {
           <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
             Take the first step towards a healthier, more confident smile. Our team is here to guide you every step of the way.
           </p>
-          <button
-            className="px-10 py-5 rounded-full text-xl font-semibold hover:opacity-90 transition-opacity shadow-lg"
+          <a
+            href="#booking"
+            className="inline-block px-10 py-5 rounded-full text-xl font-semibold hover:opacity-90 transition-opacity shadow-lg"
             style={{ backgroundColor: '#424040', color: 'white' }}
           >
             Schedule Your Consultation Today
-          </button>
+          </a>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // const Banner = "https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg";
 import Banner from "../assets/images/CTA-IMAGE.JPG";
@@ -36,10 +37,10 @@ export default function DentalCTA() {
               everything your smile deserves under one roof.
             </p>
 
-            <button className="group inline-flex items-center gap-3 bg-[#1f2933] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:text-[#1f2933] hover:shadow-xl">
+            <Link to="/#booking" className="group inline-flex items-center gap-3 bg-[#1f2933] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:text-[#1f2933] hover:shadow-xl">
               Book Appointment
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
 
           {/* Image */}

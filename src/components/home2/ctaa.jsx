@@ -9,7 +9,7 @@ export default function DentalCTA() {
     >
       <div className="container mx-auto px-4 max-w-[540px] sm:max-w-[540px] md:max-w-[750px] lg:max-w-[980px] xl:max-w-[1180px]">
         <div className="flex flex-col md:grid md:grid-cols-2 md:items-center md:gap-8">
-          
+
           {/* CTA Banner */}
           <figure className="relative w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-xl">
             <img
@@ -33,7 +33,7 @@ export default function DentalCTA() {
             </h2>
 
             <a
-              href="#"
+              href="#booking"
               className="inline-block bg-[#D9B18E] text-[#F2F1EF] font-semibold px-8 py-3 rounded-lg hover:bg-[#A67564] hover:shadow-lg transition-all duration-300 uppercase tracking-wide text-sm max-w-max"
             >
               Book Appointment

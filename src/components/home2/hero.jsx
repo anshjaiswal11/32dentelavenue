@@ -28,7 +28,7 @@ const slides = [
     subheadline:
       'Experience world-class dental care powered by advanced technology, modern techniques, and a state-of-the-art clinic designed for your comfort.',
     primaryLabel: 'Book a Visit',
-    primaryHref: '#book',
+    primaryHref: '#booking',
     secondaryLabel: 'Explore Our Services',
     secondaryHref: '#services',
   },
@@ -72,28 +72,28 @@ function Hero() {
     // - pt-16: Top padding (adjust if navbar height changes)
     // - min-h-screen: Minimum height (can be changed to specific height)
     <section className="relative pt-16 min-h-screen flex items-center bg-[#F2F1EF]">
-  <div className="absolute inset-0">
-    {slides.map((s,i)=>(
-      <div key={i} className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${i===current?'opacity-100':'opacity-0'}`} 
-        style={{backgroundImage:`url(${s.image})`,filter:'brightness(0.9)'}}>
+      <div className="absolute inset-0">
+        {slides.map((s, i) => (
+          <div key={i} className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${i === current ? 'opacity-100' : 'opacity-0'}`}
+            style={{ backgroundImage: `url(${s.image})`, filter: 'brightness(0.9)' }}>
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#723E31]/60 via-[#A67564]/40 to-transparent" />
       </div>
-    ))}
-    <div className="absolute inset-0 bg-gradient-to-r from-[#723E31]/60 via-[#A67564]/40 to-transparent" />
-  </div>
 
-  <div className="relative z-10 max-w-3xl px-6 mx-auto">
-    <h1 className="text-4xl md:text-6xl font-bold text-[#F2F1EF] drop-shadow-lg mb-4">{slides[current].headline}</h1>
-    <p className="text-lg text-[#F2F1EF]/90 mb-8">{slides[current].subheadline}</p>
-    <div className="flex flex-col sm:flex-row gap-4">
-      <a href={slides[current].primaryHref} className="bg-[#D9B18E] text-[#F2F1EF] px-8 py-3 rounded-lg font-semibold hover:bg-[#A67564] transition-all">
-        {slides[current].primaryLabel}
-      </a>
-      <a href={slides[current].secondaryHref} className="bg-[#F2F1EF] text-[#723E31] px-8 py-3 rounded-lg font-semibold hover:bg-[#D9D2CC] transition-all">
-        {slides[current].secondaryLabel}
-      </a>
-    </div>
-  </div>
-</section>
+      <div className="relative z-10 max-w-3xl px-6 mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold text-[#F2F1EF] drop-shadow-lg mb-4">{slides[current].headline}</h1>
+        <p className="text-lg text-[#F2F1EF]/90 mb-8">{slides[current].subheadline}</p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a href={slides[current].primaryHref} className="bg-[#D9B18E] text-[#F2F1EF] px-8 py-3 rounded-lg font-semibold hover:bg-[#A67564] transition-all">
+            {slides[current].primaryLabel}
+          </a>
+          <a href={slides[current].secondaryHref} className="bg-[#F2F1EF] text-[#723E31] px-8 py-3 rounded-lg font-semibold hover:bg-[#D9D2CC] transition-all">
+            {slides[current].secondaryLabel}
+          </a>
+        </div>
+      </div>
+    </section>
 
   )
 }

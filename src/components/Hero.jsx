@@ -19,7 +19,7 @@ const slides = [
     subheadline:
       'Experience world-class dental care powered by advanced technology, modern techniques, and a state-of-the-art clinic designed for your comfort.',
     primaryLabel: 'Book a Visit',
-    primaryHref: '/book',
+    primaryHref: '#booking',
     secondaryLabel: 'Explore Our Services',
     secondaryHref: '/about',
   },
