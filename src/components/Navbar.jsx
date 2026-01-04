@@ -36,8 +36,8 @@ function Navbar() {
                 alt="32 Dental Avenue"
               />
               {/* Brand text - visible on md+ only */}
-              <span className="hidden md:inline-flex flex-col ml-1 leading-none">
-                <span className="text-xl font-roboto-slab text-[#18807e]">
+              <span className="inline-flex flex-col ml-1 leading-none">
+                <span className="text-2xl font-roboto-slab text-[#18807e]">
                   Dental Avenue
                 </span>
                 {/* <span className="text-sm text-[#424040] opacity-80">Smile design & care</span> */}
@@ -47,16 +47,9 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link
-              to="/"
-              className={`text-[#185446] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/' ? 'bg-[#f7f4f1]/60' : ''
-                }`}
-            >
-              Home
-            </Link>
             <div className="relative group">
               <button
-                className={`flex items-center text-[#185446] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
+                className={`flex items-center text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
                   }`}
               >
                 Services
@@ -69,6 +62,12 @@ function Navbar() {
                   <Link to="/cosmetic-dentistry" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Cosmetic Dentistry
                   </Link>
+                  <Link to="/dental-implants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Dental Implants
+                  </Link>
+                  <Link to="/pediatric-dentistry" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Pediatric Dentistry
+                  </Link>
                   <Link to="/teeth-alignment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Teeth Alignment
                   </Link>
@@ -77,9 +76,6 @@ function Navbar() {
                   </Link>
                   <Link to="/root-canal-treatment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Root Canal Treatment
-                  </Link>
-                  <Link to="/dental-implants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
-                    Dental Implants
                   </Link>
                   <Link to="/oral-hygiene" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Oral Hygiene & Preventive Care
@@ -167,14 +163,7 @@ function Navbar() {
           }`}
       >
         <div className="px-4 pt-4 pb-6 space-y-2 bg-[#f7f4f1]/95 backdrop-blur-md shadow-xl rounded-b-2xl border-t border-[#e0ddd9]">
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/' ? 'bg-[#eae7e3]' : ''
-              }`}
-          >
-            Home
-          </Link>
+
           <button
             onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
             className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/home' ? 'bg-[#eae7e3]' : ''
@@ -201,6 +190,20 @@ function Navbar() {
                 Cosmetic Dentistry
               </Link>
               <Link
+                to="/dental-implants"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Dental Implants
+              </Link>
+              <Link
+                to="/pediatric-dentistry"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Pediatric Dentistry
+              </Link>
+              <Link
                 to="/teeth-alignment"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
@@ -222,18 +225,11 @@ function Navbar() {
                 Root Canal Treatment
               </Link>
               <Link
-                to="/dental-implants"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
-              >
-                Dental Implants
-              </Link>
-              <Link
                 to="/oral-hygiene"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
-                Oral Hygiene
+                Oral Hygiene & Preventive Care
               </Link>
             </div>
           </div>
@@ -243,7 +239,7 @@ function Navbar() {
             className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/international-clients' ? 'bg-[#eae7e3]' : ''
               }`}
           >
-            International Clients
+            Dental Tourism
           </Link>
           <Link
             to="/about"

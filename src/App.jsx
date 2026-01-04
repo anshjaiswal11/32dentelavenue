@@ -6,6 +6,7 @@ import Services from './components/Services'
 import AboutSection from './components/AboutSection'
 import TeamSection from './components/TeamSection'
 import CTASection from './components/CTASection'
+import Faq from './components/Faq'
 import AppointmentBooking from './components/Booking'
 import Testimonials from './components/Testimonals'
 import Footer from './components/Footer'
@@ -24,6 +25,7 @@ import Blogs from './pages/Blogs'
 import Gallery from './pages/Gallery'
 
 import ContactUs from './pages/contactus'
+import LatestBlogs from './components/latestnblogs'
 
 function HomePage() {
   return (
@@ -36,6 +38,8 @@ function HomePage() {
       <AboutSection />
       <TeamSection />
       <AppointmentBooking />
+      <LatestBlogs />
+      <Faq />
     </>
   )
 }
@@ -60,6 +64,7 @@ function App() {
           <Route path="/root-canal-treatment" element={<RootCanal />} />
           <Route path="/dental-implants" element={<DentalImplants />} />
           <Route path="/oral-hygiene" element={<OralHygiene />} />
+          <Route path="/pediatric-dentistry" element={<OralHygiene />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact-us" element={<ContactUs />} />

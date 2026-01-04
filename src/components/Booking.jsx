@@ -63,7 +63,7 @@ export default function AppointmentBooking() {
   };
 
   return (
-    <section id="booking" className="bg-[#8FC6B7] py-25 md:py-20">
+    <section id="booking" className="bg-[#8FC6B7] py-24 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Main Card */}
@@ -155,10 +155,10 @@ export default function AppointmentBooking() {
           </div>
 
           {/* Map */}
-          <div className="h-[280px] md:h-full relative">
+          <div className="h-[280px] md:h-full relative p-4 md:p-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.196835329085!2d77.1092939!3d28.713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07d8729099e1%3A0x54581905e31175cb!2s32%20Dental%20Avenue-%20Sector%205%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1761651873675!5m2!1sen!2sin"
-              className="w-full h-full"
+              className="w-full h-full rounded-2xl md:rounded-none"
               loading="lazy"
               style={{ border: 0 }}
               allowFullScreen

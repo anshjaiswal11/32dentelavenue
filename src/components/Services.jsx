@@ -1,12 +1,17 @@
-import React from "react";
-
+import { Link } from "react-router-dom";
+import asianDentistryImg from "../assets/home-services-img/asian-dentistry.jpg";
+import dentalImplantsImg from "../assets/home-services-img/dental-implant.jpg";
+import pediatricDentistryImg from "../assets/home-services-img/predictive.jpg";
+import teethAlignmentImg from "../assets/home-services-img/teethaligement.jpg";
+import rootCanalImg from "../assets/home-services-img/root-cannel.jpg";
+import wisdomToothImg from "../assets/home-services-img/wisdom-tooth.jpg";
 const serviceImages = {
-  cosmetic: "https://images.unsplash.com/photo-1684607632829-1e5bf4f21dab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1931",
-  alignment: "https://plus.unsplash.com/premium_photo-1681997203595-e45e06abe034?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VGVldGglMjBBbGlnbm1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
-  wisdom: "https://plus.unsplash.com/premium_photo-1667520328870-5b871fb2f212?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8V2lzZG9tJTIwVG9vdGglMjBTdXJnZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
-  rootCanal: "https://plus.unsplash.com/premium_photo-1674575270991-653fb6bfc1bf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
-  implants: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fERlbnRhbCUyMEltcGxhbnRzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
-  hygiene: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop",
+  cosmetic: asianDentistryImg,
+  alignment: teethAlignmentImg,
+  wisdom: wisdomToothImg,
+  rootCanal: rootCanalImg,
+  implants: dentalImplantsImg,
+  hygiene: pediatricDentistryImg,
 };
 
 const serviceData = [
@@ -16,6 +21,7 @@ const serviceData = [
     title: "Cosmetic Dentistry",
     description:
       "Advanced smile enhancement treatments combining restoration, technology, and natural-looking results.",
+    path: "/cosmetic-dentistry",
   },
   {
     id: "implants",
@@ -23,13 +29,15 @@ const serviceData = [
     title: "Dental Implants",
     description:
       "Permanent tooth replacement offering natural aesthetics, stability, and long-lasting confidence.",
+    path: "/dental-implants",
   },
   {
     id: "hygiene",
     image: serviceImages.hygiene,
-    title: "Oral Hygiene & Preventive Care",
+    title: "Pediatric Dentistry",
     description:
-      "Comprehensive dental cleaning and check-ups ensuring long-term oral health protection.",
+      "Gentle dental cleaning and routine check-ups designed to protect your child’s smile and support healthy oral development.",
+    path: "/pediatric-dentistry",
   },
   {
     id: "alignment",
@@ -37,6 +45,7 @@ const serviceData = [
     title: "Teeth Alignment",
     description:
       "Modern orthodontic solutions using metal, ceramic, and clear aligners for precise, comfortable smile correction.",
+    path: "/teeth-alignment",
   },
   {
     id: "wisdom",
@@ -44,6 +53,7 @@ const serviceData = [
     title: "Wisdom Tooth Surgery",
     description:
       "Safe, painless removal of impacted wisdom teeth with advanced surgical precision.",
+    path: "/wisdom-tooth-surgery",
   },
   {
     id: "root-canal",
@@ -51,8 +61,8 @@ const serviceData = [
     title: "Root Canal Treatment",
     description:
       "Pain-free treatment to remove infection and preserve your natural tooth structure.",
+    path: "/root-canal-treatment",
   },
-
 ];
 
 const Services = () => {
@@ -72,47 +82,33 @@ const Services = () => {
       {/* Service Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {serviceData.map((service, index) => (
-          <div
+          <Link
+            to={service.path}
             key={index}
             id={service.id}
-            className="bg-[#f7f4f1] rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 scroll-mt-24"
+            className="block bg-[#f7f4f1] rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 scroll-mt-24 group"
           >
             {/* Image */}
             <div className="h-80 md:h-96 w-full overflow-hidden font-roboto-slab">
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
 
             {/* Text Content */}
             <div className="p-8 font-roboto-slab ">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-[#88d4cb] transition-colors">
                 {service.title}
               </h3>
               <p className="text-gray-600 text-base leading-relaxed font-raleway">
                 {service.description}
               </p>
 
-              <button className="mt-6 inline-flex items-center text-[#88d4cb] font-semibold hover:underline font-roboto-slab">
-                Learn more
-                <svg
-                  className="ml-2 w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
