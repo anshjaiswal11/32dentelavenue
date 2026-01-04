@@ -155,7 +155,7 @@ const International = () => {
                         <div className="flex flex-col gap-8">
                             <div>
                                 {/* <span className="text-[#88d4cb] font-bold uppercase tracking-wider text-sm">WHY CHOOSE US</span> */}
-                                <h2 className="text-4xl font-bold text-[#424040] mt-2 leading-tight font-roboto-slab">Why Choose 32 Dental Avenue?</h2>
+                                <h2 className="text-4xl font-bold text-[#8FC6B7] mt-2 leading-tight font-roboto-slab">Why Choose 32 Dental Avenue?</h2>
                                 <p className="text-lg text-gray-600 max-w-3xl mt-3 font-raleway">
                                     Choosing the right clinic is the most important step of your dental tourism journey. We ensure every international patient receives world-class care.
                                 </p>
@@ -229,7 +229,7 @@ const International = () => {
             <div className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-[#424040] mb-4 font-roboto-slab">Your Hassle-Free Journey</h2>
+                        <h2 className="text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Your Hassle-Free Journey</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto font-raleway">
                             From your first virtual consultation to your final smile transformation, we guide, support, and care for you at every step.
                         </p>
