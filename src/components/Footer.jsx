@@ -122,7 +122,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-[#424040]">Contact</h3>
+            <h3 className="text-lg font-semibold mb-6 text-black">Contact</h3>
             <div className="space-y-4">
               {/* Address removed as it is now in Locations */}
               <div className="flex items-center space-x-3">
