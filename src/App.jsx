@@ -26,6 +26,7 @@ import Gallery from './pages/Gallery'
 
 import ContactUs from './pages/contactus'
 import LatestBlogs from './components/latestnblogs'
+import Admin from './pages/admin'
 
 function HomePage() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
       </div>

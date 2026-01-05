@@ -26,18 +26,35 @@ export default function AppointmentBooking() {
     setStatus("loading");
     setErrorMessage("");
 
-    // Simulate backend submission for demo
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        location: "",
-        date: "",
+    try {
+      const response = await fetch("https://server-32dentalavenue-kappa.vercel.app/api/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          location: "",
+          date: "",
+        });
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        setErrorMessage(errorData.message || "Something went wrong. Please try again.");
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Booking Error:", error);
+      setErrorMessage("Network error. Please check your connection and try again.");
+      setStatus("error");
+    }
   };
 
   const resetForm = () => {
