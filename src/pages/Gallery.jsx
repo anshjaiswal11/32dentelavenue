@@ -122,6 +122,7 @@ const Gallery = () => {
                                 src={item.image}
                                 alt={item.title}
                                 className="w-full h-64 md:h-72 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                loading="lazy"
                             />
                             {/* Overlay */}
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

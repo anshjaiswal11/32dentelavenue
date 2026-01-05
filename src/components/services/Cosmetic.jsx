@@ -3,6 +3,11 @@ import Booking from '../Booking';
 import docAnkita from '../../assets/images/drAnkitaImage.jpg';
 import docAnuj from '../../assets/images/drAnujImage.jpg';
 import Testimonials from '../review-services.jsx';
+import CTASection from '../CTASection';
+import smile from '../../assets/services-pages-image/png01.jpg'
+import fillings from '../../assets/services-pages-image/png02.jpg'
+import crowns from '../../assets/services-pages-image/png03.jpg'
+import veneers from '../../assets/services-pages-image/png04.jpg'
 import {
     Smile,
     Sparkles,
@@ -16,10 +21,10 @@ import {
     ChevronUp,
     Clock,
     Calendar
-} from 'lucide-react';
+} from 'lucide-react'; ``
 import clearBracesImg from '../../assets/images/service-clear-braces.png';
-import clearAlignersImg from '../../assets/images/service-aligners.png';
-import whiteningImg from '../../assets/images/teeth-whitening.png';
+import clearAlignersImg from '../../assets/services-pages-image/png05.jpg';
+import whiteningImg from '../../assets/services-pages-image/png06.jpg';
 
 const Cosmetic = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -31,15 +36,15 @@ const Cosmetic = () => {
     const treatments = [
         {
             title: "Smile Makeover",
-            image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: smile
         },
         {
             title: "Composite Fillings",
-            image: "https://plus.unsplash.com/premium_photo-1674586615555-d3c5f498b368?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image: fillings
         },
         {
             title: "Tooth-Colored Crowns & Bridges",
-            image: "https://plus.unsplash.com/premium_photo-1675666792361-b844bf679cb0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image: crowns
         },
         {
             title: "Partial Crowns / Inlays & Onlays",
@@ -47,7 +52,7 @@ const Cosmetic = () => {
         },
         {
             title: "Veneers",
-            image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: veneers
         },
         {
             title: "Clear Braces",
@@ -261,6 +266,7 @@ const Cosmetic = () => {
                     </div>
                 </div>
             </section>
+            <CTASection />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

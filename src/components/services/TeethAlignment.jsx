@@ -17,6 +17,7 @@ import serviceAligners from '../../assets/images/service-aligners.png';
 import serviceClearBraces from '../../assets/images/service-clear-braces.png';
 import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
 import Testimonals from '../review-services';
+import CTASection from '../CTASection';
 
 const TeethAlignment = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -211,6 +212,7 @@ const TeethAlignment = () => {
                     </div>
                 </div>
             </section>
+            <CTASection />
             {/* Teeth Alignment Services */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
                 <div className="max-w-7xl mx-auto">
@@ -229,6 +231,7 @@ const TeethAlignment = () => {
                                         src={service.image}
                                         alt={service.title}
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div className="p-8">
@@ -261,12 +264,12 @@ const TeethAlignment = () => {
                         <div className="order-2 lg:order-1">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-4">
-                                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" loading="lazy" />
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" loading="lazy" />
                                 </div>
                                 <div className="pt-8 space-y-4">
-                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" loading="lazy" />
+                                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" loading="lazy" />
                                 </div>
                             </div>
                         </div>

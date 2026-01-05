@@ -14,6 +14,7 @@ import {
 import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/images/drAnkitaImage.jpg';
 import docAnuj from '../../assets/images/drAnujImage.jpg';
+import CTASection from '../CTASection';
 
 // Using generated assets
 import heroImage from '../../assets/images/oral-hygiene/hero.png';
@@ -237,7 +238,7 @@ const OralHygiene = () => {
                     </div>
                 </div>
             </section>
-
+            <CTASection />
             {/* Services Section */}
 
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

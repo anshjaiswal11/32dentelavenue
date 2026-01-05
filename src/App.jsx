@@ -1,5 +1,32 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
+import { ReactLenis } from '@studio-freight/react-lenis'
 import Navbar from './components/Navbar'
+import ScrollToTop from './components/ScrollToTop'
+import Footer from './components/Footer'
+
+// Lazy load pages and heavy components
+// const HomePage = lazy(() => import('./pages/HomePage')) // REMOVED: HomePage is defined locally
+// The original file had a `HomePage` component DEFINED inside App.jsx (lines 31-46).
+
+// Let's lazy load the other pages first.
+const AboutUsPage = lazy(() => import('./pages/About'))
+const Home = lazy(() => import('./pages/Home'))
+const International = lazy(() => import('./components/International'))
+const International2 = lazy(() => import('./components/international2'))
+const Cosmetic = lazy(() => import('./components/services/Cosmetic'))
+const TeethAlignment = lazy(() => import('./components/services/TeethAlignment'))
+const WisdomTooth = lazy(() => import('./components/services/WisdomTooth'))
+const RootCanal = lazy(() => import('./components/services/Root-cannel'))
+const DentalImplants = lazy(() => import('./components/services/Dentel-implants'))
+const OralHygiene = lazy(() => import('./components/services/oralhygiene'))
+const Blogs = lazy(() => import('./pages/Blogs'))
+const Gallery = lazy(() => import('./pages/Gallery'))
+const ContactUs = lazy(() => import('./pages/contactus'))
+const Admin = lazy(() => import('./pages/admin'))
+
+// Components used in HomePage (keep these eager for above-the-fold performance or lazy if below fold?)
+// Ideally Hero should be eager. Others can be lazy or just eager for simplicity of Home.
 import Hero from './components/Hero'
 import Banner from './components/banner'
 import Services from './components/Services'
@@ -9,26 +36,9 @@ import CTASection from './components/CTASection'
 import Faq from './components/Faq'
 import AppointmentBooking from './components/Booking'
 import Testimonials from './components/Testimonals'
-import Footer from './components/Footer'
-import AboutUsPage from './pages/About'
-import Home from './pages/Home'
-import International from './components/International'
-import International2 from './components/international2'
-import Cosmetic from './components/services/Cosmetic'
-import TeethAlignment from './components/services/TeethAlignment'
-import WisdomTooth from './components/services/WisdomTooth'
-
-import RootCanal from './components/services/Root-cannel'
-import DentalImplants from './components/services/Dentel-implants'
-import OralHygiene from './components/services/oralhygiene'
-import Blogs from './pages/Blogs'
-import Gallery from './pages/Gallery'
-
-import ContactUs from './pages/contactus'
 import LatestBlogs from './components/latestnblogs'
-import Admin from './pages/admin'
 
-function HomePage() {
+function HomePageContent() {
   return (
     <>
       <Hero />
@@ -45,32 +55,36 @@ function HomePage() {
   )
 }
 
-import ScrollToTop from './components/ScrollToTop'
-
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <div className="relative min-h-screen overflow-x-hidden">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/dental-tourism" element={<International />} />
-          <Route path="/international-2" element={<International2 />} />
-          <Route path="/cosmetic-dentistry" element={<Cosmetic />} />
-          <Route path="/teeth-alignment" element={<TeethAlignment />} />
-          <Route path="/wisdom-tooth-surgery" element={<WisdomTooth />} />
-          <Route path="/root-canal-treatment" element={<RootCanal />} />
-          <Route path="/dental-implants" element={<DentalImplants />} />
-          <Route path="/oral-hygiene" element={<OralHygiene />} />
-          <Route path="/pediatric-dentistry" element={<OralHygiene />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/admin" element={<Admin />} />
-        </Routes>
+        <Suspense fallback={
+          <div className="flex items-center justify-center h-screen w-full bg-white">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<HomePageContent />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/dental-tourism" element={<International />} />
+            <Route path="/international-2" element={<International2 />} />
+            <Route path="/cosmetic-dentistry" element={<Cosmetic />} />
+            <Route path="/teeth-alignment" element={<TeethAlignment />} />
+            <Route path="/wisdom-tooth-surgery" element={<WisdomTooth />} />
+            <Route path="/root-canal-treatment" element={<RootCanal />} />
+            <Route path="/dental-implants" element={<DentalImplants />} />
+            <Route path="/oral-hygiene" element={<OralHygiene />} />
+            <Route path="/pediatric-dentistry" element={<OralHygiene />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </BrowserRouter>

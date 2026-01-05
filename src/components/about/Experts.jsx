@@ -15,7 +15,7 @@ const ExpertDentists = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <h2 className="text-4xl md:text-6xl font-extrabold text-[#2c3e50] font-['Roboto Slab'] mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-[#8FC6B7] font-['Roboto Slab'] mb-6">
             Meet Our <span className="text-[#8FC6B7]">Expert</span> Dentists
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-[raleway] leading-relaxed">

@@ -10,7 +10,9 @@ import {
     ShieldCheck,
     Smile,
     ChevronDown,
-    ChevronUp
+    ChevronUp,
+    ArrowRight,
+    Sparkles
 } from 'lucide-react';
 import Testimonials from './Testimonals';
 import AppointmentBooking from './Booking';
@@ -250,53 +252,65 @@ const International = () => {
             </div>
 
             {/* CTA Banner */}
-            <div className="bg-gradient-to-br from-[#8FC6B7] to-[#7ab5a5] py-20 text-white relative overflow-hidden">
-                {/* Decorative circles */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            {/* Experts Section (Styled like CTASection) */}
+            <section className="relative py-24 bg-gradient-to-br from-[#EAF7F4] to-[#f7f4f1] overflow-hidden">
+                {/* Soft background blobs */}
+                <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#88d4cb]/30 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#8FC6B7]/20 rounded-full blur-3xl"></div>
 
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* Left Content */}
-                        <div className="text-left space-y-6">
-                            <h2 className="text-4xl md:text-5xl font-bold leading-tight font-roboto-slab">
-                                Meet the Leading Dental Experts
+                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+                        {/* Content */}
+                        <div className="max-w-xl">
+                            {/* Badge */}
+                            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-[#88d4cb]/10 text-[#2b6f6a] text-sm font-semibold">
+                                <Sparkles className="w-4 h-4" />
+                                World-Class Specialists
+                            </div>
+
+                            <h2 className="text-4xl sm:text-5xl font-bold text-[#1f2933] leading-tight mb-6 font-roboto-slab">
+                                Meet the Leading <br />
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#5bbfb2] to-[#88d4cb] font-roboto-slab">
+                                    Dental Experts
+                                </span>
                             </h2>
 
-                            <p className="text-lg text-white/90 leading-relaxed font-raleway">
+                            <p className="text-gray-600 text-lg leading-relaxed mb-10 font-raleway">
                                 Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
                             </p>
 
-                            <a href="#booking" className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4 inline-block">
+                            <a href="#booking" className="group inline-flex items-center gap-3 bg-[#1f2933] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:text-[#1f2933] hover:shadow-xl font-roboto-slab">
                                 Book a Consultation
+                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                             </a>
                         </div>
 
-                        {/* Right Image Section */}
+                        {/* Image */}
                         <div className="relative">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 ">
-                                <div className="aspect-square bg-gradient-to-br from-white/20 to-white/5 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                                    {/* Decorative elements */}
-                                    {/* <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-48 h-48  rounded-full absolute top-8 right-8"></div>
-                                        <div className="w-32 h-32  rounded-full absolute bottom-12 left-12"></div>
-                                    </div> */}
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                                <img
+                                    src={doctorImg}
+                                    alt="Dr. at 32 Dental Avenue"
+                                    className="w-full h-[500px] object-cover object-top transition-transform duration-700 hover:scale-105"
+                                    loading="lazy"
+                                />
+                            </div>
 
-                                    {/* Doctor image */}
-                                    <div className="relative z-10 text-center">
-                                        <img src={doctorImg} alt="Dr. at 32 Dental Avenue" className="mx-auto w-180 md:w-100 rounded-2xl object-cover" />
-                                    </div>
-                                </div>
-
-                                {/* Floating badge */}
-                                {/* <div className="absolute -bottom-4 -right-4 bg-white text-[#8FC6B7] px-6 py-3 rounded-full shadow-xl font-semibold text-sm">
-                                    Trusted Experts
-                                </div> */}
+                            {/* Floating card */}
+                            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg">
+                                <p className="text-sm font-semibold text-gray-800">
+                                    ⭐ Top Rated Clinic
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                    International Standards
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Testimonials */}
             <Testimonials />

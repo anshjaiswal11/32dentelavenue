@@ -18,6 +18,7 @@ import serviceExtraction from '../../assets/images/service-extraction.png';
 import serviceSurgical from '../../assets/images/service-surgical.png';
 import serviceImpacted from '../../assets/images/service-impacted.png';
 import Testimonals from '../review-services';
+import CTASection from '../CTASection';
 
 const WisdomTooth = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -212,6 +213,7 @@ const WisdomTooth = () => {
                     </div>
                 </div>
             </section>
+            <CTASection />
 
             {/* Services Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
