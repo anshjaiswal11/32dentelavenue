@@ -179,7 +179,7 @@ const Cosmetic = () => {
                             <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group w-fit">
+                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-raleway hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group w-fit">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </a>
