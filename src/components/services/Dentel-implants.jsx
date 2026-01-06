@@ -12,8 +12,8 @@ import {
     Award
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/images/drAnkitaImage.jpg';
-import docAnuj from '../../assets/images/drAnujImage.jpg';
+import docAnkita from '../../assets/bg-removed/4.png';
+import docAnuj from '../../assets/bg-removed/3.png';
 import CTASection from '../CTASection';
 
 // Using generated assets

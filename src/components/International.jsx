@@ -14,13 +14,14 @@ import {
     ArrowRight,
     Sparkles
 } from 'lucide-react';
-import Testimonials from './Testimonals';
+import Testimonials from './newtest';
 import AppointmentBooking from './Booking';
 // Images used in AboutSection (reused here for consistent layout)
 import mainImage from '../assets/images/aboutpng2.jpg';
 import secondaryImage from '../assets/images/Aboutimg1.jpg';
 // Doctor image for CTA
-import doctorImg from '../assets/images/drAnkitaImage.jpg';
+import doctorImg from '../assets/images/hero-setcion.png';
+import heroimage from '../assets/slides_home/slides3.jpg';
 
 const International = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -120,7 +121,7 @@ const International = () => {
             <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 z-10"></div>
                 <img
-                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop"
+                    src={heroimage}
                     alt="Dental Tourism India"
                     className="w-full h-full object-cover"
                 />
@@ -131,7 +132,7 @@ const International = () => {
                     <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl drop-shadow-md font-raleway">
                         Enjoy Smooth, Stress-Free Dental Care in India with 32 Dental Avenue
                     </p>
-                    <a href="#booking" className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-raleway hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab inline-block">
+                    <a href="#booking" className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-raleway hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-raleway inline-block">
                         Schedule Consultation
                     </a>
                 </div>

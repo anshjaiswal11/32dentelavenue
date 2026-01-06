@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Booking from '../Booking';
-import docAnkita from '../../assets/images/drAnkitaImage.jpg';
-import docAnuj from '../../assets/images/drAnujImage.jpg';
+import docAnkita from '../../assets/bg-removed/4.png';
+import docAnuj from '../../assets/bg-removed/3.png';
 import Testimonials from '../review-services.jsx';
 import CTASection from '../CTASection';
 import smile from '../../assets/services-pages-image/png01.jpg'
@@ -48,7 +48,7 @@ const Cosmetic = () => {
         },
         {
             title: "Partial Crowns / Inlays & Onlays",
-            image: "https://plus.unsplash.com/premium_photo-1661601362837-97e39a584095?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image: crowns
         },
         {
             title: "Veneers",
@@ -102,7 +102,7 @@ const Cosmetic = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4 font-roboto-slab">
+                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm mb-4 font-roboto-slab">
                             Cosmetic Dental Treatment in Rohini, Delhi
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight font-raleway">
@@ -111,7 +111,7 @@ const Cosmetic = () => {
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Advanced smile makeover treatments tailored for natural aesthetics, long-lasting results, and complete confidence.
                         </p>
-                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-raleway text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
                             Book an Appointment
                         </a>
                     </div>
