@@ -8,6 +8,7 @@ import smile from '../../assets/services-pages-image/png01.jpg'
 import fillings from '../../assets/services-pages-image/png02.jpg'
 import crowns from '../../assets/services-pages-image/png03.jpg'
 import veneers from '../../assets/services-pages-image/png04.jpg'
+import heroimage from '../../assets/home-services-img/asian-dentistry.jpg'
 import {
     Smile,
     Sparkles,
@@ -119,7 +120,7 @@ const Cosmetic = () => {
                         {/* Placeholder for Hero Image - Replace with generated image later */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                             <img
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={heroimage}
                                 alt="Beautiful Smile"
                                 className="w-full h-auto object-cover"
                             />

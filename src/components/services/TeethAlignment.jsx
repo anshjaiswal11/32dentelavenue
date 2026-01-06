@@ -18,6 +18,7 @@ import serviceClearBraces from '../../assets/images/service-clear-braces.png';
 import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
 import Testimonals from '../review-services';
 import CTASection from '../CTASection';
+import heroimage from '../../assets/home-services-img/teethaligement.jpg'
 
 const TeethAlignment = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -98,7 +99,7 @@ const TeethAlignment = () => {
                         {/* Placeholder for Hero Image */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                             <img
-                                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={heroimage}
                                 alt="Straight Teeth Smile"
                                 className="w-full h-auto object-cover"
                             />

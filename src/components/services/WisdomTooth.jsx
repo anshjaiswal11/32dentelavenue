@@ -19,6 +19,7 @@ import serviceSurgical from '../../assets/images/service-surgical.png';
 import serviceImpacted from '../../assets/images/service-impacted.png';
 import Testimonals from '../review-services';
 import CTASection from '../CTASection';
+import heroimage from '../../assets/home-services-img/wisdom-tooth.jpg'
 
 const WisdomTooth = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -99,7 +100,7 @@ const WisdomTooth = () => {
                         {/* Placeholder for Hero Image */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                             <img
-                                src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={heroimage}
                                 alt="Comfortable Dental Care"
                                 className="w-full h-auto object-cover"
                             />

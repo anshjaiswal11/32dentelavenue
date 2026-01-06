@@ -17,7 +17,7 @@ import docAnuj from '../../assets/bg-removed/3.png';
 import CTASection from '../CTASection';
 
 // Using generated assets
-import heroImage from '../../assets/images/root-canal/hero.png';
+import heroImage from '../../assets/home-services-img/root-cannel.jpg';
 import imgExperienced from '../../assets/images/root-canal/experienced.png';
 import imgDigital from '../../assets/images/root-canal/digital.png';
 import imgPersonalized from '../../assets/images/root-canal/personalized.png';

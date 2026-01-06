@@ -17,7 +17,7 @@ import docAnuj from '../../assets/bg-removed/3.png';
 import CTASection from '../CTASection';
 
 // Using generated assets
-import heroImage from '../../assets/images/dental-implants/hero.png';
+import heroImage from '../../assets/home-services-img/dental-implant.jpg';
 import imgSingle from '../../assets/images/dental-implants/single.png';
 import imgMultiple from '../../assets/images/dental-implants/multiple.png';
 import imgFullMouth from '../../assets/images/dental-implants/full_mouth.png';
@@ -101,11 +101,11 @@ const DentalImplants = () => {
                     </div>
                     <div className="relative">
                         {/* Hero Image */}
-                        <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 h-80 md:h-96">
                             <img
                                 src={heroImage}
                                 alt="Dental Implants"
-                                className="w-full h-auto object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     </div>
