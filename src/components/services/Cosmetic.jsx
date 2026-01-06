@@ -340,7 +340,7 @@ const Cosmetic = () => {
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         Whether you want veneers, teeth whitening, clear aligners, crowns, or a complete smile makeover, every treatment is designed around your goals. With precise diagnostics and strict safety protocols, we ensure predictable, long-lasting results. Experience why patients trust us for advanced aesthetic dentistry and life-changing smile transformations.
                     </p>
-                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
+                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-raleway shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
                         Book Your Transformation
                     </a>
                 </div>
