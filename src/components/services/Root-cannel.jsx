@@ -122,6 +122,47 @@ const RootCanal = () => {
                 </div>
             </section>
 
+            {/* Services Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Safe, Reliable & Modern Dental Treatment</h2>
+                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
+                            As a leading dental clinic in Rohini, we provide more than just routine dental care, we deliver comfort, precision, and patient-first treatment for every smile.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-4 gap-8">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-48 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <div className="mb-4 bg-neutral-bg w-12 h-12 rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-lg font-bold text-text-charcoal mb-2 font-roboto-slab">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Success Stories */}
+            <Testimonals
+                mainTitle="OUR SUCCESS STORIES"
+                subtitle="Restored Teeth, Renewed Comfort"
+                description="At 32 Dental Avenue, we’ve helped countless patients save their natural teeth through gentle, precise, and highly successful root canal treatments in Rohini. Our experienced dentists in Rohini Sector 5 use advanced technology and pain-free techniques to eliminate infection, ease sensitivity, and restore full tooth strength."
+            />
             {/* Meet Our Expert Dentists */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
@@ -227,49 +268,8 @@ const RootCanal = () => {
                     </div>
                 </div>
             </section>
+
             <CTASection />
-
-            {/* Services Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Safe, Reliable & Modern Dental Treatment</h2>
-                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
-                            As a leading dental clinic in Rohini, we provide more than just routine dental care, we deliver comfort, precision, and patient-first treatment for every smile.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-4 gap-8">
-                        {services.map((service, index) => (
-                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
-                                <div className="h-48 overflow-hidden">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <div className="mb-4 bg-neutral-bg w-12 h-12 rounded-xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                        {service.icon}
-                                    </div>
-                                    <h3 className="text-lg font-bold text-text-charcoal mb-2 font-roboto-slab">{service.title}</h3>
-                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Success Stories */}
-            <Testimonals
-                mainTitle="OUR SUCCESS STORIES"
-                subtitle="Restored Teeth, Renewed Comfort"
-                description="At 32 Dental Avenue, we’ve helped countless patients save their natural teeth through gentle, precise, and highly successful root canal treatments in Rohini. Our experienced dentists in Rohini Sector 5 use advanced technology and pain-free techniques to eliminate infection, ease sensitivity, and restore full tooth strength."
-            />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

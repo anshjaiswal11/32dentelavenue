@@ -137,6 +137,49 @@ const OralHygiene = () => {
                 </div>
             </section>
 
+
+            {/* Services Section */}
+
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Oral Hygiene & Preventive Dental Care Services</h2>
+                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
+                            Protect your smile with modern, painless, and effective preventive dental solutions.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-56 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-8">
+                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Success Stories */}
+            <Testimonals
+                mainTitle="OUR SUCCESS STORIES"
+                subtitle="Expert Dental Care, Healthy Outcomes"
+                description=" 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
+            />
             {/* Meet Our Expert Dentists */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
@@ -242,49 +285,8 @@ const OralHygiene = () => {
                     </div>
                 </div>
             </section>
+
             <CTASection />
-            {/* Services Section */}
-
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Oral Hygiene & Preventive Dental Care Services</h2>
-                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
-                            Protect your smile with modern, painless, and effective preventive dental solutions.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
-                                <div className="h-56 overflow-hidden">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="p-8">
-                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                        {service.icon}
-                                    </div>
-                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
-                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Success Stories */}
-            <Testimonals
-                mainTitle="OUR SUCCESS STORIES"
-                subtitle="Expert Dental Care, Healthy Outcomes"
-                description=" 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
-            />
 
 
             {/* Our Facility */}

@@ -96,7 +96,7 @@ const WisdomTooth = () => {
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Experience painless, and stress-free wisdom tooth removal by expert surgeons designed for fast recovery and maximum comfort.
                         </p>
-                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-raleway text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
                             Book an Appointment
                         </a>
                     </div>
@@ -113,6 +113,50 @@ const WisdomTooth = () => {
                 </div>
             </section>
 
+
+
+            {/* Services Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Specialized Procedures</h2>
+                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
+                            Expert surgical solutions for wisdom teeth, ensuring safety, comfort, and optimal oral health.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-56 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-8">
+                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Success Stories */}
+            <Testimonals
+                mainTitle="PATIENT EXPERIENCES"
+                subtitle="Pain-Free & Stress-Free"
+                description="At 32 Dental Avenue, we understand the anxiety surrounding wisdom tooth removal. That's why we prioritize patient comfort above all else. Our patients consistently report surprisingly painless procedures and smooth recoveries, thanks to our gentle approach and expert care."
+
+            />
             {/* Meet Our Expert Dentists */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
@@ -219,49 +263,6 @@ const WisdomTooth = () => {
                 </div>
             </section>
             <CTASection />
-
-            {/* Services Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Specialized Procedures</h2>
-                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
-                            Expert surgical solutions for wisdom teeth, ensuring safety, comfort, and optimal oral health.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
-                                <div className="h-56 overflow-hidden">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="p-8">
-                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                        {service.icon}
-                                    </div>
-                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
-                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Success Stories */}
-            <Testimonals
-                mainTitle="PATIENT EXPERIENCES"
-                subtitle="Pain-Free & Stress-Free"
-                description="At 32 Dental Avenue, we understand the anxiety surrounding wisdom tooth removal. That's why we prioritize patient comfort above all else. Our patients consistently report surprisingly painless procedures and smooth recoveries, thanks to our gentle approach and expert care."
-
-            />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
