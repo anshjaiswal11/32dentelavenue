@@ -23,6 +23,10 @@ import imgMultiple from '../../assets/images/dental-implants/multiple.png';
 import imgFullMouth from '../../assets/images/dental-implants/full_mouth.png';
 import imgSuccess from '../../assets/images/dental-implants/success.png';
 import Testimonals from '../review-services';
+import image01 from '../../assets/newimg/IMG_83711.jpg'
+import image02 from '../../assets/newimg/IMG_81192.jpg'
+import image03 from '../../assets/newimg/IMG_83699.jpg'
+import image04 from '../../assets/newimg/IMG_83900.jpg'
 
 const DentalImplants = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -119,8 +123,8 @@ const DentalImplants = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab">
-                                    <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                                <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
                                     OUR TEAM
                                 </span>
                             </div>
@@ -217,7 +221,7 @@ const DentalImplants = () => {
                     </div>
                 </div>
             </section>
-            <CTASection />
+
 
             {/* Services Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
@@ -254,12 +258,15 @@ const DentalImplants = () => {
                 </div>
             </section>
 
+
+
             {/* Success Stories */}
             <Testimonals
                 mainTitle="OUR SUCCESS STORIES"
                 subtitle="Rebuilt Smiles That Bring Joy Back"
                 description="At 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
             />
+            <CTASection />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
@@ -268,17 +275,20 @@ const DentalImplants = () => {
                         <div className="order-2 lg:order-1">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-4">
-                                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image01} alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image02} alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <div className="pt-8 space-y-4">
-                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image03} alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image04} alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
                                 </div>
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block font-roboto-slab">OUR FACILITY</span>
+                            <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
+                                OUR FACILITY
+                            </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
                                 State-of-the-Art Dental Care at 32 Dental Avenue
                             </h2>
