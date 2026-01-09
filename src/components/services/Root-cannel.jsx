@@ -19,6 +19,7 @@ import image01 from '../../assets/newimg/IMG_83711.jpg'
 import image02 from '../../assets/newimg/IMG_81192.jpg'
 import image03 from '../../assets/newimg/IMG_83699.jpg'
 import image04 from '../../assets/newimg/IMG_83900.jpg'
+import doctorMam from '../../assets/gallery/IMG_8226.JPG';
 
 // Using generated assets
 import heroImage from '../../assets/home-services-img/root-cannel.jpg';
@@ -269,7 +270,7 @@ const RootCanal = () => {
                 </div>
             </section>
 
-            <CTASection />
+            <CTASection image={doctorMam} />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
