@@ -20,13 +20,12 @@ const WisdomTooth = lazy(() => import('./components/services/WisdomTooth'))
 const RootCanal = lazy(() => import('./components/services/Root-cannel'))
 const DentalImplants = lazy(() => import('./components/services/Dentel-implants'))
 const OralHygiene = lazy(() => import('./components/services/oralhygiene'))
+const Pediatric = lazy(() => import('./components/services/Pediatric'))
 const Blogs = lazy(() => import('./pages/Blogs'))
 const Gallery = lazy(() => import('./pages/Gallery'))
 const ContactUs = lazy(() => import('./pages/contactus'))
 const Admin = lazy(() => import('./pages/admin'))
 
-// Components used in HomePage (keep these eager for above-the-fold performance or lazy if below fold?)
-// Ideally Hero should be eager. Others can be lazy or just eager for simplicity of Home.
 import Hero from './components/Hero'
 import Banner from './components/banner'
 import Services from './components/Services'
@@ -78,7 +77,7 @@ function App() {
             <Route path="/root-canal-treatment" element={<RootCanal />} />
             <Route path="/dental-implants" element={<DentalImplants />} />
             <Route path="/oral-hygiene" element={<OralHygiene />} />
-            <Route path="/pediatric-dentistry" element={<OralHygiene />} />
+            <Route path="/pediatric-dentistry" element={<Pediatric />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact-us" element={<ContactUs />} />

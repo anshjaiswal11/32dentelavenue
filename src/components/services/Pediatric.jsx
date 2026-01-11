@@ -1,0 +1,405 @@
+import React, { useState } from 'react';
+import {
+    Smile,
+    ShieldCheck,
+    Stethoscope,
+    ChevronDown,
+    ChevronUp,
+    Clock,
+    Heart,
+    Baby,
+    Sparkles,
+    Building2,
+    CheckCircle2
+} from 'lucide-react';
+import AppointmentBooking from '../Booking';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
+import CTASection from '../CTASection';
+
+// Using identified assets
+import heroImage from '../../assets/images/kids-dentistry.png';
+import imgSealants from '../../assets/images/oral-hygiene/sealants.png';
+import imgSpaceMaintainers from '../../assets/images/oral-hygiene/preventive.png'; // Placeholder fallback
+import imgPulpectomy from '../../assets/home-services-img/root-cannel.jpg';
+import imgAlignment from '../../assets/images/service-aligners.png';
+import imgExpanders from '../../assets/images/service-metal-braces.png';
+import imgInterceptive from '../../assets/images/oral-hygiene/checkup.png'; // Placeholder fallback
+
+import Testimonals from '../review-services';
+import image01 from '../../assets/newimg/IMG_83711.jpg';
+import image02 from '../../assets/newimg/IMG_81192.jpg';
+import image03 from '../../assets/newimg/IMG_83699.jpg';
+import image04 from '../../assets/newimg/IMG_83900.jpg';
+import doctorMam from '../../assets/gallery/IMG_8226.JPG';
+
+const Pediatric = () => {
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (index) => {
+        setOpenFaq(openFaq === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "Dental Sealants",
+            description: "Protective coatings applied to back teeth to prevent cavities and shield young teeth from decay.",
+            icon: <ShieldCheck className="w-8 h-8 text-secondary-teal" />,
+            image: imgSealants
+        },
+        {
+            title: "Space Maintainers",
+            description: "Custom appliances that preserve space after early tooth loss, ensuring proper alignment of permanent teeth.",
+            icon: <Clock className="w-8 h-8 text-secondary-teal" />,
+            image: imgSpaceMaintainers
+        },
+        {
+            title: "Pulpectomy (Child Root Canal Treatment)",
+            description: "Safe and painless treatment to save infected primary teeth and maintain natural tooth function.",
+            icon: <Stethoscope className="w-8 h-8 text-secondary-teal" />,
+            image: imgPulpectomy
+        },
+        {
+            title: "Teeth Alignment",
+            description: "Early, comfortable Invisalign first for kids designed specifically for growing children and mixed dentition.",
+            icon: <Smile className="w-8 h-8 text-secondary-teal" />,
+            image: imgAlignment
+        },
+        {
+            title: "Palatal Expanders",
+            description: "Orthodontic appliances that gently widen the upper jaw, improving bite alignment and breathing.",
+            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />,
+            image: imgExpanders
+        },
+        {
+            title: "Early Interceptive Orthodontics & Special Care Dentistry",
+            description: "Timely orthodontic intervention to guide jaw growth, painless treatment options including general anesthesia and IV sedation for children.",
+            icon: <Baby className="w-8 h-8 text-secondary-teal" />,
+            image: imgInterceptive
+        }
+    ];
+
+    const faqs = [
+        {
+            question: "When should my child first visit a pediatric dentist in Rohini?",
+            answer: "A child should visit a pediatric dentist by their first birthday or when the first tooth erupts. Early visits help prevent cavities and detect growth-related dental issues early."
+        },
+        {
+            question: "What pediatric dental services in Rohini do you provide?",
+            answer: "Our pediatric dental services in Rohini include preventive cleanings, sealants, pulpectomy, space maintainers, palatal expanders, braces for kids, and early orthodontic care like Invisalign First."
+        },
+        {
+            question: "Are braces for kids necessary at an early age?",
+            answer: "Braces for kids may be recommended during early growth phases to correct bite issues, crowding, or jaw alignment, reducing the need for complex treatment later."
+        },
+        {
+            question: "What is Invisalign First and how is it different from braces for kids?",
+            answer: "Invisalign First is a clear aligner system designed for children, offering a comfortable and removable alternative to traditional braces while guiding proper jaw and teeth development."
+        },
+        {
+            question: "How do you handle dental anxiety in children?",
+            answer: "We follow a gentle, child-friendly approach and also offer treatment under IV sedation or general anesthesia for anxious or special-care children."
+        },
+        {
+            question: "How do I choose the right dentist for kids in Rohini?",
+            answer: "Choose a dentist for kids with pediatric expertise, advanced orthodontic options like braces and Invisalign First, and a supportive environment focused on long-term oral health."
+        }
+    ];
+
+    return (
+        <div className="bg-neutral-bg min-h-screen pt-16 md:pt-20">
+            {/* Hero Section */}
+            <section className="relative bg-gradient-to-r from-[#f0f4f8] to-[#e0e7ff] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+                <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4 font-roboto-slab">
+                            Healthy Smiles, Happy Kids
+                        </span>
+                        <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight font-raleway">
+                            Gentle Pediatric Dentistry in <span className="text-secondary-teal">Rohini, Delhi</span>
+                        </h1>
+                        <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
+                            Compassionate dental care for children, focused on prevention, comfort, and building strong oral habits for a lifetime of confident smiles.
+                        </p>
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
+                            Book an Appointment
+                        </a>
+                    </div>
+                    <div className="relative">
+                        {/* Hero Image */}
+                        <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 h-80 md:h-96">
+                            <img
+                                src={heroImage}
+                                alt="Pediatric Dentistry"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Services Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Pediatric Dentistry</h2>
+                        <p className="text-text-light max-w-3xl mx-auto font-raleway">
+                            Complete, gentle dental care designed to protect growing smiles and support healthy jaw development from an early age.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-56 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-8">
+                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3 font-roboto-slab">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed font-raleway">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Success Stories */}
+            <Testimonals
+                mainTitle="OUR SUCCESS STORIES"
+                subtitle="Little Smiles, Big Confidence"
+                description="See how our gentle care and expert treatments have helped children overcome dental anxiety and achieve healthy, beautiful smiles."
+            />
+
+            {/* Meet Our Expert Dentists */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-3 gap-12 items-start">
+                        {/* Left Content */}
+                        <div className="lg:col-span-1">
+                            <div className="inline-block mb-4">
+                                <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
+                                    OUR TEAM
+                                </span>
+                            </div>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-[#8FC6B7] mb-6 leading-tight font-roboto-slab">
+                                Meet Our Expert Dentists
+                            </h2>
+                            <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
+                                Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
+                            </p>
+                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group font-roboto-slab w-fit">
+                                Book A Consultation
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+
+                        {/* Right Cards */}
+                        <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                            {/* Dr. Ankita Sharma Gambhir */}
+                            <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                                <div className="relative h-96">
+                                    <img
+                                        src={docAnkita}
+                                        alt="Dr. Ankita Sharma Gambhir"
+                                        className="w-full h-full object-cover object-center"
+                                    />
+                                </div>
+                                <div className="p-6 font-raleway">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Ankita Sharma Gambhir</h3>
+                                    <div className="space-y-2 text-sm text-gray-600">
+                                        <p className="flex items-start gap-2">
+                                            <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>Pediatric Dentist</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>10+ Years of experience</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span>MDS – Pedodontics & Preventive Dentistry</span>
+                                        </p>
+                                    </div>
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                        A pediatric dentistry specialist with 10+ years of experience, delivering gentle, child-friendly care with advanced techniques.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Dr. Anuj Gambhir */}
+                            <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                                <div className="relative h-96">
+                                    <img
+                                        src={docAnuj}
+                                        alt="Dr. Anuj Gambhir"
+                                        className="w-full h-full object-cover object-center"
+                                    />
+                                </div>
+                                <div className="p-6 font-raleway">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Anuj Gambhir</h3>
+                                    <div className="space-y-2 text-sm text-gray-600">
+                                        <p className="flex items-start gap-2">
+                                            <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>Prosthodontist & Oral Implantologist</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>10+ Years of experience</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span>MDS – Prosthodontics, Crown & Bridge</span>
+                                        </p>
+                                    </div>
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                        A prosthodontics expert with 10+ years of experience, specializing in dental implants and advanced restorative procedures.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <CTASection
+                heading="Healthy Smiles Start Early"
+                subHeading="Child-friendly treatments, experienced pediatric dentists, and a caring approach to protect and nurture growing smiles at every stage."
+                image={doctorMam}
+            />
+
+            {/* Our Facility */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-4">
+                                    <img src={image01} alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image02} alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="pt-8 space-y-4">
+                                    <img src={image03} alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image04} alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="order-1 lg:order-2">
+                            <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
+                                OUR FACILITY
+                            </span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
+                                State-of-the-Art Dental Care at 32 Dental Avenue
+                            </h2>
+                            <p className="text-text-light mb-8 font-raleway">
+                                Behind every beautiful, healthy smile is a clinic built with advanced technology, modern equipment, and a patient-first approach. Our facility ensures precision, comfort, and consistently high-quality dental outcomes.
+                            </p>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <Building2 className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Advanced Dental Technology</h4>
+                                        <p className="text-text-light text-sm font-raleway">We use the latest dental innovations, including digital scanners, high-resolution X-rays, and CAD/CAM systems, to deliver accurate diagnoses and painless, precise treatments for every patient.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <Smile className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Digital Smile Design (DSD)</h4>
+                                        <p className="text-text-light text-sm font-raleway">Our Digital Smile Design setup allows us to map and preview your smile digitally, offering predictable results, customized planning, and a clear vision of your final transformation before treatment begins.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <ShieldCheck className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Sterilization & Safety Protocols</h4>
+                                        <p className="text-text-light text-sm font-raleway">Our clinic follows strict international sterilization standards using Class-B autoclaves and advanced infection control systems to ensure safe, hygienic, and worry-free dental care for all.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Booking Section */}
+            <AppointmentBooking />
+
+            {/* Bottom Info Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
+                        Specialized Pediatric Dentistry in Rohini
+                    </h2>
+                    <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
+                        Our pediatric dental services in Rohini offer complete preventive, restorative, and early orthodontic care in a friendly, child-focused setting. With an experienced pediatric dentist in Rohini, we provide gentle treatments such as dental cleanings, cavity prevention, space maintainers, and growth-guided orthodontics, including Invisalign First for kids.
+                    </p>
+                    <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
+                        Designed for comfort and confidence, 32 Dental Avenue helps your children develop healthy dental habits from an early age. If you’re searching for a trusted dentist for kids in Rohini, we deliver personalized care for strong, happy, lifelong smiles.
+                    </p>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+                <div className="max-w-3xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Frequently Asked Questions</h2>
+                        <p className="text-text-light mb-8 font-raleway">Answers to common questions about your child’s dental care.</p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {faqs.map((faq, index) => (
+                            <div key={index} className="border border-gray-100 rounded-xl overflow-hidden">
+                                <button
+                                    className="w-full px-6 py-4 text-left bg-neutral-bg hover:bg-gray-50 flex items-center justify-between transition-colors"
+                                    onClick={() => toggleFaq(index)}
+                                >
+                                    <span className="font-semibold text-text-charcoal pr-8">{faq.question}</span>
+                                    {openFaq === index ? (
+                                        <ChevronUp className="w-5 h-5 text-secondary-teal flex-shrink-0" />
+                                    ) : (
+                                        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                                    )}
+                                </button>
+                                <div
+                                    className={`transition-all duration-300 ease-in-out overflow-hidden ${openFaq === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                                        }`}
+                                >
+                                    <div className="px-6 py-4 text-text-light bg-white border-t border-gray-100 font-raleway">
+                                        {faq.answer}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default Pediatric;
