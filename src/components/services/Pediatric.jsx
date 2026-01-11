@@ -16,6 +16,7 @@ import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/bg-removed/9.png';
 import docAnuj from '../../assets/bg-removed/8.png';
 import CTASection from '../CTASection';
+import pediatricDentistryImg from "../../assets/home-services-img/predictive.jpg";
 
 // Using identified assets
 import heroImage from '../../assets/images/kids-dentistry.png';
@@ -113,16 +114,16 @@ const Pediatric = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4 font-roboto-slab">
+                        <span className="inline-block py-1 px-3 rounded-full bg-[#8FC6B7]/10 text-[#8FC6B7] text-sm font-roboto-slab mb-4 font-roboto-slab">
                             Healthy Smiles, Happy Kids
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight font-raleway">
-                            Gentle Pediatric Dentistry in <span className="text-secondary-teal">Rohini, Delhi</span>
+                            Gentle Pediatric Dentistry in <span className="text-[#8FC6B7]">Rohini, Delhi</span>
                         </h1>
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Compassionate dental care for children, focused on prevention, comfort, and building strong oral habits for a lifetime of confident smiles.
                         </p>
-                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
+                        <a href="#booking" className="bg-[#8FC6B7] text-white px-8 py-4 rounded-full font-raleway text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
                             Book an Appointment
                         </a>
                     </div>
@@ -130,7 +131,7 @@ const Pediatric = () => {
                         {/* Hero Image */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 h-80 md:h-96">
                             <img
-                                src={heroImage}
+                                src={pediatricDentistryImg}
                                 alt="Pediatric Dentistry"
                                 className="w-full h-full object-cover"
                             />
@@ -199,7 +200,7 @@ const Pediatric = () => {
                             <p className="text-gray-600 mb-8 leading-relaxed font-raleway">
                                 Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
                             </p>
-                            <a href="#booking" className="bg-[#76c4bb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#8fd7d7] transition-colors flex items-center gap-2 group font-roboto-slab w-fit">
+                            <a href="#booking" className="bg-[#8FC6B7] text-white px-8 py-3 rounded-full font-raleway hover:bg-[#76c4bb] transition-colors flex items-center gap-2 group w-fit">
                                 Book A Consultation
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </a>
@@ -217,7 +218,7 @@ const Pediatric = () => {
                                     />
                                 </div>
                                 <div className="p-6 font-raleway">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Ankita Sharma Gambhir</h3>
+                                    <h3 className="text-2xl font-bold font-roboto-slab text-black mb-2">Dr. Ankita Sharma Gambhir</h3>
                                     <div className="space-y-2 text-sm text-gray-600">
                                         <p className="flex items-start gap-2">
                                             <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
@@ -250,7 +251,7 @@ const Pediatric = () => {
                                     />
                                 </div>
                                 <div className="p-6 font-raleway">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Anuj Gambhir</h3>
+                                    <h3 className="text-2xl font-bold font-roboto-slab text-black mb-2">Dr. Anuj Gambhir</h3>
                                     <div className="space-y-2 text-sm text-gray-600">
                                         <p className="flex items-start gap-2">
                                             <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
