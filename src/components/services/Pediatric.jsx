@@ -174,6 +174,12 @@ const Pediatric = () => {
                     </div>
                 </div>
             </section>
+            <CTASection
+                heading="Healthy Smiles Start Early"
+                subHeading="Child-friendly treatments, experienced pediatric dentists, and a caring approach to protect and nurture growing smiles at every stage."
+                image={doctorMam}
+            />
+
 
             {/* Success Stories */}
             <Testimonals
@@ -181,6 +187,7 @@ const Pediatric = () => {
                 subtitle="Little Smiles, Big Confidence"
                 description="See how our gentle care and expert treatments have helped children overcome dental anxiety and achieve healthy, beautiful smiles."
             />
+
 
             {/* Meet Our Expert Dentists */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -277,12 +284,6 @@ const Pediatric = () => {
                     </div>
                 </div>
             </section>
-
-            <CTASection
-                heading="Healthy Smiles Start Early"
-                subHeading="Child-friendly treatments, experienced pediatric dentists, and a caring approach to protect and nurture growing smiles at every stage."
-                image={doctorMam}
-            />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

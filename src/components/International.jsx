@@ -12,7 +12,8 @@ import {
     ChevronDown,
     ChevronUp,
     ArrowRight,
-    Sparkles
+    Sparkles,
+    Building2
 } from 'lucide-react';
 import Testimonials from './newtest';
 import AppointmentBooking from './Booking';
@@ -22,6 +23,29 @@ import secondaryImage from '../assets/images/Aboutimg1.jpg';
 // Doctor image for CTA
 import doctorImg from '../assets/images/hero-setcion.png';
 import heroimage from '../assets/slides_home/slides3.jpg';
+import image01 from '../assets/newimg/IMG_83711.jpg';
+import image02 from '../assets/newimg/IMG_81192.jpg';
+import image03 from '../assets/newimg/IMG_83699.jpg';
+import image04 from '../assets/newimg/IMG_83900.jpg';
+
+// Helper Icon Component for User
+const UserIcon = (props) => (
+    <svg
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+    </svg>
+);
 
 const International = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -204,56 +228,7 @@ const International = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Value Propositions */}
-            <div className="bg-[#8FC6B7] py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <CheckCircle className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">No Hidden Costs</h3>
-                            <p className="text-gray-600 font-raleway">Upfront, transparent pricing with detailed written estimates shared before you begin your dental tourism journey.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <Smile className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">All-Inclusive Plans</h3>
-                            <p className="text-gray-600 font-raleway">Comprehensive packages covering consultations, procedures, digital scans, crowns/veneers, and essential clinical requirements.</p>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-                            <Clock className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">Fast Solutions</h3>
-                            <p className="text-gray-600 font-raleway">Save both time and money with quick turnaround treatments, same-day procedures, and efficient planning tailored to your schedule.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Process Section */}
-            <div className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Your Hassle-Free Journey</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-raleway">
-                            From your first virtual consultation to your final smile transformation, we guide, support, and care for you at every step.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {processSteps.map((step, index) => (
-                            <div key={index} className="relative p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 bg-[#f7f4f1] rounded-full flex items-center justify-center text-[#88d4cb] mb-2">
-                                    {step.icon}
-                                </div>
-                                <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">{step.title}</h3>
-                                <p className="text-gray-600 font-raleway">{step.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* CTA Banner */}
-            {/* Experts Section (Styled like CTASection) */}
+            <Testimonials />
             <section className="relative py-24 bg-gradient-to-br from-[#EAF7F4] to-[#f7f4f1] overflow-hidden">
                 {/* Soft background blobs */}
                 <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#88d4cb]/30 rounded-full blur-3xl"></div>
@@ -313,8 +288,119 @@ const International = () => {
                 </div>
             </section>
 
+
+            {/* Value Propositions */}
+            <div className="bg-[#8FC6B7] py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
+                            <CheckCircle className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">No Hidden Costs</h3>
+                            <p className="text-gray-600 font-raleway">Upfront, transparent pricing with detailed written estimates shared before you begin your dental tourism journey.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
+                            <Smile className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">All-Inclusive Plans</h3>
+                            <p className="text-gray-600 font-raleway">Comprehensive packages covering consultations, procedures, digital scans, crowns/veneers, and essential clinical requirements.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
+                            <Clock className="w-12 h-12 text-[#88d4cb] mx-auto mb-3" />
+                            <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">Fast Solutions</h3>
+                            <p className="text-gray-600 font-raleway">Save both time and money with quick turnaround treatments, same-day procedures, and efficient planning tailored to your schedule.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Process Section */}
+            <div className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Your Hassle-Free Journey</h2>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-raleway">
+                            From your first virtual consultation to your final smile transformation, we guide, support, and care for you at every step.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {processSteps.map((step, index) => (
+                            <div key={index} className="relative p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 bg-[#f7f4f1] rounded-full flex items-center justify-center text-[#88d4cb] mb-2">
+                                    {step.icon}
+                                </div>
+                                <h3 className="text-xl font-bold text-[#424040] mb-1 font-roboto-slab">{step.title}</h3>
+                                <p className="text-gray-600 font-raleway">{step.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* CTA Banner */}
+            {/* Experts Section (Styled like CTASection) */}
+
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-4">
+                                    <img src={image01} alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image02} alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="pt-8 space-y-4">
+                                    <img src={image03} alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src={image04} alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="order-1 lg:order-2">
+                            <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
+                                OUR FACILITY
+                            </span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
+                                State-of-the-Art Dental Care at 32 Dental Avenue
+                            </h2>
+                            <p className="text-text-light mb-8 font-raleway">
+                                Behind every beautiful, healthy smile is a clinic built with advanced technology, modern equipment, and a patient-first approach. Our facility ensures precision, comfort, and consistently high-quality dental outcomes.
+                            </p>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <Building2 className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Advanced Dental Technology</h4>
+                                        <p className="text-text-light text-sm font-raleway">We use the latest dental innovations, including digital scanners, high-resolution X-rays, and CAD/CAM systems, to deliver accurate diagnoses and painless, precise treatments for every patient.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <ShieldCheck className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Digital Smile Design (DSD)</h4>
+                                        <p className="text-text-light text-sm font-raleway">Our Digital Smile Design setup allows us to map and preview your smile digitally, offering predictable results, customized planning, and a clear vision of your final transformation before treatment begins.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start">
+                                    <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
+                                        <ShieldCheck className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-text-charcoal mb-1 font-roboto-slab">Sterilization & Safety Protocols</h4>
+                                        <p className="text-text-light text-sm font-raleway">Our clinic follows strict international sterilization standards using Class-B autoclaves and advanced infection control systems to ensure safe, hygienic, and worry-free dental care for all.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Testimonials */}
-            <Testimonials />
             <AppointmentBooking />
 
             {/* Dental Tourism Section */}
@@ -370,23 +456,6 @@ const International = () => {
     );
 };
 
-// Helper Icon Component for User (since User is imported but used as UserIcon in map to avoid conflict if any)
-const UserIcon = (props) => (
-    <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-    >
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-    </svg>
-);
+
 
 export default International;

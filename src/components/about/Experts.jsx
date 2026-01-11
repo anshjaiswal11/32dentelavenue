@@ -21,7 +21,7 @@ const ExpertDentists = () => {
           {...fadeInUp}
           className="max-w-4xl mb-20 mx-auto text-center"
         >
-          <h2 className="text-5xl md:text-6xl font-roboto-slab text-[#8FC6B7] mb-6 leading-tight">
+          <h2 className="text-5xl font-bold md:text-6xl font-roboto-slab text-[#8FC6B7] mb-6 leading-tight">
             Meet Our <span className="text-[#8FC6B7]">Expert</span> Dentists
           </h2>
         </motion.div>
@@ -58,9 +58,9 @@ const ExpertDentists = () => {
                 <FaUserMd /> Pediatric Specialist
               </div>
 
-              <h3 className="text-4xl md:text-5xl font-roboto-slab text-[#2c3e50] mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold font-roboto-slab text-[#2c3e50] mb-4">
                 Dr. Ankita Sharma Gambhir
-              </h3>
+              </h2>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
@@ -114,9 +114,9 @@ const ExpertDentists = () => {
                 <FaAward /> Prosthodontist & Implantologist
               </div>
 
-              <h3 className="text-4xl md:text-5xl font-roboto-slab text-[#2c3e50] mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold font-roboto-slab text-[#2c3e50] mb-4">
                 Dr. Anuj Gambhir
-              </h3>
+              </h2>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
@@ -135,8 +135,8 @@ const ExpertDentists = () => {
                 government dental institutions.
                 <br /><br />
                 He brings advanced expertise in smile reconstruction, full-mouth rehabilitation,
-                and implant-supported restorations. As a consultant prosthodontist and oral
-                implantologist, Dr. Anuj is known for his precision, aesthetic sense, and
+                and implant-supported restorations. As a Consultant Prosthodontist and Oral
+                Implantologist, Dr. Anuj is known for his precision, aesthetic sense, and
                 commitment to delivering natural, confident smiles through modern dental innovation.
               </p>
             </motion.div>

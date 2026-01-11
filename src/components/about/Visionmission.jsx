@@ -8,19 +8,19 @@ import commitmentImg from "../../assets/gallery/IMG_8360.JPG";
 
 const sections = [
   {
-    title: "Our Vision",
+    title: "OUR VISION",
     icon: <FaBullseye className="text-[#88d4cb] text-5xl md:text-6xl" />,
     text: "To create a place where innovation meets compassion — where every patient feels valued, cared for, and confident. We aim to set a new standard in modern dental care that inspires trust and transformation.",
     image: visionImg,
   },
   {
-    title: "Our Mission",
+    title: "OUR MISSION",
     icon: <FaHandsHelping className="text-[#afabfd] text-5xl md:text-6xl" />,
     text: "To deliver ethical, advanced, and patient-focused dental care using the latest technology. Our mission is to make every treatment journey seamless, transparent, and comfortable while building lifelong relationships based on trust.",
     image: missionImg,
   },
   {
-    title: "Our Commitment",
+    title: "OUR COMMITMENT",
     icon: <FaHeart className="text-[#FF9AA2] text-5xl md:text-6xl" />,
     text: "We are devoted to excellence in every smile we create. From preventive care to full restoration, our commitment is honesty, precision, and personalized care that ensures lasting confidence.",
     image: commitmentImg,
@@ -33,11 +33,11 @@ const VisionMission = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-7xl font-roboto-slab text-[#8FC6B7] mb-6">
+          <h2 className="text-5xl font-bold md:text-5xl font-roboto-slab text-[#8FC6B7] mb-6">
             Our <span className="text-[#8FC6B7]">Vision, Mission</span> & Commitment
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 font-roboto-slab max-w-3xl mx-auto leading-relaxed">
-            Guided by care, driven by innovation — building trust through every smile.
+          <p className="text-xl md:text-2xl text-gray-700 font-roboto-slab max-w-4xl mx-auto leading-relaxed">
+            Guided by care, driven by innovation, building trust through every smile.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const VisionMission = () => {
               {/* Text + Icon */}
               <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
                 <div className="mb-6 flex justify-center md:justify-start">{item.icon}</div>
-                <h3 className="text-4xl md:text-5xl font-roboto-slab text-[#2c3e50] mb-6 font-raleway">
+                <h3 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-6 font-raleway">
                   {item.title}
                 </h3>
                 <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-raleway">
