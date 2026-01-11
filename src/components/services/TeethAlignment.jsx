@@ -11,8 +11,8 @@ import {
     CheckCircle2
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/bg-removed/4.png';
-import docAnuj from '../../assets/bg-removed/3.png';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
 import serviceAligners from '../../assets/images/service-aligners.png';
 import serviceClearBraces from '../../assets/images/service-clear-braces.png';
 import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
@@ -35,7 +35,7 @@ const TeethAlignment = () => {
     const services = [
         {
             title: "Clear Aligners",
-            description: "Transparent, removable trays that straighten teeth discreetly and comfortably. Ideal for adults and teens looking for a flexible, lifestyle-friendly alignment option with predictable digital treatment planning.",
+            description: "Transparent, removable Invisalign that straighten teeth discreetly and comfortably. Ideal for adults and teens looking for a flexible, lifestyle-friendly alignment option with predictable digital treatment planning.",
             icon: <Smile className="w-8 h-8 text-secondary-teal" />,
             image: serviceAligners
         },
@@ -163,8 +163,8 @@ const TeethAlignment = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab">
-                                    <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                                <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
                                     OUR TEAM
                                 </span>
                             </div>
@@ -281,8 +281,8 @@ const TeethAlignment = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
-                                <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                            <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
                                 Our Facility
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
@@ -336,12 +336,12 @@ const TeethAlignment = () => {
                         Advanced Teeth Alignment in Rohini
                     </h2>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
-                        At 32 Dental Avenue, we make achieving a beautifully aligned smile simple and stress-free. If you’re struggling with crooked teeth, spacing issues, or an uneven bite, our orthodontic specialists in Rohini, Delhi are here to guide you toward the perfect smile. Using advanced technology and precise digital planning, we create alignment treatments that are comfortable, effective, and tailored just for you.
+                        At 32 Dental Avenue, we make achieving a beautifully aligned smile simple and stress-free. If you’re struggling with crooked teeth, spacing issues, or an uneven bite, our orthodontic specialists in Rohini, Delhi are here to guide you toward the perfect smile. Using advanced technology and precise digital planning, we offer modern solutions like Invisalign clear aligners along with other customized alignment treatments that are comfortable, effective, and tailored just for you.
                     </p>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
-                        Choose from clear aligners, clear braces, or traditional braces, each designed to move your teeth gently and predictably. With expert monitoring and a patient-first approach, we ensure steady progress and long-lasting results. Step into a straighter smile and renewed confidence with 32 Dental Avenue.
+                        Choose from Invisalign, clear aligners, clear braces, or traditional braces, each designed to move your teeth gently and predictably. With expert monitoring and a patient-first approach, we ensure steady progress and long-lasting results. Step into a straighter smile and renewed confidence with 32 Dental Avenue.
                     </p>
-                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
+                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-raleway shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
                         Book Your Transformation
                     </a>
                 </div>
@@ -351,7 +351,7 @@ const TeethAlignment = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Frequently Asked Questions</h2>
                         <p className="text-text-light font-raleway">Your Guide to Braces, Aligners & Teeth Alignment</p>
                     </div>
 

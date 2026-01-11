@@ -97,7 +97,7 @@ export default function ContactUs() {
                             <div className="w-12 h-12 bg-[#8FC6B7]/10 rounded-xl flex items-center justify-center mb-6 text-[#8FC6B7] group-hover:bg-[#8FC6B7] group-hover:text-white transition-colors">
                                 <MapPin className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-[#424040] mb-2">{loc.name}</h3>
+                            <h3 className="text-xl font-raleway font-bold text-[#424040] mb-2">{loc.name}</h3>
                             <p className="text-gray-500 mb-6 leading-relaxed text-sm h-10">
                                 {loc.address}
                             </p>
@@ -202,8 +202,8 @@ export default function ContactUs() {
                                         onClick={handleSubmit}
                                         disabled={status === "loading"}
                                         className={`w-full py-4 rounded-xl font-bold tracking-wide transition-all shadow-lg ${status === "loading"
-                                                ? "bg-gray-300 cursor-not-allowed text-gray-500"
-                                                : "bg-[#424040] text-white hover:bg-[#8FC6B7] hover:text-[#424040] hover:shadow-[#8FC6B7]/30"
+                                            ? "bg-gray-300 cursor-not-allowed text-gray-500"
+                                            : "bg-[#424040] text-white hover:bg-[#8FC6B7] hover:text-[#424040] hover:shadow-[#8FC6B7]/30"
                                             }`}
                                     >
                                         {status === "loading" ? "Sending..." : "Send Message"}

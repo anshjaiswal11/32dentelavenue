@@ -37,7 +37,7 @@ export default function DentalJourney() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-6xl font-bold mb-6 text-[#8FC6B7] font-roboto-slab"
+          className="text-4xl md:text-5xl font-bold mb-6 text-[#8FC6B7] font-roboto-slab"
         >
           A Journey of Care, Commitment, and Confident Smiles
         </motion.h2>

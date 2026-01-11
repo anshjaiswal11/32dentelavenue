@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Booking from '../Booking';
-import docAnkita from '../../assets/bg-removed/4.png';
-import docAnuj from '../../assets/bg-removed/3.png';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
 import Testimonials from '../review-services.jsx';
 import CTASection from '../CTASection';
 import smile from '../../assets/services-pages-image/smile.jpg'
@@ -55,10 +55,6 @@ const Cosmetic = () => {
             image: crowns
         },
         {
-            title: "Partial Crowns / Inlays & Onlays",
-            image: inlays
-        },
-        {
             title: "Veneers",
             image: veneers
         },
@@ -73,6 +69,10 @@ const Cosmetic = () => {
         {
             title: "Teeth Whitening / Bleaching",
             image: whiteningImg
+        },
+        {
+            title: "Tooth Jewellery",
+            image: inlays
         }
     ];
 
@@ -362,7 +362,7 @@ const Cosmetic = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">FAQ</h2>
                         <p className="text-text-light font-raleway">Expert Answers to Help You Choose the Right Smile Solutions</p>
                     </div>
 

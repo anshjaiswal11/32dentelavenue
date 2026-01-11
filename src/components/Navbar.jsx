@@ -132,7 +132,7 @@ function Navbar() {
           <div className="hidden md:block">
             <Link
               to="/#booking"
-              className="bg-[#88d4cb] text-white px-6 py-2 rounded-md font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#88d4cb]/30"
+              className="bg-[#88d4cb] text-white px-6 py-2 rounded-md font-raleway transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#88d4cb]/30"
             >
               Book Appointment
             </Link>
@@ -295,7 +295,7 @@ function Navbar() {
           <Link
             to="/#booking"
             onClick={() => setIsOpen(false)}
-            className="w-full mt-3 bg-[#8FC6B7] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40 text-center block"
+            className="w-full mt-3 bg-[#8FC6B7] text-white px-6 py-2.5 rounded-lg font-raleway transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40 text-center block"
           >
             Book Appointment
           </Link>

@@ -12,8 +12,8 @@ import {
     HeartPulse
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/bg-removed/4.png';
-import docAnuj from '../../assets/bg-removed/3.png';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
 import CTASection from '../CTASection';
 import image01 from '../../assets/newimg/IMG_83711.jpg'
 import image02 from '../../assets/newimg/IMG_81192.jpg'
@@ -97,16 +97,16 @@ const RootCanal = () => {
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4 font-roboto-slab">
+                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm mb-4 font-roboto-slab">
                             Pain-Free Relief, Trusted Dental Care
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight font-raleway">
-                            Advanced Root Canal Treatment in <span className="text-secondary-teal">Rohini, Delhi</span>
+                            Painless Root Canal Treatment in <span className="text-secondary-teal">Rohini, Delhi</span>
                         </h1>
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Say goodbye to tooth pain with our gentle, modern root canal treatment designed to restore your tooth’s health comfortably and precisely.
                         </p>
-                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
+                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-raleway text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-roboto-slab inline-block">
                             Book an Appointment
                         </a>
                     </div>
@@ -171,8 +171,8 @@ const RootCanal = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab">
-                                    <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                                <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
                                     OUR TEAM
                                 </span>
                             </div>
@@ -289,8 +289,8 @@ const RootCanal = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
-                                <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                            <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
                                 OUR FACILITY
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
@@ -356,7 +356,7 @@ const RootCanal = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Frequently Asked Questions</h2>
                         <p className="text-text-light font-raleway">Your Guide to Root Canal Treatment & Tooth Pain Relief</p>
                     </div>
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import drAnkitaImage from "../assets/bg-removed/4.png";
-import drAnujImage from "../assets/bg-removed/3.png";
+import drAnkitaImage from "../assets/bg-removed/9.png";
+import drAnujImage from "../assets/bg-removed/8.png";
 
 const dentists = [
   {
@@ -11,7 +11,7 @@ const dentists = [
     qualifications: "MDS – Pedodontics & Preventive Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnkitaImage,
-    position: "center 90%",
+    position: "center 70%",
   },
   {
     name: "Dr. Anuj Gambhir",
@@ -20,7 +20,7 @@ const dentists = [
       "MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnujImage,
-    position: "center 80%",
+    position: "center 50%",
   },
 ];
 

@@ -33,10 +33,10 @@ const VisionMission = () => {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Heading */}
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-7xl font-extrabold text-[#2c3e50] font-['roboto-slab'] mb-6">
-            Our <span className="text-[#88d4cb]">Vision, Mission</span> & Commitment
+          <h2 className="text-5xl md:text-7xl font-roboto-slab text-[#8FC6B7] mb-6">
+            Our <span className="text-[#8FC6B7]">Vision, Mission</span> & Commitment
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 font-['roboto-slab'] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 font-roboto-slab max-w-3xl mx-auto leading-relaxed">
             Guided by care, driven by innovation — building trust through every smile.
           </p>
         </div>
@@ -68,10 +68,10 @@ const VisionMission = () => {
               {/* Text + Icon */}
               <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
                 <div className="mb-6 flex justify-center md:justify-start">{item.icon}</div>
-                <h3 className="text-4xl md:text-5xl font-extrabold text-[#2c3e50] mb-6 font-[raleway]">
+                <h3 className="text-4xl md:text-5xl font-roboto-slab text-[#2c3e50] mb-6 font-raleway">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-[raleway]">
+                <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-raleway">
                   {item.text}
                 </p>
               </div>

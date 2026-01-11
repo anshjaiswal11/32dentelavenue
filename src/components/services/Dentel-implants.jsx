@@ -12,8 +12,8 @@ import {
     Award
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/bg-removed/4.png';
-import docAnuj from '../../assets/bg-removed/3.png';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
 import CTASection from '../CTASection';
 
 // Using generated assets
@@ -342,7 +342,7 @@ const DentalImplants = () => {
                         At 32 Dental Avenue, we make replacing missing teeth simple, safe, and stress-free. If you’re struggling with tooth loss, weak chewing, or an unstable denture, our implant specialists in Rohini, Delhi are here to restore your smile with precision and complete comfort. Using digital scans, guided implant placement, and advanced surgical techniques, we create implant solutions that look natural and last for years.
                     </p>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
-                        Choose from single tooth implants, multiple teeth implants, or full-mouth implants (All-on-4 / All-on-6), each designed to offer strong support, a natural bite, and long-term durability. With expert planning and a patient-first approach, we ensure predictable healing, stable function, and a confident smile you can trust.
+                        Choose from single tooth implants, multiple teeth implants, or full-mouth rehabilitation (All-on-4 / All-on-6), each designed to offer strong support, a natural bite, and long-term durability. With expert planning and a patient-first approach, we ensure predictable healing, stable function, and a confident smile you can trust.
                     </p>
                 </div>
             </section>
@@ -351,7 +351,8 @@ const DentalImplants = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Frequently Asked Questions</h2>
+                        <p className="text-text-light mb-8 font-raleway">Everything You Need to Know About Dental Implants</p>
                     </div>
 
                     <div className="space-y-4">

@@ -81,8 +81,8 @@ const DentalJourney = () => {
       marginBottom: '10px',
     },
     headerMainText: {
-      fontSize: '2.8rem',
-      fontWeight: '700',
+      fontSize: '2.2rem',
+      fontWeight: '600',
       color: '#222',
       marginBottom: '20px',
       lineHeight: '1.2',

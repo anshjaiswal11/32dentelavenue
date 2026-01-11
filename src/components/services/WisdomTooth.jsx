@@ -12,8 +12,8 @@ import {
     HeartPulse
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
-import docAnkita from '../../assets/bg-removed/4.png';
-import docAnuj from '../../assets/bg-removed/3.png';
+import docAnkita from '../../assets/bg-removed/9.png';
+import docAnuj from '../../assets/bg-removed/8.png';
 import serviceExtraction from '../../assets/images/service-extraction.png';
 import serviceSurgical from '../../assets/images/service-surgical.png';
 import serviceImpacted from '../../assets/images/service-impacted.png';
@@ -164,8 +164,8 @@ const WisdomTooth = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab">
-                                    <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                                <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab">
+                                    <span className="w-2 h-2 bg-black rounded-full"></span>
                                     OUR TEAM
                                 </span>
                             </div>
@@ -281,8 +281,8 @@ const WisdomTooth = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
-                                <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                            <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                                <span className="w-2 h-2 bg-black rounded-full"></span>
                                 Our Facility
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
@@ -336,12 +336,12 @@ const WisdomTooth = () => {
                         Expert Wisdom Tooth Removal in Rohini
                     </h2>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
-                        Don't let wisdom tooth pain disrupt your life. At 32 Dental Avenue, our specialized oral surgeons provide safe, quick, and comfortable wisdom tooth removal services. Whether it's a simple extraction or complex impaction surgery, we have the expertise and technology to handle it with care.
+                        Don't let wisdom tooth pain disrupt your life. At 32 Dental Avenue, our specialized oral surgeons provide safe, quick, and painless wisdom tooth removal services. Whether it's a simple extraction or complex impaction surgery, we have the expertise and technology to handle it with care.
                     </p>
                     <p className="text-text-light text-lg mb-8 leading-relaxed font-raleway">
                         We believe in keeping you informed and comfortable every step of the way. From digital diagnostics to detailed aftercare, we ensure your journey to a pain-free smile is smooth and worry-free. Trust us for the best wisdom tooth care in Delhi.
                     </p>
-                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all font-roboto-slab inline-block">
+                    <a href="#booking" className="bg-secondary-teal text-white px-8 py-3 rounded-full font-raleway shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all inline-block">
                         Book Your Relief Today
                     </a>
                 </div>
@@ -351,7 +351,7 @@ const WisdomTooth = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4 font-roboto-slab">FAQ</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-4 font-roboto-slab">Frequently Asked Questions</h2>
                         <p className="text-text-light font-raleway">Common Questions About Wisdom Tooth Surgery</p>
                     </div>
 

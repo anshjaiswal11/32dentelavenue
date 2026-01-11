@@ -317,10 +317,27 @@ const International = () => {
             <Testimonials />
             <AppointmentBooking />
 
+            {/* Dental Tourism Section */}
+            <div className="py-20 bg-[#f9f9f9]">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#8FC6B7] mb-6 font-roboto-slab">
+                        Dental Tourism in India
+                    </h2>
+                    <div className="space-y-4 text-gray-600 text-lg leading-relaxed font-raleway">
+                        <p>
+                            India has emerged as a preferred destination for dental tourism, offering world-class dental care at significantly affordable costs. Patients from across the globe choose India for its advanced technology, skilled specialists, and internationally followed treatment standards.
+                        </p>
+                        <p>
+                            At 32 Dental Avenue, international patients receive personalized dental solutions ranging from cosmetic dentistry to advanced restorative treatments. With transparent pricing, modern facilities, and a patient-first approach, we ensure a smooth, comfortable, and trusted dental tourism experience in India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* FAQ Section */}
             <div className="py-20 bg-white">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-[#424040] text-center mb-12 font-roboto-slab">Frequently Asked Questions</h2>
+                    <h2 className="text-4xl font-bold text-[#8FC6B7] text-center mb-12 font-roboto-slab">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
                             <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">

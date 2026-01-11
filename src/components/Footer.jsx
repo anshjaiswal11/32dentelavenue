@@ -35,7 +35,7 @@ const Footer = () => {
     contact: {
       phone: '+91 7042129178',
       email: 'info@32dentalavenue.com',
-      hours: 'Tues-Sun: 11:00 AM - 8:00 PM'
+      hours: 'Tues-Sun: 10:00 AM - 8:00 PM'
     }
   };
 
