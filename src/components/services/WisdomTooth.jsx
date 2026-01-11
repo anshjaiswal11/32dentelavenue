@@ -96,7 +96,7 @@ const WisdomTooth = () => {
                         <p className="text-lg text-text-light mb-8 max-w-xl font-raleway">
                             Experience painless, and stress-free wisdom tooth removal by expert surgeons designed for fast recovery and maximum comfort.
                         </p>
-                        <a href="#booking" className="bg-secondary-teal text-white px-8 py-4 rounded-full font-raleway text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 inline-block">
+                        <a href="#booking" className="bg-[#8FC6B7] text-white px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1 font-raleway inline-block">
                             Book an Appointment
                         </a>
                     </div>
