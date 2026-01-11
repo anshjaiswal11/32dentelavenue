@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaHeart, FaBullseye, FaHandsHelping } from "react-icons/fa";
-const visionImg = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470";
-const missionImg = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470";
-const commitmentImg = "https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470";
+import visionImg from "../../assets/gallery/IMG_8120.JPG";
+import missionImg from "../../assets/gallery/IMG_8214.JPG";
+import commitmentImg from "../../assets/gallery/IMG_8360.JPG";
 
 
 const sections = [
