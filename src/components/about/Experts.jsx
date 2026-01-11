@@ -21,7 +21,7 @@ const ExpertDentists = () => {
           {...fadeInUp}
           className="max-w-4xl mb-20 mx-auto text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-roboto-slab text-[#8FC6B7] mb-6 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-roboto-slab text-[#8FC6B7] mb-6 leading-tight">
             Meet Our <span className="text-[#8FC6B7]">Expert</span> Dentists
           </h2>
         </motion.div>
