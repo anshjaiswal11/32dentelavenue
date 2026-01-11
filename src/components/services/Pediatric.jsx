@@ -189,7 +189,7 @@ const Pediatric = () => {
                         {/* Left Content */}
                         <div className="lg:col-span-1">
                             <div className="inline-block mb-4">
-                                <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab">
+                                <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab">
                                     <span className="w-2 h-2 bg-black rounded-full"></span>
                                     OUR TEAM
                                 </span>
@@ -301,7 +301,7 @@ const Pediatric = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-black font-semibold text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
+                            <span className="text-black font-roboto-slab text-sm flex items-center gap-2 font-roboto-slab uppercase mb-2">
                                 <span className="w-2 h-2 bg-black rounded-full"></span>
                                 OUR FACILITY
                             </span>
