@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
     Plane,
     Calendar,
@@ -141,6 +142,11 @@ const International = () => {
 
     return (
         <div className="bg-white min-h-screen pt-20">
+            <Helmet>
+                <title>Dental Treatment for International Clients in Rohini</title>
+                <meta name="description" content="International clients choose 32 Dental Avenue in Rohini for advanced dental treatments, seamless coordination & global patient support. Contact us!" />
+                <link rel="canonical" href="https://www.32dentalavenue.in/international-clients" />
+            </Helmet>
             {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 z-10"></div>

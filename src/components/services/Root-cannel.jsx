@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
     ShieldCheck,
     Building2,
@@ -92,6 +93,11 @@ const RootCanal = () => {
 
     return (
         <div className="bg-neutral-bg min-h-screen pt-16 md:pt-20">
+            <Helmet>
+                <title>Pain-Free Root Canal Treatment in Rohini | 32 Dental Avenue</title>
+                <meta name="description" content="Looking for root canal treatment in Rohini? Our experienced dentists at 32 Dental Avenue deliver precise, effective care to save your natural tooth." />
+                <link rel="canonical" href="https://www.32dentalavenue.in/root-canal-treatment" />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative bg-gradient-to-r from-[#f0f4f8] to-[#e0e7ff] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
