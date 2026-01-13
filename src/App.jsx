@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Suspense, lazy } from 'react'
 import { ReactLenis } from '@studio-freight/react-lenis'
 import Navbar from './components/Navbar'
+import NotFound from './components/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 import Footer from './components/Footer'
 
@@ -47,45 +48,45 @@ function HomePageContent() {
         <link rel="canonical" href="https://www.32dentalavenue.in/" />
         <script type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Dentist",
-              "name": "32 Dental Avenue",
-              "image": "https://www.32dentalavenue.in/logo.png", 
-              "url": "https://www.32dentalavenue.in/",
-              "telephone": "+919810850024", 
+{
+  "@context": "https://schema.org",
+    "@type": "Dentist",
+      "name": "32 Dental Avenue",
+        "image": "https://www.32dentalavenue.in/logo.png",
+          "url": "https://www.32dentalavenue.in/",
+            "telephone": "+919810850024",
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "C-9/4, Sector-7, Rohini",
-                "addressLocality": "Delhi",
-                "postalCode": "110085",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 28.7041,
-                "longitude": 77.1025
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                  "Sunday"
-                ],
-                "opens": "10:00",
-                "closes": "20:00"
-              },
-              "sameAs": [
-                "https://www.facebook.com/32DentalAvenue",
-                "https://www.instagram.com/32dentalavenue"
-              ]
-            }
-          `}
+    "@type": "PostalAddress",
+      "streetAddress": "C-9/4, Sector-7, Rohini",
+        "addressLocality": "Delhi",
+          "postalCode": "110085",
+            "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+      "latitude": 28.7041,
+        "longitude": 77.1025
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+        "opens": "10:00",
+          "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/32DentalAvenue",
+    "https://www.instagram.com/32dentalavenue"
+  ]
+}
+`}
         </script>
       </Helmet>
       <Hero />
@@ -130,6 +131,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <Footer />

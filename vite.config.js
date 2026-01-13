@@ -13,4 +13,15 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async', 'framer-motion'],
+          lucide: ['lucide-react']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+  }
 })
