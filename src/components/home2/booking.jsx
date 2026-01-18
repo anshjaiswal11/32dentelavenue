@@ -128,6 +128,7 @@ export default function AppointmentBooking() {
                   <input
                     type="date"
                     name="date"
+                    min={new Date().toISOString().split("T")[0]}
                     value={formData.date}
                     onChange={handleChange}
                     className="w-full pl-11 pr-4 py-4 bg-white border border-[#E5E5E5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D9B18E] text-lg transition"

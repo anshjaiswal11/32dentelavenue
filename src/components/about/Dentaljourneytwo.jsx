@@ -9,7 +9,7 @@ const DentalJourney = () => {
         'Our journey began in a modest rented clinic at Sector 16, Rohini. With limited space but unlimited passion, 32 Dental Avenue was founded on a simple mission — to make quality dental care accessible and patient-friendly.',
       icon: (
         <svg
-          fill="#88d4cb"
+          fill="#87d4cb"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -28,7 +28,7 @@ const DentalJourney = () => {
         'As our family of happy patients grew, so did our aspirations. We opened our second clinic in Sector 7, Rohini — a more advanced and centrally located space designed to deliver comfort, precision, and premium dental experiences.',
       icon: (
         <svg
-          fill="#88d4cb"
+          fill="#87d4cb"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -47,7 +47,7 @@ const DentalJourney = () => {
         'With a decade of trust and thousands of transformed smiles, we proudly launched our third and most advanced center in Sector 5, Rohini. Equipped with state-of-the-art technology and modern aesthetics, it marks a new era of precision dentistry and patient care.',
       icon: (
         <svg
-          fill="#88d4cb"
+          fill="#87d4cb"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -75,7 +75,7 @@ const DentalJourney = () => {
     headerSmallText: {
       fontSize: '0.9rem',
       fontWeight: '600',
-      color: '#88d4cb',
+      color: '#87d4cb',
       letterSpacing: '1px',
       textTransform: 'uppercase',
       marginBottom: '10px',
@@ -129,7 +129,7 @@ const DentalJourney = () => {
       flex: '0 0 100px',
       fontSize: '1.8rem',
       fontWeight: '700',
-      color: '#88d4cb',
+      color: '#87d4cb',
       margin: '0 20px',
     },
     timelineIconCircle: {
@@ -138,7 +138,7 @@ const DentalJourney = () => {
       height: '60px',
       borderRadius: '50%',
       backgroundColor: '#fff',
-      border: '3px solid #88d4cb',
+      border: '3px solid #87d4cb',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -154,16 +154,16 @@ const DentalJourney = () => {
       borderRadius: '10px',
       boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
       position: 'relative',
-      borderLeft: '4px solid #88d4cb',
+      borderLeft: '4px solid #87d4cb',
     },
     timelineContentLeft: {
-      borderRight: '4px solid #88d4cb',
+      borderRight: '4px solid #87d4cb',
       borderLeft: 'none',
     },
     contentTitle: {
       fontSize: '1.4rem',
       fontWeight: '600',
-      color: '#333',
+      color: '#87d4cb',
       marginBottom: '10px',
     },
     contentDescription: {

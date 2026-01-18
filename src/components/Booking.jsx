@@ -135,7 +135,7 @@ export default function AppointmentBooking() {
                   </div>
 
                   {/* Date */}
-                  <Input icon={Calendar} type="date" name="date" value={formData.date} onChange={handleChange} />
+                  <Input icon={Calendar} type="date" name="date" min={new Date().toISOString().split("T")[0]} value={formData.date} onChange={handleChange} />
 
                   {/* Error Message */}
                   {errorMessage && (

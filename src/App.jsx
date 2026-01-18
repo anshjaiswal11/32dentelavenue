@@ -24,6 +24,7 @@ const DentalImplants = lazy(() => import('./components/services/Dentel-implants'
 const OralHygiene = lazy(() => import('./components/services/oralhygiene'))
 const Pediatric = lazy(() => import('./components/services/Pediatric'))
 const Blogs = lazy(() => import('./pages/Blogs'))
+const BlogDetail = lazy(() => import('./pages/BlogDetail'))
 const Gallery = lazy(() => import('./pages/Gallery'))
 const ContactUs = lazy(() => import('./pages/contactus'))
 const Admin = lazy(() => import('./pages/admin'))
@@ -128,6 +129,7 @@ function App() {
             <Route path="/oral-hygiene" element={<OralHygiene />} />
             <Route path="/pediatric-dentistry" element={<Pediatric />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/admin" element={<Admin />} />

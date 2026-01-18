@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -11,13 +11,50 @@ import kidsDentistryImg from '../assets/images/kids-dentistry.png';
 import blogHeroBg from '../assets/images/blog-hero-bg.png';
 
 const Blogs = () => {
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         window.scrollTo(0, 0);
+        fetchBlogs();
     }, []);
 
-    const blogPosts = [
+    const fetchBlogs = async () => {
+        try {
+            const response = await fetch('https://server-32dentalavenue-kappa.vercel.app/api/blogs');
+            if (response.ok) {
+                const data = await response.json();
+                // Map API data to UI structure
+                const apiPosts = data.map(blog => ({
+                    id: blog.id,
+                    slug: blog.slug, // Added slug
+                    title: blog.title,
+                    excerpt: blog.content.substring(0, 100) + '...',
+                    category: "General", // Default category for now
+                    author: "Admin", // Default author
+                    date: new Date(blog.created_at).toLocaleDateString(),
+                    readTime: "3 min read", // Estimate
+                    image: blog.image_url || blogHeroBg // Fallback image
+                }));
+                // Combine with static posts or replace. Let's replace for now to show dynamic content, 
+                // but if empty show static? Or just show all. User asked to "add new blogs", implying addition.
+                // But usually dynamic replaces static. I'll combine them for now so the page isn't empty if no dynamic blogs exist.
+                setPosts([...apiPosts]);
+            } else {
+                setPosts(staticBlogPosts);
+            }
+        } catch (error) {
+            console.error("Failed to fetch blogs", error);
+            setPosts(staticBlogPosts);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const staticBlogPosts = [
         {
-            id: 1,
+            id: 'static-1',
+            slug: 'the-permanent-solution-for-missing-teeth',
             title: "The Permanent Solution for Missing Teeth",
             excerpt: "Discover how dental implants can restore your smile and confidence with a natural look and feel.",
             category: "Dental Implants",
@@ -27,7 +64,8 @@ const Blogs = () => {
             image: dentalImplantsImg
         },
         {
-            id: 2,
+            id: 'static-2',
+            slug: 'brighten-your-smile-safely',
             title: "Brighten Your Smile Safely",
             excerpt: "Learn about professional teeth whitening options and why over-the-counter kits might not be enough.",
             category: "Cosmetic Dentistry",
@@ -37,7 +75,8 @@ const Blogs = () => {
             image: teethWhiteningImg
         },
         {
-            id: 3,
+            id: 'static-3',
+            slug: 'daily-habits-for-a-healthy-smile',
             title: "Daily Habits for a Healthy Smile",
             excerpt: "Simple yet effective daily routines to keep your teeth and gums healthy between visits.",
             category: "Oral Hygiene",
@@ -47,7 +86,8 @@ const Blogs = () => {
             image: oralHygieneImg
         },
         {
-            id: 4,
+            id: 'static-4',
+            slug: 'clear-aligners-vs-braces',
             title: "Clear Aligners vs Braces",
             excerpt: "Comparing the pros and cons of clear aligners and traditional braces to help you decide.",
             category: "Orthodontics",
@@ -57,7 +97,8 @@ const Blogs = () => {
             image: alignersImg
         },
         {
-            id: 5,
+            id: 'static-5',
+            slug: 'debunking-common-root-canal-myths',
             title: "Debunking Common Root Canal Myths",
             excerpt: "Separating fact from fiction about this common and pain-relieving dental procedure.",
             category: "Endodontics",
@@ -67,7 +108,8 @@ const Blogs = () => {
             image: rootCanalImg
         },
         {
-            id: 6,
+            id: 'static-6',
+            slug: 'making-the-first-visit-fun',
             title: "Making the First Visit Fun",
             excerpt: "Tips for parents to help their children have a positive and anxiety-free first dental experience.",
             category: "Pediatric Dentistry",
@@ -100,58 +142,67 @@ const Blogs = () => {
 
             {/* Blog Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                    {blogPosts.map((post) => (
-                        <article key={post.id} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full group">
-                            {/* Image Container */}
-                            <div className="relative h-56 overflow-hidden">
-                                <img
-                                    src={post.image}
-                                    alt={post.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute top-4 left-4 bg-[#88d4cb] text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                                    {post.category}
-                                </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-6 flex-1 flex flex-col">
-                                <div className="flex items-center text-sm text-gray-400 mb-4 space-x-4">
-                                    <div className="flex items-center">
-                                        <Calendar className="w-4 h-4 mr-1.5" />
-                                        {post.date}
+                {loading ? (
+                    <div className="flex justify-center items-center h-64">
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#88d4cb]"></div>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                        {posts.map((post) => (
+                            <Link to={`/blog/${post.slug || post.id}`} key={post.id} className="block h-full group">
+                                <article className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+                                    {/* Image Container */}
+                                    <div className="relative h-64 overflow-hidden">
+                                        <img
+                                            src={post.image}
+                                            alt={post.title}
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute top-4 left-4">
+                                            <span className="px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#88d4cb] text-sm font-bold rounded-full shadow-sm">
+                                                {post.category}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center">
-                                        <Clock className="w-4 h-4 mr-1.5" />
-                                        {post.readTime}
-                                    </div>
-                                </div>
 
-                                <h2 className="text-xl font-bold text-[#424040] mb-3 leading-snug group-hover:text-[#88d4cb] transition-colors">
-                                    {post.title}
-                                </h2>
-                                <p className="text-gray-600 mb-6 flex-1 leading-relaxed">
-                                    {post.excerpt}
-                                </p>
+                                    {/* Content */}
+                                    <div className="p-8 flex flex-col flex-grow">
+                                        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                                            <div className="flex items-center gap-1.5">
+                                                <Calendar className="w-4 h-4 text-[#88d4cb]" />
+                                                {post.date}
+                                            </div>
+                                            <div className="flex items-center gap-1.5">
+                                                <Clock className="w-4 h-4 text-[#88d4cb]" />
+                                                {post.readTime}
+                                            </div>
+                                        </div>
 
-                                <div className="flex items-center justify-between pt-6 border-t border-gray-100 mt-auto">
-                                    <div className="flex items-center text-sm font-medium text-gray-500">
-                                        <User className="w-4 h-4 mr-2" />
-                                        {post.author}
+                                        <h3 className="text-xl font-bold text-[#424040] mb-3 group-hover:text-[#88d4cb] transition-colors line-clamp-2">
+                                            {post.title}
+                                        </h3>
+
+                                        <p className="text-gray-500 mb-6 line-clamp-3">
+                                            {post.excerpt}
+                                        </p>
+
+                                        <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
+                                                    <User className="w-4 h-4" />
+                                                </div>
+                                                <span className="text-sm font-medium text-gray-600">{post.author}</span>
+                                            </div>
+                                            <span className="text-[#88d4cb] font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                                Read More <ArrowRight className="w-4 h-4" />
+                                            </span>
+                                        </div>
                                     </div>
-                                    <Link
-                                        to="#"
-                                        className="inline-flex items-center text-[#88d4cb] font-semibold hover:text-[#76b8b0] transition-colors group-hover:translate-x-1 duration-300"
-                                    >
-                                        Read More
-                                        <ArrowRight className="ml-1.5 w-4 h-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {/* Newsletter CTA */}
@@ -183,3 +234,4 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
