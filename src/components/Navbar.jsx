@@ -131,7 +131,7 @@ function Navbar() {
           {/* Book Appointment Button */}
           <div className="hidden md:block">
             <Link
-              to="/#booking"
+              to="/contact-us"
               className="bg-[#88d4cb] text-white px-6 py-2 rounded-md font-raleway transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#88d4cb]/30"
             >
               Book Appointment
