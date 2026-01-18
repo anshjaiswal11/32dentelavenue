@@ -380,7 +380,7 @@ const Pediatric = () => {
                                     className="w-full px-6 py-4 text-left bg-neutral-bg hover:bg-gray-50 flex items-center justify-between transition-colors"
                                     onClick={() => toggleFaq(index)}
                                 >
-                                    <span className="font-semibold text-text-charcoal pr-8">{faq.question}</span>
+                                    <span className="font-raleway text-text-charcoal pr-8">{faq.question}</span>
                                     {openFaq === index ? (
                                         <ChevronUp className="w-5 h-5 text-secondary-teal flex-shrink-0" />
                                     ) : (

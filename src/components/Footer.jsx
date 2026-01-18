@@ -6,14 +6,13 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'General Dentistry', path: '/services/general' },
-      { name: 'Cosmetic Dentistry', path: '/services/cosmetic' },
-      { name: 'Dental Implants', path: '/services/implants' },
-      { name: 'Orthodontics', path: '/services/orthodontics' },
-      { name: 'Pediatric Dentistry', path: '/services/pediatric' },
-      { name: 'Wisdom Tooth Surgery', path: '/services/wisdom' },
-      { name: 'Root Canal Treatment', path: '/services/root-canal' },
-      { name: 'Oral Hygiene', path: '/services/hygiene' }
+      { name: 'Cosmetic Dentistry', path: '/cosmetic-dentistry' },
+      { name: 'Dental Implants', path: '/dental-implants' },
+      { name: 'Orthodontics', path: '/teeth-alignment' },
+      { name: 'Pediatric Dentistry', path: '/pediatric-dentistry' },
+      { name: 'Wisdom Tooth Surgery', path: '/wisdom-tooth-surgery' },
+      { name: 'Root Canal Treatment', path: '/root-canal-treatment' },
+      { name: 'Oral Hygiene', path: '/oral-hygiene' }
     ],
     locations: [
       {

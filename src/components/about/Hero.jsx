@@ -28,9 +28,9 @@ const DentalHero = () => {
           tailored to every patient’s needs.
         </p>
 
-        <button className="w-fit bg-[#88d4cb] text-white font-raleway px-6 py-3 rounded-xl shadow-lg hover:bg-[#6bc2b9] transition duration-300">
+        {/* <button className="w-fit bg-[#88d4cb] text-white font-raleway px-6 py-3 rounded-xl shadow-lg hover:bg-[#6bc2b9] transition duration-300">
           Learn More About Our Care
-        </button>
+        </button> */}
       </div>
     </section>
   );

@@ -43,7 +43,7 @@ export default function DentalJourney() {
         </motion.h2>
 
         <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-20 leading-relaxed font-raleway">
-          At <span className="font-semibold text-teal-600">32 Dental Avenue</span>, our story is one of growth,
+          At <span className="font-raleway text-[#8FC6B7]">32 Dental Avenue</span>, our story is one of growth,
           trust, and transformation. What began as a small practice with a big dream has evolved into one of Rohini’s
           most trusted names in advanced dental care. Every milestone reflects our belief — that every smile deserves
           precision, comfort, and compassion.
@@ -63,8 +63,8 @@ export default function DentalJourney() {
               >
                 {item.icon}
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 font-roboto-slab">{item.year}</h3>
-              <h4 className="text-2xl md:text-3xl font-semibold text-teal-600 mt-2 font-roboto-slab">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-600 font-roboto-slab">{item.year}</h3>
+              <h4 className="text-2xl md:text-3xl text-[#8FC6B7] mt-2 font-roboto-slab">
                 {item.title}
               </h4>
               <p className="text-lg md:text-xl text-gray-700 mt-3 max-w-4xl leading-relaxed font-raleway">

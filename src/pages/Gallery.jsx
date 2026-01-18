@@ -80,10 +80,10 @@ const Gallery = () => {
             {/* Hero Section */}
             <div className="bg-[#f7f4f1] py-16 md:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-[#424040] mb-4 tracking-tight">
+                    <h1 className="text-4xl md:text-5xl font-roboto-slab text-[#424040] mb-4 tracking-tight">
                         Our <span className="text-[#88d4cb]">Gallery</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-raleway">
                         Take a glimpse into our world-class facility, state-of-the-art equipment, and the beautiful smiles we create every day.
                     </p>
                 </div>
