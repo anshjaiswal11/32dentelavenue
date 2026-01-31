@@ -129,11 +129,11 @@ const Pediatric = () => {
                     </div>
                     <div className="relative">
                         {/* Hero Image */}
-                        <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 h-80 md:h-96">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 h-80 md:h-96 bg-gray-50">
                             <img
                                 src={pediatricDentistryImg}
                                 alt="Pediatric Dentistry"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                             />
                         </div>
                     </div>
