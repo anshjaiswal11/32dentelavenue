@@ -21,18 +21,18 @@ import pediatricDentistryImg from "../../assets/home-services-img/img-123.jpeg";
 // Using identified assets
 import heroImage from '../../assets/images/kids-dentistry.png';
 import imgSealants from '../../assets/images/oral-hygiene/sealants.png';
-import imgSpaceMaintainers from '../../assets/images/oral-hygiene/preventive.png'; // Placeholder fallback
-import imgPulpectomy from '../../assets/home-services-img/root-cannel.jpg';
-import imgAlignment from '../../assets/images/service-aligners.png';
+import imgSpaceMaintainers from '../../assets/gallery/newimgg.jpeg'; // Placeholder fallback
+import imgPulpectomy from '../../assets/gallery/rootcanalpediatric.jpeg';
+import imgAlignment from '../../assets/gallery/teethaliped.jpeg';
 import imgExpanders from '../../assets/home-services-img/Palatal.png';
-import imgInterceptive from '../../assets/images/oral-hygiene/checkup.png'; // Placeholder fallback
-
+import imgInterceptive from '../../assets/gallery/image-new.jpeg'
 import Testimonals from '../review-services';
 import image01 from '../../assets/newimg/IMG_83711.jpg';
 import image02 from '../../assets/newimg/IMG_81192.jpg';
 import image03 from '../../assets/newimg/IMG_83699.jpg';
 import image04 from '../../assets/newimg/IMG_83900.jpg';
 import doctorMam from '../../assets/gallery/IMG_8226.JPG';
+
 
 const Pediatric = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -74,7 +74,7 @@ const Pediatric = () => {
         },
         {
             title: "Early Interceptive Orthodontics & Special Care Dentistry",
-            description: "Timely orthodontic intervention to guide jaw growth, painless treatment options including general anesthesia and IV sedation for children.",
+            description: "Timely orthodontic intervention to guide jaw growth, painless treatment options including general local anesthesia and mild sedation for children.",
             icon: <Baby className="w-8 h-8 text-secondary-teal" />,
             image: imgInterceptive
         }
@@ -99,7 +99,7 @@ const Pediatric = () => {
         },
         {
             question: "How do you handle dental anxiety in children?",
-            answer: "We follow a gentle, child-friendly approach and also offer treatment under IV sedation or general anesthesia for anxious or special-care children."
+            answer: "We follow a gentle, child-friendly approach and also offer treatment under local anesthesia for anxious or special-care children."
         },
         {
             question: "How do I choose the right dentist for kids in Rohini?",
@@ -158,6 +158,11 @@ const Pediatric = () => {
                                         src={service.image}
                                         alt={service.title}
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        style={
+                                            service.title === "Space Maintainers" ? { objectPosition: "center 30%" } :
+                                                service.title === "Teeth Alignment" ? { objectPosition: "center 70%" } :
+                                                    {}
+                                        }
                                     />
                                 </div>
                                 <div className="p-8">
