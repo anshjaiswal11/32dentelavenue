@@ -24,7 +24,7 @@ import imgSealants from '../../assets/images/oral-hygiene/sealants.png';
 import imgSpaceMaintainers from '../../assets/images/oral-hygiene/preventive.png'; // Placeholder fallback
 import imgPulpectomy from '../../assets/home-services-img/root-cannel.jpg';
 import imgAlignment from '../../assets/images/service-aligners.png';
-import imgExpanders from '../../assets/images/home-services-img/palatal.png';
+import imgExpanders from '../../assets/home-services-img/Palatal.png';
 import imgInterceptive from '../../assets/images/oral-hygiene/checkup.png'; // Placeholder fallback
 
 import Testimonals from '../review-services';
