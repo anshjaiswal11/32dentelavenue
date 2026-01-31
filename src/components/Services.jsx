@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import asianDentistryImg from "../assets/home-services-img/asian-dentistry.jpg";
 import dentalImplantsImg from "../assets/home-services-img/dental-implant.jpg";
-import pediatricDentistryImg from "../assets/home-services-img/predictive.jpg";
+import pediatricDentistryImg from "../assets/home-services-img/img-123.jpeg";
 import teethAlignmentImg from "../assets/home-services-img/teethaligement.jpg";
 import rootCanalImg from "../assets/home-services-img/root-cannel.jpg";
 import wisdomToothImg from "../assets/home-services-img/wisdom-tooth.jpg";
