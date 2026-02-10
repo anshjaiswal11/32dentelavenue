@@ -1,13 +1,5 @@
 import { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
-import img1 from '../assets/gallery/IMG_8114.JPG';
-import img2 from '../assets/gallery/IMG_8120.JPG';
-import img3 from '../assets/gallery/IMG_8127.JPG';
-import img4 from '../assets/gallery/IMG_8201.JPG';
-import img5 from '../assets/gallery/IMG_8214.JPG';
-import img6 from '../assets/gallery/IMG_8226.JPG';
-import img7 from '../assets/gallery/IMG_8359.JPG';
-import img8 from '../assets/gallery/IMG_8360.JPG';
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -19,56 +11,108 @@ const Gallery = () => {
 
     const categories = ['All', 'Clinic Interiors', 'Happy Smiles', 'Advanced Equipment'];
 
+    // Cloudinary configuration - replace with your Cloudinary cloud name
+    const CLOUD_NAME = 'dvh0vvoqc';
+    // Helper to build a Cloudinary URL with quality/format auto, sharpening and color enhancer,
+    // responsive DPR, and width scaling for fast, compressed delivery.
+    const cloudinaryUrl = (publicId, width = 1000) =>
+        `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/q_auto,f_auto,w_${width},c_scale,e_sharpen,e_auto_color,dpr_auto/${publicId}`;
+
     // Real images from gallery folder
     const galleryItems = [
         {
             id: 1,
             category: 'Clinic Interiors',
             title: 'Modern Reception & Waiting Area',
-            image: img1
+            image: cloudinaryUrl('IMG_8229_widel6')
         },
         {
             id: 2,
             category: 'Advanced Equipment',
             title: 'Dental Operatory View',
-            image: img2
+            image: cloudinaryUrl('IMG_8368_k4vrah')
         },
         {
             id: 3,
             category: 'Clinic Interiors',
             title: 'State-of-the-Art Facility',
-            image: img3
+            image: cloudinaryUrl('IMG_8128_mfemtz')
         },
+        // Happy Smiles: these images are served from Cloudinary with
+        // auto quality/format + enhancer/compression for fast delivery.
+        // Replace the public IDs below with your actual Cloudinary public IDs.
         {
             id: 4,
             category: 'Happy Smiles',
             title: 'Patient Consultation',
-            image: img4
+            image: cloudinaryUrl('IMG_20250228_004045_1_mhb9pt')
         },
         {
             id: 5,
             category: 'Advanced Equipment',
             title: 'Advanced Dental Unit',
-            image: img5
+            image: cloudinaryUrl('IMG_8364_hyu9th')
         },
         {
             id: 6,
             category: 'Clinic Interiors',
             title: 'Hygienic Treatment Room',
-            image: img6
+            image: cloudinaryUrl('IMG_8104_nbvhdu')
         },
         {
             id: 7,
             category: 'Happy Smiles',
             title: 'Expert Dental Care',
-            image: img7
+            image: cloudinaryUrl('IMG_20250226_130425_irqhhg')
         },
         {
             id: 8,
             category: 'Clinic Interiors',
             title: 'Premium Dental Experience',
-            image: img8
-        }
+            image: cloudinaryUrl('IMG_8371_sdjdrk')
+        },
+        {
+            id: 9,
+            category: 'Happy Smiles',
+            title: 'Bright New Smile',
+            image: cloudinaryUrl('Mende_US_yxop2h')
+        },
+        {
+            id: 10,
+            category: 'Happy Smiles',
+            title: 'Confident Patient',
+            image: cloudinaryUrl('IMG_4100_uafrjm')
+        },
+        {
+            id: 11,
+            category: 'Happy Smiles',
+            title: 'Post-Treatment Joy',
+            image: cloudinaryUrl('IMG_2121_1_mhlzmv')
+        },
+        {
+            id: 12,
+            category: 'Happy Smiles',
+            title: 'Comfortable Care',
+            image: cloudinaryUrl('IMG_2317_ok7dut')
+        },
+        // {
+        //     id: 13,
+        //     category: 'Clinic Interiors',
+        //     title: 'Modern Reception & Waiting Area',
+        //     image: cloudinaryUrl('IMG_8360_2_d1yzjr')
+        // },
+        {
+            id: 14,
+            category: 'Clinic Interiors',
+            title: 'Modern Reception & Waiting Area',
+            image: cloudinaryUrl('IMG_8121_zx5dku')
+        },
+        {
+            id: 15,
+            category: 'Advanced Equipment',
+            title: 'Dental Operatory View',
+            image: cloudinaryUrl('IMG_8365_dh7zhu')
+        },
     ];
 
     const filteredItems = selectedCategory === 'All'
