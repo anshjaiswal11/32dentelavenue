@@ -25,7 +25,7 @@ import imgSpaceMaintainers from '../../assets/gallery/newimgg.jpeg'; // Placehol
 import imgPulpectomy from '../../assets/gallery/rootcanalpediatric.jpeg';
 import imgAlignment from '../../assets/gallery/teethaliped.jpeg';
 import imgExpanders from '../../assets/home-services-img/Palatal.png';
-import imgInterceptive from '../../assets/gallery/image-new.jpeg'
+// import imgInterceptive from '../../assets/gallery/image-new.jpeg'
 import Testimonals from '../review-services';
 import image01 from '../../assets/newimg/IMG_83711.jpg';
 import image02 from '../../assets/newimg/IMG_81192.jpg';
