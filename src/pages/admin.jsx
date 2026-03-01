@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Lock, LogOut, Calendar, Phone, MapPin, User, Loader2 } from 'lucide-react';
 
-const BOOKING_API_URL = "https://server-32dentalavenue-kappa.vercel.app/api";
-const BLOG_API_URL = "https://server-32dentalavenue-kappa.vercel.app/api/blogs";
+const BOOKING_API_URL = "https://server-32dentalavenue-git-testing-anshs-projects-a61999fb.vercel.app/api";
+const BLOG_API_URL = "https://server-32dentalavenue-git-testing-anshs-projects-a61999fb.vercel.app/api/blogs";
 
 export default function Admin() {
     const [token, setToken] = useState(localStorage.getItem('adminToken'));
