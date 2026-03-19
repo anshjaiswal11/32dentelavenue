@@ -28,6 +28,7 @@ const BlogDetail = lazy(() => import('./pages/BlogDetail'))
 const Gallery = lazy(() => import('./pages/Gallery'))
 const ContactUs = lazy(() => import('./pages/contactus'))
 const Admin = lazy(() => import('./pages/admin'))
+const ThankYou = lazy(() => import('./pages/ThankYou'))
 
 import Hero from './components/Hero'
 import Banner from './components/banner'
@@ -132,6 +133,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
