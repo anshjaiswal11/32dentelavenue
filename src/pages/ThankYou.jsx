@@ -1,7 +1,31 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function ThankYou() {
+  useEffect(() => {
+    const AW_ID = 'AW-18001923711'
+    const hasScript = !!document.querySelector(`script[src*="${AW_ID}"]`)
+
+    // Ensure dataLayer and gtag helper exist
+    window.dataLayer = window.dataLayer || []
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments) }
+
+    if (!hasScript) {
+      const s = document.createElement('script')
+      s.async = true
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${AW_ID}`
+      document.head.appendChild(s)
+
+      // Initialize after script added
+      window.gtag('js', new Date())
+      window.gtag('config', AW_ID)
+    } else {
+      // If present, ensure config is called so conversions work
+      window.gtag('config', AW_ID)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-neutral-white p-6">
       <Helmet>
