@@ -7,6 +7,9 @@ export default function ThankYou() {
       <Helmet>
         <title>Thank You | 32 Dental Avenue</title>
         <meta name="description" content="Thank you for contacting 32 Dental Avenue. We'll get back to you soon." />
+        <script>
+          {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'booking_complete', event_category: 'engagement', event_label: 'thank_you_booking'});`}
+        </script>
       </Helmet>
 
       <div className="max-w-3xl text-center">
