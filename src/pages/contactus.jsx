@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Calendar, Mail, Phone, MapPin, User, ArrowRight, Clock } from "lucide-react";
+
+const API_BASE = "https://server-32dentalavenue-kappa.vercel.app/api";
 
 export default function ContactUs() {
     const [formData, setFormData] = useState({
@@ -37,12 +40,14 @@ export default function ContactUs() {
         }
     ];
 
+    const navigate = useNavigate();
+
     const handleChange = (e) =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const handleSubmit = async () => {
-        if (!formData.firstName || !formData.email || !formData.phone) {
-            setErrorMessage("Please fill in all required fields.");
+        if (!formData.firstName || !formData.email || !formData.phone || !formData.message) {
+            setErrorMessage("Please fill in all required fields (First Name, Email, Phone, Message).");
             return;
         }
 
@@ -50,17 +55,20 @@ export default function ContactUs() {
         setErrorMessage("");
 
         try {
-            // Simulated API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            setStatus("success");
-            setFormData({
-                firstName: "",
-                lastName: "",
-                email: "",
-                phone: "",
-                location: "",
-                message: "",
+            const response = await fetch(`${API_BASE}/contact`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
             });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                navigate("/thank-you");
+            } else {
+                setStatus("error");
+                setErrorMessage(data.error || "Something went wrong. Please try again.");
+            }
         } catch (error) {
             console.error("Contact Error:", error);
             setStatus("error");
@@ -72,6 +80,7 @@ export default function ContactUs() {
         setStatus("idle");
         setErrorMessage("");
     };
+
 
     return (
         <section className="bg-slate-50 min-h-screen pt-28 pb-20">

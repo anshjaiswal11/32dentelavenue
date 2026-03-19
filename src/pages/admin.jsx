@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Lock, LogOut, Calendar, Phone, MapPin, User, Loader2 } from 'lucide-react';
+import { Mail, Lock, LogOut, Calendar, Phone, MapPin, User, Loader2, MessageSquare } from 'lucide-react';
 
 const BOOKING_API_URL = "https://server-32dentalavenue-kappa.vercel.app/api";
 const BLOG_API_URL = "https://server-32dentalavenue-kappa.vercel.app/api/blogs";
+const CONTACT_API_URL = "https://server-32dentalavenue-kappa.vercel.app/api/contact";
 
 export default function Admin() {
     const [token, setToken] = useState(localStorage.getItem('adminToken'));
@@ -133,13 +134,20 @@ function Login({ onLoginSuccess }) {
 
 function Dashboard({ token, onLogout }) {
     const [bookings, setBookings] = useState([]);
+    const [contacts, setContacts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const [activeTab, setActiveTab] = useState('bookings'); // 'bookings' or 'blogs'
+    const [activeTab, setActiveTab] = useState('bookings'); // 'bookings', 'contacts', or 'blogs'
 
     useEffect(() => {
+        setLoading(true);
+        setError('');
         if (activeTab === 'bookings') {
             fetchBookings();
+        } else if (activeTab === 'contacts') {
+            fetchContacts();
+        } else {
+            setLoading(false);
         }
     }, [activeTab]);
 
@@ -174,6 +182,28 @@ function Dashboard({ token, onLogout }) {
         }
     };
 
+    const fetchContacts = async () => {
+        try {
+            const response = await fetch(CONTACT_API_URL, {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            if (response.ok) {
+                const data = await response.json();
+                setContacts(Array.isArray(data.contacts) ? data.contacts : []);
+            } else {
+                if (response.status === 401 || response.status === 403) {
+                    onLogout();
+                    return;
+                }
+                setError('Failed to fetch contacts');
+            }
+        } catch (err) {
+            setError('Network error fetching contacts');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div>
             {/* Header */}
@@ -196,6 +226,20 @@ function Dashboard({ token, onLogout }) {
                                     }`}
                             >
                                 Bookings
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('contacts')}
+                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'contacts'
+                                    ? 'bg-[#8FC6B7]/10 text-[#8FC6B7]'
+                                    : 'text-gray-600 hover:bg-gray-50'
+                                    }`}
+                            >
+                                Contacts
+                                {contacts.length > 0 && (
+                                    <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full bg-[#8FC6B7] text-white">
+                                        {contacts.length > 99 ? '99+' : contacts.length}
+                                    </span>
+                                )}
                             </button>
                             <button
                                 onClick={() => setActiveTab('blogs')}
@@ -265,6 +309,52 @@ function Dashboard({ token, onLogout }) {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {Array.isArray(bookings) && bookings.map((booking, idx) => (
                                     <BookingCard key={booking._id || idx} booking={booking} />
+                                ))}
+                            </div>
+                        )}
+                    </>
+                ) : activeTab === 'contacts' ? (
+                    <>
+                        <div className="flex items-center justify-between mb-8">
+                            <div>
+                                <h2 className="text-2xl font-bold text-[#424040]">Contact Submissions</h2>
+                                <p className="text-gray-500 mt-1">Messages received from the Contact Us form</p>
+                            </div>
+                            <button
+                                onClick={() => { setLoading(true); fetchContacts(); }}
+                                className="p-2 text-[#8FC6B7] hover:bg-[#8FC6B7]/10 rounded-full transition-colors"
+                                title="Refresh"
+                            >
+                                <Loader2 className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
+                            </button>
+                        </div>
+
+                        {loading ? (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[1, 2, 3, 4, 5, 6].map(i => (
+                                    <div key={i} className="h-48 bg-gray-200 rounded-2xl animate-pulse" />
+                                ))}
+                            </div>
+                        ) : error ? (
+                            <div className="text-center py-20 bg-white rounded-3xl shadow-sm border border-red-100">
+                                <p className="text-red-500 mb-4">{error}</p>
+                                <button
+                                    onClick={fetchContacts}
+                                    className="px-6 py-2 bg-[#424040] text-white rounded-full hover:bg-[#8FC6B7] transition-colors"
+                                >
+                                    Try Again
+                                </button>
+                            </div>
+                        ) : contacts.length === 0 ? (
+                            <div className="text-center py-20 bg-white rounded-3xl shadow-sm">
+                                <MessageSquare className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                                <h3 className="text-lg font-medium text-gray-900">No messages yet</h3>
+                                <p className="text-gray-500">Contact Us submissions will appear here</p>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {contacts.map((contact, idx) => (
+                                    <ContactCard key={contact._id || idx} contact={contact} />
                                 ))}
                             </div>
                         )}
@@ -515,6 +605,56 @@ function BlogManager() {
                     ))}
                 </div>
             )}
+        </div>
+    );
+}
+
+function ContactCard({ contact }) {
+    const formatDate = (dateStr) => {
+        if (!dateStr) return '';
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return dateStr;
+        return date.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+    };
+
+    return (
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group flex flex-col">
+            <div className="flex justify-between items-start mb-4">
+                <div className="w-12 h-12 bg-[#8FC6B7]/10 rounded-full flex items-center justify-center text-[#8FC6B7] group-hover:bg-[#8FC6B7] group-hover:text-white transition-colors">
+                    <MessageSquare className="w-6 h-6" />
+                </div>
+                {contact.location && (
+                    <span className="text-xs font-medium px-2.5 py-1 bg-gray-100 text-gray-600 rounded-full">
+                        {contact.location}
+                    </span>
+                )}
+            </div>
+
+            <h3 className="text-lg font-bold text-[#424040] mb-1">
+                {contact.firstName} {contact.lastName}
+            </h3>
+            <p className="text-xs text-gray-400 mb-3">{formatDate(contact.createdAt)}</p>
+
+            <div className="space-y-2 mb-4">
+                <div className="flex items-center gap-3 text-sm text-gray-600">
+                    <Mail className="w-4 h-4 text-[#8FC6B7] flex-shrink-0" />
+                    <a href={`mailto:${contact.email}`} className="hover:text-[#8FC6B7] transition-colors truncate">
+                        {contact.email}
+                    </a>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-gray-600">
+                    <Phone className="w-4 h-4 text-[#8FC6B7] flex-shrink-0" />
+                    <a href={`tel:${contact.phone}`} className="hover:text-[#8FC6B7] transition-colors">
+                        {contact.phone}
+                    </a>
+                </div>
+            </div>
+
+            <div className="mt-auto pt-4 border-t border-gray-100">
+                <p className="text-sm text-gray-700 bg-gray-50 rounded-xl p-3 leading-relaxed line-clamp-4">
+                    {contact.message}
+                </p>
+            </div>
         </div>
     );
 }

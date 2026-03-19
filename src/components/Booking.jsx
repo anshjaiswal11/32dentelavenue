@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Calendar, Mail, Phone, MapPin, User } from "lucide-react";
 
 export default function AppointmentBooking() {
@@ -12,6 +13,8 @@ export default function AppointmentBooking() {
   });
   const [status, setStatus] = useState("idle"); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,15 +39,7 @@ export default function AppointmentBooking() {
       });
 
       if (response.ok) {
-        setStatus("success");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          location: "",
-          date: "",
-        });
+        navigate("/thank-you");
       } else {
         const errorData = await response.json().catch(() => ({}));
         setErrorMessage(errorData.message || "Something went wrong. Please try again.");

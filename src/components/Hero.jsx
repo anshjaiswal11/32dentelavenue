@@ -3,14 +3,6 @@ import slide2 from '../assets/images/slide2.png'
 import slide1 from '../assets/slides_home/slide1.png'
 import slide3 from '../assets/slides_home/slides3.jpg'
 
-const CLOUD_NAME = 'dvh0vvoqc';
-// Helper to build a Cloudinary URL with quality/format auto, sharpening and color enhancer,
-// responsive DPR, and width scaling for fast, compressed delivery.
-const cloudinaryUrl = (publicId, width = 1000) =>
-  `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/q_auto,f_auto,w_${width},c_scale,e_sharpen,e_auto_color,dpr_auto/${publicId}`;
-
-
-
 
 const slides = [
   {
