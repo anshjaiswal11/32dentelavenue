@@ -24,6 +24,11 @@ export default function ThankYou() {
       // If present, ensure config is called so conversions work
       window.gtag('config', AW_ID)
     }
+
+    // Fire conversion event — "Submit lead form"
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-18001923711/zEK5CLra5oscEP-c_odD',
+    })
   }, [])
 
   return (
