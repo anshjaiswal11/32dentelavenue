@@ -32,7 +32,7 @@ const slides = [
       'Travel with confidence knowing your smile is in expert hands. Experience advanced technology, world-class expertise, and luxury care at affordable costs.',
     primaryLabel: 'Explore Packages',
     primaryHref: '/dental-tourism',
-    secondaryLabel: 'Consultate Online',
+    secondaryLabel: 'Consult Online',
     secondaryHref: '/about',
   },
 ]

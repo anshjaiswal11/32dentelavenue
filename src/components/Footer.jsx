@@ -33,7 +33,7 @@ const Footer = () => {
     ],
     contact: {
       phone: '+91 7042129178',
-      email: 'info@32dentalavenue.com',
+      email: '32dentalavenue@gmail.com',
       hours: 'Tues-Sun: 10:00 AM - 8:00 PM'
     }
   };
